@@ -1,7 +1,7 @@
 ---
 layout: words
 title: 2026/01/08 Sentences
-author: Shao Zelian
+author: Umbra
 date: 2026-01-08
 parent: 202601 Sentences
 tags: [English]

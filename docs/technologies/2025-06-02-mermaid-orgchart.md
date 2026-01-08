@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mermaid OrgChart Test
-author: Shao Zelian
+author: Umbra
 date: 2025-06-02
 parent: 💻 Technologies
 tags: [blog, markdown]

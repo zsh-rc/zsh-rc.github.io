@@ -1,6 +1,6 @@
 ---
 layout: post
 title: 💡 Tips
-author: Shao Zelian
+author: Umbra
 nav_order: 7
 ---

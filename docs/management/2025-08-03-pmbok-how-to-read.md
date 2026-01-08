@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PMBOK®阅读大纲
-author: Shao Zelian
+author: Umbra
 date: 2025-08-03
 parent: PMBOK® Guide📚
 tags: [PMP]

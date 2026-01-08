@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Timeline
-author: Shao Zelian
+author: Umbra
 date: 2025-12-26
 parent: Excel📚
 tags: [Excel, Chart]

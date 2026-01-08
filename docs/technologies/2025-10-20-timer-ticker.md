@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Timer ticker
-author: Shao Zelian
+author: Umbra
 date: 2025-10-20
 parent: CSS/HTML/JavaScript📚
 tags: [css, javascript]

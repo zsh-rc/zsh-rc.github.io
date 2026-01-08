@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 常用的Windows快捷键
-author: Shao Zelian
+author: Umbra
 date: 2025-06-30
 parent: 💻 Technologies
 tags: [tools]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 🧭 Management
-author: Shao Zelian
+author: Umbra
 nav_order: 3
 ---
 

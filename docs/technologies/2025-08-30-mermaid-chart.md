@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mermaid Charts (Examples)
-author: Shao Zelian
+author: Umbra
 date: 2025-08-30
 parent: 💻 Technologies
 tags: [blog, markdown]

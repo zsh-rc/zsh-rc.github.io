@@ -1,7 +1,7 @@
 ---
 layout: words
 title: 2026/01 All
-author: Shao Zelian
+author: Umbra
 date: 2026-01-04
 parent: 202601 Words
 tags: [English]

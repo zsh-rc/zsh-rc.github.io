@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 常用Linux Commands
-author: Shao Zelian
+author: Umbra
 date: 2025-10-05
 parent: 💻 Technologies
 tags: [tools]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable pagination
-author: Shao Zelian
+author: Umbra
 date: 2025-05-20
 parent: Jekyll📚
 nav_order: 3

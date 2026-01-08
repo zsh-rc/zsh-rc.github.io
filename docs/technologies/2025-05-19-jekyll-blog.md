@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a blog site
-author: Shao Zelian
+author: Umbra
 date: 2025-05-19
 parent: Jekyll📚
 nav_order: 2

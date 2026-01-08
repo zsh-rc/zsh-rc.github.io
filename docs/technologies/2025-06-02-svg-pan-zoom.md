@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Zoom and pan SVG in HTML
-author: Shao Zelian
+author: Umbra
 date: 2025-06-02
 parent: 💻 Technologies
 tags: [blog, markdown]

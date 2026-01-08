@@ -28,7 +28,7 @@ defaults:
     values:
       layout: "default"
 
-url: https://shaozelian.github.io/everest/
+url: https://zsh-rc.github.io/
 
 # aux_links:
 #   GitHub Repo.: https://github.com/just-the-docs/just-the-docs-template
@@ -100,7 +100,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "📝Edit"
-gh_edit_repository: "https://github.com/shaozelian/everest" # the github URL for your repo
+gh_edit_repository: "https://github.com/zsh-rc/zsh-rc.github.io" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
@@ -162,7 +162,7 @@ just_the_docs:
 # External navigation links
 nav_external_links:
   - title: ⌨ Repository
-    url: "https://github.com/shaozelian/everest"
+    url: "https://github.com/zsh-rc/zsh-rc.github.io"
     hide_icon: false # set to true to hide the external link icon - defaults to false
     opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
 

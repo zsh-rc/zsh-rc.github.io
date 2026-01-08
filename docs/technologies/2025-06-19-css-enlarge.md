@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enlarge/minimize DIV
-author: Shao Zelian
+author: Umbra
 date: 2025-06-19
 parent: CSS/HTML/JavaScript📚
 tags: [css, javascript]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Homebrew加速（中国）
-author: Shao Zelian
+author: Umbra
 date: 2026-01-04
 parent: MacOS📚
 tags: [MacOS, Homebrew]

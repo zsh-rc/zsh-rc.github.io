@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RaspberryPi E-Ink
-author: Shao Zelian
+author: Umbra
 date: 2025-10-06
 parent: 💻 Technologies
 tags: [Digital Products]

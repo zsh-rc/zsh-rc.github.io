@@ -1,6 +1,6 @@
 ---
 layout: post
 title: 🌿 Brilliant Writtings
-author: Shao Zelian
+author: Umbra
 nav_order: 5
 ---

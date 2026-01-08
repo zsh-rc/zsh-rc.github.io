@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 常用Git命令
-author: Shao Zelian
+author: Umbra
 date: 2025-11-15
 parent: 💻 Technologies
 tags: [git]

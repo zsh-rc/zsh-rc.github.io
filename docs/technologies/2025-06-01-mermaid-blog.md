@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable Mermaid Support
-author: Shao Zelian
+author: Umbra
 date: 2025-06-01
 parent: 💻 Technologies
 tags: [blog, markdown]

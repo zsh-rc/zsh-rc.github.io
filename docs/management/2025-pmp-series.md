@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PMBOK® Guide📚
-author: Shao Zelian
+author: Umbra
 date: 2025-05-01
 parent: 🧭 Management
 tags: [PMP]

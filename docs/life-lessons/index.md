@@ -1,6 +1,6 @@
 ---
 layout: post
 title: ✨ Life Lessons
-author: Shao Zelian
+author: Umbra
 nav_order: 6
 ---

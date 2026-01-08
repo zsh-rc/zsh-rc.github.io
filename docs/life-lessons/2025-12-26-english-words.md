@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Daily English Words
-author: Shao Zelian
+author: Umbra
 date: 2025-12-26
 parent: ✨ Life Lessons
 tags: [English]

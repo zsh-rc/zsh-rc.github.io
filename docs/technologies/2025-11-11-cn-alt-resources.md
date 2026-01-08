@@ -1,7 +1,7 @@
 ---
 layout: post
 title: China alternative resources
-author: Shao Zelian
+author: Umbra
 date: 2025-11-11
 parent: 💻 Technologies
 tags: [Ruby, Python]

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 💻 Technologies
-author: Shao Zelian
+author: Umbra
 nav_order: 4
 ---
 

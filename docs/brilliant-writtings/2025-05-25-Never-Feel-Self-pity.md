@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Never Feel Self-pity
-author: Shao Zelian
+author: Umbra
 date: 2025-05-25
 parent: 🌿 Brilliant Writtings
 tags: [Proverbs]

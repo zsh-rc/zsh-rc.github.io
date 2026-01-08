@@ -1,7 +1,7 @@
 ---
 layout: words
 title: 2026/01 小然
-author: Shao Zelian
+author: Umbra
 date: 2026-01-01
 parent: 202601 Words
 tags: [English, word-test]

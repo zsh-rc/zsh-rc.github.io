@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 升降桌错误无法升降
-author: Shao Zelian
+author: Umbra
 date: 2025-05-31
 parent: 💡 Tips
 tags: [Digital Products]

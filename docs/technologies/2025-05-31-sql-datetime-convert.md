@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SQL date time format
-author: Shao Zelian
+author: Umbra
 date: 2025-05-31
 parent: 💻 Technologies
 tags: [Database]

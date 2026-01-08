@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Responsible Grid Layout
-author: Shao Zelian
+author: Umbra
 date: 2025-08-31
 parent: CSS/HTML/JavaScript📚
 tags: [css]

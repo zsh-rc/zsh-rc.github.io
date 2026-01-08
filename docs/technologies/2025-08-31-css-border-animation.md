@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS border animiation
-author: Shao Zelian
+author: Umbra
 date: 2025-08-31
 parent: CSS/HTML/JavaScript📚
 tags: [css]

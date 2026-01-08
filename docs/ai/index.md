@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 🤖 AI
-author: Shao Zelian
+author: Umbra
 nav_order: 2
 ---
 

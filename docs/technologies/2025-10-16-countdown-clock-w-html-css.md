@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS Countdown Clock
-author: Shao Zelian
+author: Umbra
 date: 2025-10-16
 parent: CSS/HTML/JavaScript📚
 tags: [css]

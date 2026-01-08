@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Beautiful English Sentences
-author: Shao Zelian
+author: Umbra
 date: 2025-06-30
 parent: ✨ Life Lessons
 tags: [English]

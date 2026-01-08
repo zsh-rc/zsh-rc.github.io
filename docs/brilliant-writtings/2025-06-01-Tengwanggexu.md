@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 《滕王阁序》赏析
-author: Shao Zelian
+author: Umbra
 date: 2025-06-01
 parent: 🌿 Brilliant Writtings
 tags: [Proverbs]

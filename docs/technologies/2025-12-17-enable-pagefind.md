@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pagefind Plugin
-author: Shao Zelian
+author: Umbra
 date: 2025-12-17
 parent: Jekyll📚
 tags: [Jekyll]

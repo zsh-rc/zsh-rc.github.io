@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MAUI Development (MacOS)
-author: Shao Zelian
+author: Umbra
 date: 2025-11-10
 parent: 💻 Technologies
 tags: [.net]

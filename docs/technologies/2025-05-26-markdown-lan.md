@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markdown语法参考手册
-author: Shao Zelian
+author: Umbra
 date: 2025-05-26
 parent: 💻 Technologies
 tags: [markdown]

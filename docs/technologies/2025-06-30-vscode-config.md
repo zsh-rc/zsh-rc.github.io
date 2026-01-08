@@ -1,7 +1,7 @@
 ---
 layout: post
 title: VSCode编辑器配置
-author: Shao Zelian
+author: Umbra
 date: 2025-06-30
 parent: 💻 Technologies
 tags: [tools]
