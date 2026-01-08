@@ -1,0 +1,458 @@
+month: "202601"
+days:
+- date: "2026/01/01"
+  words:
+  - en: Bazaar
+    cn: 市场，集市（Mart） 
+  - en: Antique Bazaar
+    cn: 古玩市场
+  - en: Bankrupt
+    cn: 破产
+  - en: Fantasy
+    cn: 幻想
+  - en: Coffer
+    cn: 保险箱
+  - en: Betrayal
+    cn: 背叛
+  - en: Salvage
+    cn: 挽救，救难
+- date: "2026/01/02"
+  words:
+  - en: Saliva
+    cn: 唾液
+  - en: Incurable
+    cn: 无法治愈的
+  - en: Abuser
+    cn: 滥用者
+  - en: Unleash
+    cn: 解除...的束缚
+  - en: Receptive
+    cn: 接受的
+  - en: Bud
+    cn: 花蕾
+  - en: Taste Buds
+    cn: 味蕾
+  - en: Wrinkle Up
+    cn: 皱起
+  - en: Trendy
+    cn: 时髦的，趋势的，ref. Trend
+  - en: Passage
+    cn: 通道，段落，章节
+  - en: Rafting
+    cn: 竹筏漂流
+  - en: Glacier
+    cn: 冰川
+  - en: Nepal
+    cn: 尼泊尔
+  - en: Ghana
+    cn: 加纳
+  - en: Senegal
+    cn: 塞内加尔
+  - en: Liberia
+    cn: 利比里亚
+  - en: Trekker
+    cn: 高山徒步者
+  - en: Psychopath
+    cn: 精神变态者
+  - en: Alterocentric Interference
+    cn: 非自我中心干扰（神经科学）
+  - en: Mind-numbing
+    cn: / ˈmaɪnd nʌmɪŋ /枯燥乏味的 / 极端到无法想象的（weather）
+  - en: Unjust
+    cn: 不公平的
+  - en: Geothermal
+    cn: /ˌdʒiːəʊˈθɜːml /地热资源
+  - en: Kerosene
+    cn: 煤油
+  - en: Doom
+    cn: 使...遭受
+  - en: Chronic
+    cn: 慢性的
+  - en: Surreal
+    cn: 离奇的，梦幻的
+  - en: Viral
+    cn: 病毒性的
+  - en: Go Viral
+    cn: 变得很火很流行
+  - en: Coastal Bird
+    cn: 海鸟
+  - en: Cyberbullying
+    cn: 网络欺凌
+  - en: Boycott
+    cn: 抵制
+  - en: Neglect
+    cn: 忽视，忽略
+  - en: Excessive
+    cn: 过度的
+  - en: Dormitory
+    cn: 宿舍
+  - en: Auditorium
+    cn: / ˌɔːdɪˈtɔːriəm /礼堂
+  - en: Lavatory
+    cn: / ˈlævətri /洗手间
+  - en: Compartment
+    cn: 隔间
+  - en: Corridor
+    cn: 走廊
+  - en: Be consumed with jealousy
+    cn: 被嫉妒心吞噬
+  - en: Be worthy of trust
+    cn: 值得信赖
+  - en: Impoverished
+    cn: 贫困的
+  - en: Fragment
+    cn: 碎片
+  - en: Boundary
+    cn: 边界
+  - en: Combat
+    cn: 战斗，抗击
+  - en: Habitat
+    cn: 栖息地
+  - en: Trait
+    cn: 特征，品质
+  - en: Instrumental
+    cn: 有帮助的，起重要作用的
+  - en: Aromas
+    cn: 香气
+- date: "2026/01/04"
+  words:
+  - en: Localize
+    cn: 本地化
+  - en: AI-driven
+    cn: 人工智能驱动的
+  - en: Campaign
+    cn: 活动,如促销活动
+  - en: Penetrate
+    cn: 渗透
+  - en: Penetration
+    cn: 渗透率
+  - en: Market Share
+    cn: 市场份额
+  - en: Gamified
+    cn: 游戏化的
+  - en: Loyalty Program
+    cn: 忠诚度计划
+  - en: Retention Rate
+    cn: 保留率
+  - en: Boost
+    cn: 提升, 增强
+  - en: Upsell
+    cn: 追加销售
+  - en: Premium
+    cn: 高级的
+  - en: Cybersecurity
+    cn: 网络安全
+  - en: SMB
+    cn: 中小企业(Small and Medium-sized Business, SMB)
+  - en: Renewal Cycle
+    cn: 续订周期
+  - en: Streamline
+    cn: 简化，使效率更高
+  - en: Launch
+    cn: 启动
+  - en: Compliance Framework
+    cn: 合规框架
+  - en: Mitigate
+    cn: 减轻（风险等）
+  - en: GDPR
+    cn: 通用数据保护条例 (欧盟，General Data Protection Regulation, GDPR)
+  - en: Leverage
+    cn: 利用
+  - en: Predict
+    cn: 预测
+  - en: Consumer Trend
+    cn: 消费者趋势
+  - en: Accuracy
+    cn: 准确率
+  - en: Pioneer
+    cn: 开创
+  - en: Blockchain
+    cn: 区块链
+  - en: Supply Chain
+    cn: 供应链
+  - en: Luxury Sector
+    cn: 奢侈品行业
+  - en: Secure
+    cn: 保障, 确保, 使安全
+  - en: Legacy
+    cn: 传统的, 遗留的
+  - en: Overhaul
+    cn: 彻底改革
+  - en: Integration
+    cn: 集成
+  - en: Resolution Time
+    cn: 解决时间
+  - en: Scalable
+    cn: 可扩展的
+  - en: SaaS
+    cn: 软件即服务(Software as a Service，SaaS)
+  - en: Architecture
+    cn: 架构
+  - en: Infrastructure Upgrade
+    cn: 基础设施升级
+  - en: Orchestrate
+    cn: 策划, 把...谱写成管弦乐曲（Orchestral Music）; n. Orchestration 编排
+  - en: Synchronize
+    cn: vt. 同步; adj. Synchronized; n. Synchronization
+  - en: AR
+    cn: 增强现实（Augmented Reality, AR）
+  - en: Multilingual Support
+    cn: 多语言支持
+- date: "2026/01/05"
+  words:
+  - en: Eco-friendly
+    cn: 环保的
+  - en: Sustainability
+    cn: 可持续性
+  - en: Outwards
+    cn: 向外的
+  - en: Inwards
+    cn: 向内的
+  - en: Tick
+    cn: 运转
+  - en: Underpin
+    cn: 支撑, 巩固
+  - en: Platform
+    cn: 平台
+  - en: Collaboration
+    cn: 合作
+  - en: Reliability
+    cn: 可靠性
+  - en: Peers
+    cn: 同行
+  - en: recognition
+    cn: 认可
+  - en: Tech Giant
+    cn: 科技巨头
+  - en: Meaninglessness
+    cn: 毫无意义
+  - en: Restricted
+    cn: 受限制的
+  - en: Secrecy
+    cn: 秘密
+  - en: Innovation
+    cn: 创新
+  - en: lead to
+    cn: 导致
+  - en: Heated Debate
+    cn: 激烈辩论
+  - en: Repurpose
+    cn: 重新利用
+  - en: modify
+    cn: 修改
+  - en: over time
+    cn: 随着时间的推移
+  - en: Evolve
+    cn: 演变
+  - en: Entirely
+    cn: 完全地
+  - en: for instance
+    cn: 例如
+  - en: Parent Company
+    cn: 母公司
+  - en: Large Language Model
+    cn: 大型语言模型(LLM)
+  - en: weight
+    cn: 权重, 重量
+  - en: Artificial Neurons
+    cn: 人工神经元
+  - en: Neural Network
+    cn: 神经网络
+  - en: Source Code
+    cn: 源代码
+  - en: Training Data
+    cn: 训练数据
+  - en: Blueprint
+    cn: 蓝图
+  - en: Feed
+    cn: 提供, 饲养
+  - en: performance
+    cn: 性能
+  - en: Acceptable
+    cn: 可接受的
+  - en: Identical
+    cn: 完全相同的, Identity (身份), Identification ()
+  - en: cutting-edge
+    cn: 先进的，尖端的（技术，科技等）
+  - en: release
+    cn: 发行版本，释放
+  - en: Eco-friendly
+    cn: 环保的
+  - en: Sustainability
+    cn: 可持续性
+  - en: concern
+    cn: 顾虑
+  - en: misuse
+    cn: 滥用
+  - en: spread
+    cn: 传播
+  - en: harmful
+    cn: 有害的
+- date: "2026/01/06"
+  words:
+  - en: encompass
+    cn: 包含，涵盖
+  - en: speech recognition
+    cn: 语音识别（一种基于语音的应用技术）
+  - en: algorithm
+    cn: 算法
+  - en: numerous
+    cn: 许多的，大量的
+  - en: healthcare
+    cn: 医疗保健（行业）
+  - en: diagnose
+    cn: 诊断
+  - en: disease
+    cn: 疾病
+  - en: detect
+    cn: 发现
+  - en: tumor
+    cn: 肿瘤
+  - en: treatment
+    cn: 治疗
+  - en: bibliography
+    cn: 参考文献
+- date: "2026/01/08"
+  words:
+  - en: martial arts
+    cn: 武术
+  - en: intent
+    cn: v. 意图; n. intention
+  - en: hone
+    cn: v. 磨练
+  - en: immortality
+    cn: 不朽，永生
+  - en: orthodox
+    cn: n. 正统, 东正教; adj. 正统的
+  - en: decades of
+    cn: 几十年的
+  - en: meditation
+    cn: 冥想，禅修，打坐
+  - en: heretical
+    cn: 邪恶的，异端的
+  - en: swift
+    cn: 飞速，迅速，同rapid，fast等。
+  - en: moral
+    cn: adj. 道德/道义上的，n. 寓意
+  - en: compromise
+    cn: n. v. 妥协，折中
+  - en: opt for
+    cn: 选择
+  - en: latter
+    cn: 后者
+  - en: former
+    cn: 前者
+  - en: acquire
+    cn: 获得
+  - en: lease
+    cn: 租约
+  - en: literary
+    cn: adj. 文学的
+  - en: literature
+    cn: 文学
+  - en: literal
+    cn: 字面上的，adv. literally
+  - en: origin
+    cn: 起源
+  - en: denote
+    cn: 表示
+  - en: departure
+    cn: （航班）起飞，出发，离开
+  - en: convention
+    cn: 惯例，公约，大会
+  - en: life hacks
+    cn: 生活技巧
+  - en: lard
+    cn: 猪油，rendering lard：炼制猪油
+  - en: render
+    cn: 渲染，呈现
+  - en: fanfiction
+    cn: 同人小说
+  - en: absurd
+    cn: 荒谬的，同ridiculous
+  - en: veer
+    cn: 偏离，转向
+  - en: advanced mathematics
+    cn: 高等数学（学科）
+  - en: insomnia
+    cn: 失眠，失眠症
+  - en: nude
+    cn: 裸露的，裸体的，同naked
+  - en: get in shape
+    cn: 保持身材
+  - en: carbonara
+    cn: 卡邦尼意面
+  - en: sauce
+    cn: 酱汁
+  - en: soy sauce
+    cn: 酱油
+  - en: vinegar
+    cn: 醋
+  - en: sausage
+    cn: 香肠
+  - en: embrace
+    cn: 拥抱，接受（同accept）
+  - en: strive
+    cn: 努力，力争
+  - en: lying flat
+    cn: 躺平
+  - en: dull
+    cn: 平淡的，无聊的，同boring
+  - en: employment
+    cn: 就业，雇佣，employment rate（就业率）
+  - en: intolerable
+    cn: 难以忍受的
+  - en: tolerable
+    cn: 可以承受的
+  - en: tolerate
+    cn: v. 忍受，承受
+  - en: stress
+    cn: 压力，同pressure
+  - en: signal
+    cn: 信号，无线电信号，v. 传递了...的信号
+  - en: disillusionment
+    cn: 幻想破灭，醒悟（同wake up）
+  - en: hurdle
+    cn: 难关，障碍（obstacle, barrier, impediment)，跨栏运动（hurdling）
+  - en: step into
+    cn: 步入
+  - en: adulthood
+    cn: 成年
+  - en: balance
+    cn: n. v. 平衡
+  - en: demand
+    cn: 需求
+  - en: prospect
+    cn: n. 前景
+  - en: prosperity
+    cn: 繁荣
+  - en: prosperous
+    cn: 繁荣的
+  - en: seek
+    cn: 寻找，同look for / search
+  - en: option
+    cn: 选项，同choice
+  - en: fad
+    cn: 一时的流行，同fashion，stylish
+  - en: cheerful
+    cn: 愉快的
+  - en: counter
+    cn: 柜台，计数器；反击，对抗，同against。
+  - en: initiative
+    cn: 主动性，主动权
+  - en: uncertainty
+    cn: 不确定性；certainty，certainly
+  - en: commentary
+    cn: 评论，同comments
+  - en: rebellion
+    cn: 叛逆，反抗
+  - en: anxiety
+    cn: 焦虑，adj. anxious焦虑的
+  - en: quirky
+    cn: 古怪的，离奇的（行为）
+  - en: complicated
+    cn: adj. 复杂的，同complex
+  - en: inclination
+    cn: 倾向，趋势（同trend）
+  - en: clear-eyed
+    cn: 清晰的

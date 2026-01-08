@@ -1,0 +1,284 @@
+---
+layout: post
+---
+
+{{ content }}
+
+<div id="quiz" class="d-none bg-grey-lt-000 p-5"> 
+    <div class="fs-2 mb-3">
+      🛈&nbsp;Instructions: <br/>
+      Press "Enter" key or "Check" button to check your answer. <br/>
+      Use the "Switch" button to toggle between English→Chinese and Chinese→English modes.<br/>
+      <a href="javascript:void(0)" id="toggle" class="btn mt-2">Switch to English → Chinese</a> 
+    </div>
+    <textarea id="word" placeholder="" rows="1" style="width: 100%;" disabled readonly style="background-color: wheat;"></textarea> <br/>
+    <textarea id="answer" placeholder="Type your answer" rows="2" style="width: 100%;"></textarea> <br/>
+    <span class="fs-2"> <a href="javascript:void(0)" class="btn" onclick="checkAnswer()">✔ Check (Enter)</a> </span>&nbsp;&nbsp;
+    <!-- <span class="fs-2"> <a href="javascript:void(0)" id="nextButton" class="btn" onclick="nextWord()">➡ Next (Ctrl+])</a> </span> -->
+     <span class="fs-2"> <a href="javascript:void(0)" class="btn" onclick="reviewAnswer()">Review Only (Ctrl + ])</a> </span>&nbsp;&nbsp;
+     <span class="fs-2"> <a href="javascript:void(0)" class="btn" onclick="reset()">Reset</a> </span>
+    <div id="result"></div> 
+    <div id="stats"> <div id="coverage"></div> <div id="accuracy"></div> </div>
+    <div id="errors"></div>
+    <hr/>
+</div>
+
+{% if page.month %}
+
+    {% assign month = site.data.words[page.month] %}
+    {% if month %}
+        {% assign sorted = month.days | sort: "date" | reverse %}
+
+        {% assign days_is_empty = true %}
+        {% if page.days and page.days.size > 0 %}
+          {% assign days_is_empty = false %}
+        {% endif %}
+
+        {% for day in sorted %}
+          {% if days_is_empty or page.days contains day.date %}
+            <h3>📅 {{ day.date }} </h3>
+            {% for word in day.words %}
+                {{ forloop.index }}. <a href="javascript:void(0)" onclick="playVoice('{{ word.en }}');">{{ word.en }} 🔊 {{ word.cn }}</a>&nbsp;→&nbsp;<a href="https://dict.youdao.com/result?word={{ word.en }}&lang=en" target="_blank">🔗</a> <br/>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+
+    {% else %}
+        <span>{{ page.month }} data not found. </span>       
+    {% endif %}
+
+{% endif %}
+
+<script>
+    const wordsData = [];
+    {% if page.month %}
+        {% assign month = site.data.words[page.month] %}
+        {% if month %}
+            {% assign sorted = month.days | sort: "date" | reverse %}
+
+            {% assign days_is_empty = true %}
+            {% if page.days and page.days.size > 0 %}
+              {% assign days_is_empty = false %}
+            {% endif %}
+
+            {% for day in sorted %}
+              {% if days_is_empty or page.days contains day.date %}
+                {% for word in day.words %}
+                    wordsData.push({ en: "{{ word.en }}", cn: "{{ word.cn }}" });
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+
+        {% endif %}
+    {% endif %}
+
+    let orderedWords = shuffleWordsOrder();
+    let currentIndex = 0;
+
+    function playVoice(word) {
+        const url = "https://dict.youdao.com/dictvoice?audio="+word+"&type=2";
+        const audio = new Audio(url);
+        audio.play();
+    }
+
+    function startTest() {
+        if (wordsData.length === 0) {
+            alert("No words available for testing.");
+            return;
+        }
+        document.getElementById("quiz").classList.remove("d-none");
+        document.getElementById("start").classList.add("d-none");
+        document.getElementById("close").classList.remove("d-none");
+        nextWord();
+    }
+
+    function closeTest() {
+        document.getElementById("quiz").classList.add("d-none");
+        document.getElementById("start").classList.remove("d-none");
+        document.getElementById("close").classList.add("d-none");        
+    }
+
+  let current = null;
+  let mode = "cn_to_en"; /* or "en_to_cn"  */
+
+  /* Tracking coverage and correction rate*/
+  let totalWords = wordsData.length; 
+  let seen = new Set(); /* tracks which words have been shown */
+  let attempts = 0; /* total questions answered */
+  let correctCount = 0; /* correct answers */
+
+  /* Levenshtein distance for fuzzy matching */
+  function levenshtein(a, b) {
+    const dp = Array(a.length + 1).fill(null).map(() =>
+      Array(b.length + 1).fill(null)
+    );
+
+    for (let i = 0; i <= a.length; i++) dp[i][0] = i;
+    for (let j = 0; j <= b.length; j++) dp[0][j] = j;
+
+    for (let i = 1; i <= a.length; i++) {
+      for (let j = 1; j <= b.length; j++) {
+        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+        dp[i][j] = Math.min(
+          dp[i - 1][j] + 1,
+          dp[i][j - 1] + 1,
+          dp[i - 1][j - 1] + cost
+        );
+      }
+    }
+    return dp[a.length][b.length];
+  }
+
+  function isFuzzyMatch(a, b) {
+    a = a.trim().toLowerCase();
+    b = b.trim().toLowerCase();
+    const distance = levenshtein(a, b);
+    return distance <= 0; /* allow 0 mistakes */
+  }
+
+  function weightedRandomWord() { 
+    /* Assign weights */
+    const weightedList = wordsData.map(w => { 
+        const isSeen = seen.has(w.en); 
+        return { 
+          word: w, 
+          weight: isSeen ? 1 : 10 /* unseen words are 10× more likely */
+        }; 
+    }); 
+    /* Compute total weight */
+    const totalWeight = weightedList.reduce((sum, item) => sum + item.weight, 0); 
+    /* Pick a random number in [0, totalWeight) */
+    let r = Math.random() * totalWeight; 
+    /* Find the chosen word */
+    for (const item of weightedList) { 
+      if (r < item.weight) return item.word; 
+      r -= item.weight; 
+    } 
+  }
+
+  function shuffleWordsOrder(){
+    /* 1. Create a copy to avoid mutating the original data */
+    const shuffledWords = [...wordsData];
+
+    /* 2. Shuffle the array (Fisher-Yates algorithm) */
+    for (let i = shuffledWords.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledWords[i], shuffledWords[j]] = [shuffledWords[j], shuffledWords[i]];
+    }
+    
+    return shuffledWords;
+  }
+
+  function nextWord() {
+    /* current = wordsData[Math.floor(Math.random() * wordsData.length)]; */
+    /* current = weightedRandomWord(); */
+    /* Mark this word as seen */
+    current = orderedWords[currentIndex];
+    seen.add(current.en);
+    currentIndex++;
+    
+    document.getElementById("word").textContent = mode === "en_to_cn" ? current.en : current.cn;
+
+    document.getElementById("answer").value = "";
+    document.getElementById("result").textContent = "";
+    document.getElementById("answer").focus();
+
+    updateStats();
+  }
+
+  function checkAnswer() {
+    const user = document.getElementById("answer").value.trim();
+    if(user === "") {
+      alert("Please enter your answer.");
+      return;
+    }
+    const correct = mode === "en_to_cn" ? current.cn : current.en;
+
+    attempts++;
+
+    if (isFuzzyMatch(user, correct)) {
+      correctCount++;
+      document.getElementById("result").textContent = "Correct!";
+      setTimeout(nextWord, 500);
+    } else {
+      document.getElementById("result").textContent =
+        "Not quite. Correct answer: " + correct;
+      document.getElementById("errors").innerHTML += `<div>❌ ${mode === "en_to_cn" ? current.en : current.cn} → ${correct} (Your answer: ${user})</div>`;
+    }
+
+    updateStats();
+    /* setTimeout(nextWord, 1000); */
+  }
+
+  function reviewAnswer() {
+    if(document.getElementById("answer").value.trim() != "") {
+      current = weightedRandomWord();
+      seen.add(current.en);
+      document.getElementById("word").textContent = mode === "en_to_cn" ? current.en : current.cn;            
+    }
+
+    const correct = mode === "en_to_cn" ? current.cn : current.en;
+    document.getElementById("result").textContent =
+      "Review answer: " + correct;
+    document.getElementById("answer").value = correct;    
+
+    updateStats();    
+  }
+
+  document.getElementById("toggle").addEventListener("click", () => {
+    mode = mode === "en_to_cn" ? "cn_to_en" : "en_to_cn";
+    document.getElementById("toggle").textContent =
+      mode === "en_to_cn"
+        ? "Switch to Chinese → English"
+        : "Switch to English → Chinese";
+    nextWord();
+  });
+
+  function updateStats() { 
+    document.getElementById("coverage").textContent = `Coverage: ${seen.size} / ${totalWords}`; 
+    /* alert(correctCount + " | seen: " + seen.size); */
+    /* alert("correctCount: " + correctCount + " | attempts: " + attempts); */
+    const rate = attempts === 0 ? "Accuracy: --" : `Accuracy: ${Math.round((correctCount / attempts) * 100)}%`; 
+    document.getElementById("accuracy").textContent = rate; 
+    if(seen.size === totalWords) {
+      document.getElementById("coverage").textContent += " 🎉 Congratulations!. All words covered!"; 
+      alert("🎉 Congratulations! You have covered all words!");
+      setTimeout(reset, 5000);
+    }
+  }
+
+  function resetStats() {
+    seen.clear();
+    attempts = 0;
+    correctCount = 0;
+    updateStats();
+  }
+
+  function reset() {
+      orderedWords = shuffleWordsOrder();
+      currentIndex = 0;
+      resetStats();
+      nextWord();
+      document.getElementById("errors").innerHTML = "";
+      document.getElementById("result").textContent = "";
+      document.getElementById("answer").value = "";
+  }
+
+  document.addEventListener("keydown", function (e) {
+      /* Ctrl + [ */
+      /* if (e.ctrlKey && e.key === "[") { e.preventDefault(); checkAnswer(); } */
+      /* Ctrl + ] */
+      /* else if (e.ctrlKey && e.key === "]") { e.preventDefault(); nextWord(); } */
+
+      /* Enter key to check answer */
+      if (e.key === "Enter" && !e.ctrlKey) {
+        e.preventDefault();
+        checkAnswer();
+      } else if (e.key === "]" && e.ctrlKey) {
+        e.preventDefault();
+        reviewAnswer();
+      }
+    });
+
+
+</script>

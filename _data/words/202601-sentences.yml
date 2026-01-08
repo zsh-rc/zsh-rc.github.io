@@ -1,0 +1,262 @@
+month: "202601-sentences"
+days:
+- date: "2026/01/02"
+  words:
+  - en: I was absorbed in a detective novel and I didn't notice what was happening in the corridor.
+    cn: 我全神贯注地看一本侦探小说，没注意走廊里发生的事情。
+  - en: Seeing her best friend's success, Susie was consumed with jealousy and was on the edge of collapse.
+    cn: 看到她最好的朋友的成功，苏茜被嫉妒心吞噬，濒临崩溃。
+  - en: The historial site, with its profound cultural significance, is worthy of preservation for future generations.
+    cn: 这个历史遗址具有深厚的文化意义，值得为子孙后代保存。
+  - en: The once-impoverished mountain village witnessed rapid development in recent years.
+    cn: 那个曾经一贫如洗的小山村近几年发展迅猛。
+  - en: Impoverished
+    cn: 贫困的
+  - en: I was about to turn off the TV when a wildlife documentary caught my attention.
+    cn: 我正要关掉电视时，一部野生动物纪录片吸引了我的注意力。
+  - en: It was not until the rescure team arrived at the accident site that the parents who had been anxiously waiting finally felt relieved.
+    cn: 直到救援队到达事故现场，那些焦急等待的父母们才终于感到宽慰。
+  - en: Citizens should take a stand against cyberbullying by reporting offensive online behavior.。
+    cn: 公民们应该通过举报冒犯性的网络行为来反对网络欺凌。
+  - en: Some believe that an execssive pursuit of online knowledge fragements without integration amounts to neglecting the development of deep practical skills.
+    cn: 有些人认为，过度追求在线知识的碎片化而不加以整合，相当于忽视了深度实践技能的发展。
+  - en: Fragment
+    cn: 碎片
+  - en: The AI-generated image, due to its surral creativity, went viral overnight and sparked heated debates about the boundaries of art.
+    cn: 由于其超现实的创造力，这幅AI生成的图像一夜之间走红，并引发了关于艺术边界的激烈辩论。
+  - en: Boundary
+    cn: 边界
+  - en: Throughout the negotiations, many scientists insisted that wealthier nations take more responsibility for combating climate change.
+    cn: 在整个谈判过程中，许多科学家坚持认为，较富裕的国家应承担更多应对气候变化的责任。
+  - en: Combat
+    cn: 战斗，抗击
+  - en: Many analysts believe that the company has an edge in conversational AI due to its massive data resources.
+    cn: 许多分析人士认为，由于其庞大的数据资源，该公司在对话式人工智能方面具有优势。
+  - en: Some international trade unions called for a boycott of goods from certain regions in response to reported labor rights violations.
+    cn: 一些国际工会呼吁抵制某些地区的商品，以回应报道中的劳工权利侵犯行为。
+  - en: Scientific data indicates that currently extreme weather events are worsening due to continued global warming.
+    cn: 科学数据表明，由于持续的全球变暖，目前极端天气事件正在恶化。
+  - en: The sharp decline in coastal bird populations calls for immediate conservation efforts to protect their habitats.
+    cn: 海鸟种群的急剧下降需要立即采取保护措施来保护它们的栖息地。
+  - en: Habitat
+    cn: 栖息地
+  - en: Trait
+    cn: 特征，品质
+  - en: Instrumental
+    cn: 有帮助的，起重要作用的
+  - en: The aromas from cooked food work with our taste buds to enhance our eating experience.
+    cn: 熟食的香气与我们的味蕾协同工作，提升我们的饮食体验。
+  - en: Aromas
+    cn: 香气
+- date: "2026/01/04"
+  words:
+  - en: Our localized AI-driven campaigns successfully penetrated Southeast Asian markets, achieving 35% market share within six months.
+    cn: 我们的本地化 AI 驱动活动成功渗透到东南亚市场，在 6 个月内获得了 35% 的市场份额。
+  - en: Localize
+    cn: 本地化
+  - en: AI-driven
+    cn: 人工智能驱动的
+  - en: Campaign
+    cn: 活动,如促销活动
+  - en: Penetrate
+    cn: 渗透
+  - en: Penetration
+    cn: 渗透率
+  - en: Market Share
+    cn: 市场份额
+  - en: By leveraging gamified loyalty programs, we boosted annual client retention rates from 62% to 89%.
+    cn: 通过利用游戏化的忠诚度计划，我们将年度客户保留率从 62% 提高到 89%。
+  - en: Gamified
+    cn: 游戏化的
+  - en: Loyalty Program
+    cn: 忠诚度计划
+  - en: Retention Rate
+    cn: 保留率
+  - en: Boost
+    cn: 提升, 增强
+  - en: We upsold premium cybersecurity packages to 40% of existing SMB clients during Q3 renewal cycles.
+    cn: 在第三季度的续订周期中，我们向 40% 的现有中小企业客户推销了高级网络安全套餐。
+  - en: Upsell
+    cn: 追加销售
+  - en: Premium
+    cn: 高级的
+  - en: Cybersecurity
+    cn: 网络安全
+  - en: SMB
+    cn: 中小企业（Small and Medium-sized Business, SMB）
+  - en: Renewal Cycle
+    cn: 续订周期
+  - en: By streamlining the approval process with RPA, we reduced project launch time from 14 days to 72 hours.
+    cn: 通过使用 RPA 简化审批流程，我们将项目启动时间从 14 天缩短到 72 小时。
+  - en: Streamline
+    cn: 简化
+  - en: Launch
+    cn: 启动
+  - en: Our new compliance framework mitigated 98% of GDPR-related risks during our EU expansion.
+    cn: 我们的新合规框架在我们扩展到欧盟期间减轻了 98% 的 GDPR 相关风险。
+  - en: Compliance Framework
+    cn: 合规框架
+  - en: Mitigate
+    cn: 减轻（风险等）
+  - en: GDPR
+    cn: 通用数据保护条例 (欧盟，General Data Protection Regulation, GDPR)
+  - en: We leveraged historical campaign data to predict 2024 consumer trends with 91% accuracy.
+    cn: 我们利用历史活动数据以 91% 的准确率预测了 2024 年的消费者趋势。
+  - en: Leverage
+    cn: 利用
+  - en: Predict
+    cn: 预测
+  - en: Consumer Trend
+    cn: 消费者趋势
+  - en: Accuracy
+    cn: 准确率
+  - en: Our team pioneered blockchain based supply chain solutions in the luxury sector, securing 8 industry awards.
+    cn: 我们的团队在奢侈品行业开创了基于区块链的供应链解决方案，获得了 8 项行业奖项。
+  - en: Pioneer
+    cn: 开创
+  - en: Blockchain
+    cn: 区块链
+  - en: Supply Chain
+    cn: 供应链
+  - en: Luxury Sector
+    cn: 奢侈品行业
+  - en: Secure
+    cn: 保障, 确保, 使安全
+  - en: The legacy CRM system was overhauled with AI integration, cutting customer query resolution time by 65%.
+    cn: 通过 AI 集成对传统 CRM 系统进行了彻底改革，将客户查询解决时间缩短了 65%。
+  - en: Legacy
+    cn: 传统的, 遗留的
+  - en: Overhaul
+    cn: 彻底改革
+  - en: Integration
+    cn: 集成
+  - en: Resolution Time
+    cn: 解决时间
+  - en: This scalable SaaS architecture supports 10x user growth without infrastructure upgrades.
+    cn: 这种可扩展的 SaaS 架构支持 10 倍的用户增长，而无需进行基础设施升级。
+  - en: Scalable
+    cn: 可扩展的
+  - en: SaaS
+    cn: 软件即服务(Software as a Service，SaaS)
+  - en: Architecture
+    cn: 架构
+  - en: Infrastructure Upgrade
+    cn: 基础设施升级
+  - en: We orchestrated a 15-country product launch with synchronized AR experiences and real-time multilingual support.
+    cn: 我们策划了一个涵盖 15 个国家的产品发布活动，配备同步的 AR 体验和实时多语言支持。
+  - en: Orchestrate
+    cn: 策划, 把...谱写成管弦乐曲（Orchestral Music）; n. Orchestration 编排
+  - en: Synchronize
+    cn: vt. 同步; adj. Synchronized; n. Synchronization
+  - en: AR
+    cn: 增强现实（Augmented Reality, AR）
+  - en: Multilingual Support
+    cn: 多语言支持
+- date: "2026/01/05"
+  words:
+  - en: One faces outwards, with products and services generating billions for trillion-dollar companies. The other faces inwards, creating, updating and sharing—often for free—the basic software tools that make the digital world tick.
+    cn: 一个面向外部，产品和服务为万亿美元公司创造数十亿美元的收入。另一个面向内部，创建、更新和共享——通常是免费的——使数字世界运转的基本软件工具。
+  - en: Outwards
+    cn: 向外的
+  - en: Inwards
+    cn: 向内的
+  - en: Tick
+    cn: 运转
+  - en: Open-source software underpins (巩固) platforms like Google's Android, Apple's iOS, and major web browsers
+    cn: 开源软件支撑着像谷歌的安卓、苹果的 iOS 和主要的网络浏览器这样的平台
+  - en: Underpins
+    cn: 支撑, 巩固
+  - en: Platforms
+    cn: 平台
+  - en: By making software freely available, developers can strengthen their code through collaboration (合作), gain trust by proving its reliability and earn recognition from peers.
+    cn: 通过免费提供软件，开发人员可以通过协作来加强他们的代码，通过证明其可靠性来获得信任，并赢得同行的认可。
+  - en: Collaboration
+    cn: 合作
+  - en: Reliability
+    cn: 可靠性
+  - en: Peers
+    cn: 同行
+  - en: recognition
+    cn: 认可
+  - en: Unluckily, modern tech giants have stretched the term into meaninglessness.
+    cn: 不幸的是，现代科技巨头已经将这个词的意义延伸到了毫无意义的地步。
+  - en: Tech Giants
+    cn: 科技巨头
+  - en: Meaninglessness
+    cn: 毫无意义
+  - en: Many so-called "free" products are restricted, developed in secrecy and unable to bring about true innovation. 
+    cn: 许多所谓的“免费”产品受到限制，在秘密中开发，无法带来真正的创新。
+  - en: Restricted
+    cn: 受限制的
+  - en: Secrecy
+    cn: 秘密
+  - en: Innovation
+    cn: 创新
+  - en: This has led to a heated debate about the real meaning of open source in the age of AI.
+    cn: 这引发了关于人工智能时代开源真正意义的激烈辩论。
+  - en: lead to
+    cn: 导致
+  - en: Heated Debate
+    cn: 激烈辩论
+  - en: This allows any other developer to download, modify (修改) and repurpose the code. 
+    cn: 这允许任何其他开发人员下载、修改和重新利用代码。
+  - en: Repurpose
+    cn: 重新利用
+  - en: modify
+    cn: 修改
+  - en: Over time, original code can evolve into entirely new products. Android, for instance, is based on Linux, originally written for computers.
+    cn: 随着时间的推移，原始代码可以演变成全新的产品。例如，安卓是基于 Linux 的，最初是为计算机编写的。
+  - en: over time
+    cn: 随着时间的推移
+  - en: Evolve
+    cn: 演变
+  - en: Entirely
+    cn: 完全地
+  - en: for instance
+    cn: 例如
+  - en: Meta, the parent company of Facebook, proudly claims that its large language model (LLM), Llama 3, is "open source".
+    cn: Facebook 的母公司 Meta 自豪地宣称其大型语言模型 (LLM) Llama 3 是“开源”的。
+  - en: Parent Company
+    cn: 母公司
+  - en: Large Language Model
+    cn: 大型语言模型(LLM)
+  - en: What Meta shares freely is the weights (权重) of the artificial neurons (人工神经元) in its LLM, rather than all the source code and training data.
+    cn: Meta 自由分享的是其 LLM 中人工神经元的权重，而不是所有的源代码和训练数据。
+  - en: weight
+    cn: 权重, 重量
+  - en: Artificial Neurons
+    cn: 人工神经元
+  - en: Neural Network
+    cn: 神经网络
+  - en: Source Code
+    cn: 源代码
+  - en: Training Data
+    cn: 训练数据
+  - en: Unlike traditional software development, AI training involves creating a blueprint of the model and feeding it large amounts of data.
+    cn: 与传统的软件开发不同，人工智能训练涉及创建模型的蓝图并向其提供大量数据。
+  - en: Blueprint
+    cn: 蓝图
+  - en: Feed
+    cn: 提供, 饲养
+  - en: Over time, the model improves its performance to an acceptable level.
+    cn: 随着时间的推移，模型的性能提高到可接受的水平。
+  - en: performance
+    cn: 性能
+  - en: Acceptable
+    cn: 可接受的
+  - en: Even if someone were to train an AI model using the same data and hardware as Llama 3, the result would not be identical. 
+    cn: 即使有人使用与 Llama 3 相同的数据和硬件来训练 AI 模型，结果也不会是完全相同的。
+  - en: Identical
+    cn: 完全相同的, Identity (身份), Identification ()
+  - en: Training a cutting-edge AI model that can compete with the latest releases from OpenAI or its peers.
+    cn: 训练一个能够与 OpenAI 或其同行最新发布相竞争的尖端人工智能模型。
+  - en: cutting-edge
+    cn: 先进的，尖端的（技术，科技等）
+  - en: release
+    cn: 发行版本，释放
+  - en: The new eco-friendly packaging not only reduces waste but also enhances the brand's sustainability image.
+    cn: 新的环保包装不仅减少了浪费，还提升了品牌的可持续形象。
+  - en: Eco-friendly
+    cn: 环保的
+  - en: Sustainability
+    cn: 可持续性

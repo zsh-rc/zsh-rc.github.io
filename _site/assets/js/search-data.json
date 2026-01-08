@@ -1,0 +1,1318 @@
+{"0": {
+    "doc": "Jekyll📚",
+    "title": "Jekyll📚",
+    "content": "Ref.: Jekyll . ",
+    "url": "/docs/technologies/2025-05-01-jekyll/",
+    
+    "relUrl": "/docs/technologies/2025-05-01-jekyll/"
+  },"1": {
+    "doc": "Jekyll/GitHub Pages Set-up (Windows)",
+    "title": "Table of contents",
+    "content": ". | Part 1 - Quick start of creating personal site . | Create Github repository. | Enable Github Pages by settings. | Apply Jekyll theme. (optional) | Visit personal site. | . | Part 2 - Set up local development and CI/CD environment. (Windows) . | Install Ruby on Windows | Install Jekyll | Configure Jekyll Theme | Build and run local site |  Q&amp;A of common problems and errors | . | . ",
+    "url": "/docs/technologies/2025-05-18-jekyll-setup/#table-of-contents",
+    
+    "relUrl": "/docs/technologies/2025-05-18-jekyll-setup/#table-of-contents"
+  },"2": {
+    "doc": "Jekyll/GitHub Pages Set-up (Windows)",
+    "title": "Part 1 - Quick start of creating personal site",
+    "content": "Create Github repository. | Login github.com and create a repository with the following settings. | . Repository Name: {Owner} / {username}.github.ioPublic or private: PublicAdd a README file: CheckedAdd .gitignore template: Jekyll . Enable Github Pages by settings. | Open the created repository. | Click tab “Settings” &gt; menu item “Pages”. | . Source: Deply from a branchBranch: Main / (root) . Apply Jekyll theme. (optional) . The step is optional. If you want to see how it is easy to quickly enable Jekyll theme, following the steps below. | Create a “_config.yml” file in the root folder of the repository. | Copy the code into the file and save it. | . # _config.yml file.remote_theme: pages-themes/hacker@v0.2.0plugins:- jekyll-remote-themetitle: my site titledescription: my site description. | Click tab “Actions” &gt; “All workflows”. One or two workflow is created automatically because of code repository changes detected by Github Actions. | If the latest workflow runs as below, the deployment of your site is completed successfully. | . Visit personal site. Open https://{username}.github.io. ",
+    "url": "/docs/technologies/2025-05-18-jekyll-setup/#part-1---quick-start-of-creating-personal-site",
+    
+    "relUrl": "/docs/technologies/2025-05-18-jekyll-setup/#part-1---quick-start-of-creating-personal-site"
+  },"3": {
+    "doc": "Jekyll/GitHub Pages Set-up (Windows)",
+    "title": "Part 2 - Set up local development and CI/CD environment. (Windows)",
+    "content": "In the real world, we normally need a local development environment which allows us to code, local debugging and testing. It doesn’t need deploy uncompleted work to remote website every time. In this section, we will lead you step by step for how to set the local development using Microsoft Visual Studio within Windows system. Install Ruby on Windows . | Download latest Ruby+DevKit package (my version is Ruby+Devkit 3.4.4-2 (x64)) from the site https://rubyinstaller.org/downloads/. | Run installer and select all components. | At the last stage of installation, following the instructions to continue the installation in the pop-up command window. | Open a new command window, enter “ruby -v” and “gem -v” to verify. | Installed ruby and gem versions will look like below if all is installed successfully. | . Install Jekyll . | Open a new command window. Run “gem install jekyll bundler”. | Verify after installation completed by command “jekyll -v”. | . Configure Jekyll Theme . | Go to local project root folder, for example “xxx.github.io”. | Assume the “_config.yml” file is configured as below (following part 1 step 3). | . # _config.yml file.remote_theme: pages-themes/hacker@v0.2.0plugins:- jekyll-remote-themetitle: my site titledescription: my site description. | Open a new command window. Navigate to root folder. | Run “bundle init” command. “Gemfile” will be generated if it isn’t there. | Open “Gemfile”. Add the following 3 lines and save it. | . # Gemfilegem \"jekyll\"gem \"jekyll-seo-tag\"gem \"jekyll-remote-theme\" . | In the same command window, run “bundle install”. | Listed packages in Gemfile will be installed. | .  Important tips: . | If there is any error for missing packages, put “gem {pakcage name}” in Gemfile and run “bundle install” again. | For some region (like China), the default Ruby source site “https://rubygems.org” might not be accessible or instable. You need config an accessible mirror source site before run “bundle install”. For exmple: in the same command window, run the command. | . # Change mirror Ruby source site.C:\\Users&gt;bundle config mirror.https://rubygems.org https://gems.ruby-china.com . Build and run local site . | Keep at the root folder in command window. | Run “jekyll build” to complie the site. | Run “jekyll server” to run the site. | Open browser to visit the local site (default: “http://localhost:4000”). | .  Q&amp;A of common problems and errors . |  Error: Liquid Exception: invalid byte sequence in UTF-8…  If UTF-8 is asked, source files must use UTF-8 encoding. To make it corrected, In “Notepad”, “Save As” and select encoding as “UTF-8”. In “Visual Studio”, change default environment setting by “Tools” &gt; “Options” &gt; “Environment” &gt; “Documents”. |  Error: When run “jekyll build”, sometimes it says version incompatiblility error.  Run “bundle clean –force”. Then reinstall by “bundle install” command. |  Tip: Change configured mirror Ruby source site.  Run command line. # Change mirror Ruby source site.C:\\Users&gt;bundle config mirror.https://rubygems.org https://gems.ruby-china.com . |  Error: You have already activated jekyll-sass-converter 3.1.0, but your Gemfile requires jekyll-sass-converter 3.0.0. Prepending bundle exec to your command may solve this. (Gem::LoadError).  After all methods tried, there is still error. Prepending “bundle exec” to the command. For example, use “bundle exec jekyll serve” to start the jekyll web service. # Add \"bundle exec\" befor command.C:\\Users&gt;bundle exec jekyll serve . |  Error: certificate verify failed (unable to get certificate CRL) (OpenSSL::SSL::SSLError) (Gem::LoadError). (Oct-25, error in my MacOS)  Install openssl by command “gem install openssl”, then update project “Gemfile” with “gem “openssl””. # Install openssl.C:\\Users&gt;gem install openssl . # Add openssl into project Gemfile...gem \"openssl\"... |  Error: ERROR: SSL verification error at depth 1: unable to get local issuer certificate (20) ERROR: You must add /C=US/O=Internet Security Research Group/CN=ISRG Root X1 to your local trusted store   . | Download the cacert.pem file from SRG Root X1 certificate. | Save it to a local foder. For example: C:\\Ruby34-x64\\ssl\\cacert.pem | Manually set up the system environment variable set SSL_CERT_FILE to the file location. | . set SSL_CERT_FILE=C:\\Ruby34-x64\\ssl\\cacert.pem . | Run “gem update –system” | Run “ridk install” | . | . References: . | https://docs.github.com/en/pages | https://jekyllrb.com/docs | https://pages.github.com/themes | . ",
+    "url": "/docs/technologies/2025-05-18-jekyll-setup/#part-2---set-up-local-development-and-cicd-environment-windows",
+    
+    "relUrl": "/docs/technologies/2025-05-18-jekyll-setup/#part-2---set-up-local-development-and-cicd-environment-windows"
+  },"4": {
+    "doc": "Jekyll/GitHub Pages Set-up (Windows)",
+    "title": "Jekyll/GitHub Pages Set-up (Windows)",
+    "content": " ",
+    "url": "/docs/technologies/2025-05-18-jekyll-setup/",
+    
+    "relUrl": "/docs/technologies/2025-05-18-jekyll-setup/"
+  },"5": {
+    "doc": "Create a blog site",
+    "title": "Table of contents",
+    "content": ". | Page structure | Posts list page - “blog/index.html” | Create post layout page “_layouts/post.html” | Create .md files in folder “_posts” | Final result | . Prerequisite: This post assumes you have already a website built using Jekyll template. ",
+    "url": "/docs/technologies/2025-05-19-jekyll-blog/#table-of-contents",
+    
+    "relUrl": "/docs/technologies/2025-05-19-jekyll-blog/#table-of-contents"
+  },"6": {
+    "doc": "Create a blog site",
+    "title": "Page structure",
+    "content": "highlighted are used specifically for posts.) . Root Folder . assets . css images js . blog . index.html . _data _includes _layouts _posts _sass . index.html about.md . ",
+    "url": "/docs/technologies/2025-05-19-jekyll-blog/#page-structure",
+    
+    "relUrl": "/docs/technologies/2025-05-19-jekyll-blog/#page-structure"
+  },"7": {
+    "doc": "Create a blog site",
+    "title": "Posts list page - “blog/index.html”",
+    "content": "--- layout: default title: BLOG --- &lt;h1&gt;Latest Posts&lt;/h1&gt; &lt;ul class=\"blog__container\"&gt; {% for post in site.posts %} &lt;li&gt; &lt;h3&gt;&lt;a href=\"{{ post.url }}\"&gt;{{ post.title }}&lt;/a&gt;&lt;span&gt;&amp;nbsp;|&amp;nbsp;{{ post.date | date_to_string }}&lt;/span&gt;&lt;/h3&gt; &lt;span&gt;{{ post.excerpt }}&lt;/span&gt; &lt;/li&gt; {% endfor %} &lt;/ul&gt; . ",
+    "url": "/docs/technologies/2025-05-19-jekyll-blog/#posts-list-page---blogindexhtml",
+    
+    "relUrl": "/docs/technologies/2025-05-19-jekyll-blog/#posts-list-page---blogindexhtml"
+  },"8": {
+    "doc": "Create a blog site",
+    "title": "Create post layout page “_layouts/post.html”",
+    "content": "The layout file will be use for all posts. --- layout: default --- &lt;h1&gt;{{ page.title }}&lt;/h1&gt; &lt;p class=\"post__author__date\"&gt;{{ page.author }}, {{ page.date | date_to_string }}&lt;/p&gt; {{ content }} . ",
+    "url": "/docs/technologies/2025-05-19-jekyll-blog/#create-post-layout-page-_layoutsposthtml",
+    
+    "relUrl": "/docs/technologies/2025-05-19-jekyll-blog/#create-post-layout-page-_layoutsposthtml"
+  },"9": {
+    "doc": "Create a blog site",
+    "title": "Create .md files in folder “_posts”",
+    "content": "File name follows the pattern “2025-01-1-filename.md”. --- layout: post author: my name title: this is my first post. excerpt: My first post summary. --- # Welcome to my blog. ***Helo world=***, this is my first blog post. ",
+    "url": "/docs/technologies/2025-05-19-jekyll-blog/#create-md-files-in-folder-_posts",
+    
+    "relUrl": "/docs/technologies/2025-05-19-jekyll-blog/#create-md-files-in-folder-_posts"
+  },"10": {
+    "doc": "Create a blog site",
+    "title": "Final result",
+    "content": ". | Build and run Jekyll: “jekyll serve”; | Go to “http://localhost:4000/blog”; | Posts are listed in the page; | Click the link to one post to open the post page. | . ",
+    "url": "/docs/technologies/2025-05-19-jekyll-blog/#final-result",
+    
+    "relUrl": "/docs/technologies/2025-05-19-jekyll-blog/#final-result"
+  },"11": {
+    "doc": "Create a blog site",
+    "title": "Create a blog site",
+    "content": " ",
+    "url": "/docs/technologies/2025-05-19-jekyll-blog/",
+    
+    "relUrl": "/docs/technologies/2025-05-19-jekyll-blog/"
+  },"12": {
+    "doc": "Enable pagination",
+    "title": "Table of contents",
+    "content": ". | Install “jekyll-paginate” plugin. | Enable pagination in _config.yml. | Update blog HTML page to render the pagination. | . ",
+    "url": "/docs/technologies/2025-05-20-jekyll-blog-pagination/#table-of-contents",
+    
+    "relUrl": "/docs/technologies/2025-05-20-jekyll-blog-pagination/#table-of-contents"
+  },"13": {
+    "doc": "Enable pagination",
+    "title": "Install “jekyll-paginate” plugin.",
+    "content": ". | Update “Gemfile” to include the plugin. # Gemfile filegem \"jekyll-paginate\" . | Open a new command window. | Navigate to project root folder. | Run “bundle install” command. | . ",
+    "url": "/docs/technologies/2025-05-20-jekyll-blog-pagination/#install-jekyll-paginate-plugin",
+    
+    "relUrl": "/docs/technologies/2025-05-20-jekyll-blog-pagination/#install-jekyll-paginate-plugin"
+  },"14": {
+    "doc": "Enable pagination",
+    "title": "Enable pagination in _config.yml.",
+    "content": ". | Add additional configuration in “_config.yml” file. # _config.yml filepaginate: 5paginate_path: \"/blog/page:num/\" . | . ",
+    "url": "/docs/technologies/2025-05-20-jekyll-blog-pagination/#enable-pagination-in-_configyml",
+    
+    "relUrl": "/docs/technologies/2025-05-20-jekyll-blog-pagination/#enable-pagination-in-_configyml"
+  },"15": {
+    "doc": "Enable pagination",
+    "title": "Update blog HTML page to render the pagination.",
+    "content": "For example, if you have “blog.html” to list all posts. {% if paginator.total_pages &gt; 1 %} &lt;div class=\"pagination\"&gt; {% if paginator.previous_page %} &lt;a href=\"{{ paginator.previous_page_path | relative_url }}\"&gt;&laquo; Prev&lt;/a&gt; {% else %} &lt;span&gt;&laquo; Prev&lt;/span&gt; {% endif %}&lt;br/&gt; {% for page in (1..paginator.total_pages) %} {% if page == paginator.page %} &lt;em&gt;{{ page }}&lt;/em&gt; {% elsif page == 1 %} &lt;a href=\"{{ site.paginate_path | relative_url | replace: 'page:num/', '' }}\"&gt;{{ page }}&lt;/a&gt; {% else %} &lt;a href=\"{{ site.paginate_path | relative_url | replace: ':num', page }}\"&gt;{{ page }}&lt;/a&gt; {% endif %} {% endfor %} {% if paginator.next_page %} &lt;a href=\"{{ paginator.next_page_path | relative_url }}\"&gt;Next &raquo;&lt;/a&gt; {% else %} &lt;span&gt;Next &raquo;&lt;/span&gt; {% endif %} &lt;/div&gt; {% endif %} . | Open a new command window. | Navigate to project root folder. | Run “jekyll serve” command to start the website. | . ",
+    "url": "/docs/technologies/2025-05-20-jekyll-blog-pagination/#update-blog-html-page-to-render-the-pagination",
+    
+    "relUrl": "/docs/technologies/2025-05-20-jekyll-blog-pagination/#update-blog-html-page-to-render-the-pagination"
+  },"16": {
+    "doc": "Enable pagination",
+    "title": "Enable pagination",
+    "content": "Reference: Pagination | Jekyll . Notes: Pagination only works with HTML files. ",
+    "url": "/docs/technologies/2025-05-20-jekyll-blog-pagination/",
+    
+    "relUrl": "/docs/technologies/2025-05-20-jekyll-blog-pagination/"
+  },"17": {
+    "doc": "Enable tags / categories",
+    "title": "Table of contents",
+    "content": ". | Create a new page for grouping by Tag or Cetegory. | /blog/categories.html | . Notes: If page belongs to more tags or categories, use “tags: a, b, c” or “categories: a, b, c”. ",
+    "url": "/docs/technologies/2025-05-21-jekyll-blog-tags/#table-of-contents",
+    
+    "relUrl": "/docs/technologies/2025-05-21-jekyll-blog-tags/#table-of-contents"
+  },"18": {
+    "doc": "Enable tags / categories",
+    "title": "Create a new page for grouping by Tag or Cetegory.",
+    "content": "Taking Category as example, create a page called “/blog/categories.html”. Put the following code and test if it works. --- layout: default title: Categories --- &lt;div class=\"blog__container\"&gt; {% for category in site.categories %} {% capture category_name %}{{ category | first }}{% endcapture %} &lt;h3 class=\"category-head\"&gt;{{ category_name }}&lt;/h3&gt; &lt;a name=\"{{ category_name | slugize }}\"&gt;&lt;/a&gt; {% for post in site.categories[category_name] %} &lt;h4 style=\"margin: 2px;\"&gt;&lt;a href=\"{{ post.url }}\"&gt;{{ post.title }}&lt;/a&gt;&lt;span&gt;&amp;nbsp;|&amp;nbsp;{{ post.date | date_to_string }}&lt;/span&gt;&lt;/h4&gt; {% endfor %} &lt;p&gt;&lt;/p&gt; {% endfor %} &lt;/div&gt; . ",
+    "url": "/docs/technologies/2025-05-21-jekyll-blog-tags/#create-a-new-page-for-grouping-by-tag-or-cetegory",
+    
+    "relUrl": "/docs/technologies/2025-05-21-jekyll-blog-tags/#create-a-new-page-for-grouping-by-tag-or-cetegory"
+  },"19": {
+    "doc": "Enable tags / categories",
+    "title": "/blog/categories.html",
+    "content": ". ",
+    "url": "/docs/technologies/2025-05-21-jekyll-blog-tags/#blogcategorieshtml",
+    
+    "relUrl": "/docs/technologies/2025-05-21-jekyll-blog-tags/#blogcategorieshtml"
+  },"20": {
+    "doc": "Enable tags / categories",
+    "title": "Enable tags / categories",
+    "content": " ",
+    "url": "/docs/technologies/2025-05-21-jekyll-blog-tags/",
+    
+    "relUrl": "/docs/technologies/2025-05-21-jekyll-blog-tags/"
+  },"21": {
+    "doc": "Never Feel Self-pity",
+    "title": "Never Feel Self-pity",
+    "content": "In my long life, there are two things I would never do. 在我漫长的一生中，有两件事我绝不会做 . The firsty thing is to never feel self-pity. 第一件事就是：永远不要自怜 . Life is always accompanied by terrible blows, serious setbacks, unfair encounters, and so on. 人生总会伴随着可怕的打击、严重的挫折、不公平的遭遇等等 . I’m never surprised by humanity. 我永远不会因为人性而感到意外 . Charlie Thomas Munger / 查尔斯·托马斯·芒格 (1924 - 2023) . ",
+    "url": "/docs/brilliant-writtings/2025-05-25-Never-Feel-Self-pity/",
+    
+    "relUrl": "/docs/brilliant-writtings/2025-05-25-Never-Feel-Self-pity/"
+  },"22": {
+    "doc": "《劝学》",
+    "title": "原文",
+    "content": "君子曰：学不可以已。青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规，虽有槁暴，不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。 . 吾尝终日而思矣，不如须臾之所学也。吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。 . 积土成山，风雨兴焉；积水成渊，蛟龙生焉；积善成德，而神明自得，圣心备焉。故不积跬步，无以至千里；不积小流，无以成江海。骐骥一跃，不能十步；驽马十驾，功在不舍。锲而舍之，朽木不折；锲而不舍，金石可镂。蚓无爪牙之利，筋骨之强，上食埃土，下饮黄泉，用心一也。蟹六跪而二螯，非蛇鳝之穴无可寄托者，用心躁也。 . ",
+    "url": "/docs/brilliant-writtings/2025-05-25-Quanxue/#%E5%8E%9F%E6%96%87",
+    
+    "relUrl": "/docs/brilliant-writtings/2025-05-25-Quanxue/#原文"
+  },"23": {
+    "doc": "《劝学》",
+    "title": "译文",
+    "content": "君子说：学习是不可以停止的。 靛青是从蓝草里提取的，可是比蓝草的颜色更深；冰是水凝结而成的，却比水还要寒冷。木材直得符合拉直的墨绳，用煣的工艺把它制成车轮，(那么)木材的弯度(就)合乎圆的标准了，即使再干枯了，(木材)也不会再挺直，是因为经过加工，使它成为这样的。所以木材用墨线量过，再经辅具加工就能取直，刀剑等金属制品在磨刀石上磨过就能变得锋利，君子广泛地学习，而且每天检查反省自己，那么他就会聪明机智，而行为就不会有过错了。 . 我曾经整天思索，(却)不如片刻学到的知识(多)；我曾经踮起脚远望，(却)不如登到高处看得广阔。登到高处招手，胳膊没有比原来加长，可是别人在远处也看见；顺着风呼叫，声音没有比原来加大，可是听的人听得很清楚。借助车马的人，并不是脚走得快，却可以行千里，借助舟船的人，并不是能游水，却可以横渡江河。君子的本性跟一般人没什么不同，(只是君子)善于借助外物罢了。 . 堆积土石成了高山，风雨就从这里兴起了；汇积水流成为深渊，蛟龙就从这儿产生了；积累善行养成高尚的品德，自然会心智澄明，也就具有了圣人的精神境界。所以不积累一步半步的行程，就没有办法达到千里之远；不积累细小的流水，就没有办法汇成江河大海。骏马一跨跃，也不足十步远；劣马拉车走十天，(也能走得很远，)它的成功就在于不停地走。(如果)刻几下就停下来了，(那么)腐烂的木头也刻不断。(如果)不停地刻下去，(那么)金石也能雕刻成功。蚯蚓没有锐利的爪子和牙齿，强健的筋骨，却能向上吃到泥土，向下可以喝到泉水，这是由于它用心专一啊。螃蟹有六条腿，两个蟹钳，(但是)如果没有蛇、鳝的洞穴它就无处存身，这是因为它用心浮躁啊。 . ",
+    "url": "/docs/brilliant-writtings/2025-05-25-Quanxue/#%E8%AF%91%E6%96%87",
+    
+    "relUrl": "/docs/brilliant-writtings/2025-05-25-Quanxue/#译文"
+  },"24": {
+    "doc": "《劝学》",
+    "title": "《劝学》",
+    "content": " ",
+    "url": "/docs/brilliant-writtings/2025-05-25-Quanxue/",
+    
+    "relUrl": "/docs/brilliant-writtings/2025-05-25-Quanxue/"
+  },"25": {
+    "doc": "使用Remarkable Paper Pro",
+    "title": "Table of contents",
+    "content": ". | 打开开发者模式 | 访问设备 . | 通过 USB 连接电脑访问 | 通过 WIFI 远程连接访问 | . | 更新系统时间 | 增加中文字体支持 | . ",
+    "url": "/docs/tips/2025-05-25-rpp/#table-of-contents",
+    
+    "relUrl": "/docs/tips/2025-05-25-rpp/#table-of-contents"
+  },"26": {
+    "doc": "使用Remarkable Paper Pro",
+    "title": "打开开发者模式",
+    "content": ". | 打开 Setting &gt; General &gt; Software； | Turn On “Advanced”； | 选择 Developer mode: 置为 enabled。 | . ",
+    "url": "/docs/tips/2025-05-25-rpp/#%E6%89%93%E5%BC%80%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F",
+    
+    "relUrl": "/docs/tips/2025-05-25-rpp/#打开开发者模式"
+  },"27": {
+    "doc": "使用Remarkable Paper Pro",
+    "title": "访问设备",
+    "content": "需要访问设备通过一些命令方式进行设置。两种访问方式：使用提供的 USB 连接线连接电脑，或者通过 WIFI 远程连接。 . 通过 USB 连接电脑访问 . | 打开 Setting &gt; General &gt; Help: About &gt; Copyrights and licenses； | 在底部获得设备的 IP 地址(例如：10.11.99.1)和 root 用户密码； | 在电脑段，执行 cmd 命令打开命令执行窗口； | 输入 ssh root@10.11.99.1，回车； | 输入 root 密码后，即可连接成功。在接下来的命令行忠可以执行 Remarkable Paper Pro 的命令。 | . 通过 WIFI 远程连接访问 . | WIFI 远程访问需要先通过有线连接设备，使用 root 用户执行命令”rm-ssh-over-wlan on”允许可以远程访问； | 打开 Setting &gt; General &gt; Help: About &gt; Copyrights and licenses； | 在底部会出现另一个无线网络地址，比如 192.168.1.11，这个地址就是设备的 IP 地址； | 使用处于同一无线网络的电脑，打开 cmd 命令窗口； | 输入 ssh root@192.168.1.11,回车； | 输入正确的 root 密码后，即可连接设备。无需使用 USB 线连接电脑即可执行 Remarkable Papare Pro 命令。 | . ",
+    "url": "/docs/tips/2025-05-25-rpp/#%E8%AE%BF%E9%97%AE%E8%AE%BE%E5%A4%87",
+    
+    "relUrl": "/docs/tips/2025-05-25-rpp/#访问设备"
+  },"28": {
+    "doc": "使用Remarkable Paper Pro",
+    "title": "更新系统时间",
+    "content": "如果系统时间与实际有差异，一些重要的功能无法使用。比如，系统不能够远程更新。因此，必须保证设备上的时间与实际时间一致。 . | 通过远程或有线连接设备（如上步骤）； | 使用 root 用户连接设备后，执行”date”命令，即可查看设备的时间； | 调整时间可以通过 Setting &gt; General &gt; Help: About &gt; System time（注意，一般默认为 UTC 时区时间） | 使用 ssh 命令行：timedatectl set-time &lt;2025-10-30 18:17:16&gt; | . ",
+    "url": "/docs/tips/2025-05-25-rpp/#%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4",
+    
+    "relUrl": "/docs/tips/2025-05-25-rpp/#更新系统时间"
+  },"29": {
+    "doc": "使用Remarkable Paper Pro",
+    "title": "增加中文字体支持",
+    "content": "设备默认不支持中文字体，如需要看中文版本电子书，需要在系统中安装中文字体。否则，中文会显示为乱码。 可以通过 FTP 软件，将中文字体安装到设备中。（在此我们以 Windows 系统中使用 WinSCP 软件为例） . | 到 WinSCP 官网下载最新的软件并安装到电脑中； | 通过 WinSCP 连接 Remarkable Paper Pro 设备，需要使用 root 用户名和密码（参照以上步骤在设备中查找 root 密码）； | 在 Windows 系统中找到字体文件目录：c:\\windows\\fonts，找到需要的中文字体文件，比如： msyh.ttc 微软雅黑 / simfang.ttf 仿宋 / STKAITI.TTF 楷体 | 通过 WinSCP 上传到设备目录：/home/root/.local/share/fonts | 连接设备； | 执行命令”fc-cache -f -v”； | 执行命令”systemctl restart xochitl”重启设备； | 打开一中文电子书，验证中文字体或中文书名是否显示正常。 | . 备注：有时候系统重启或者系统升级后，中文会显示乱码，此时连接设备执行命令”systemctl restart xochitl”重启设备会解决问题，不需要重新上传字体文件。 . ",
+    "url": "/docs/tips/2025-05-25-rpp/#%E5%A2%9E%E5%8A%A0%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E6%94%AF%E6%8C%81",
+    
+    "relUrl": "/docs/tips/2025-05-25-rpp/#增加中文字体支持"
+  },"30": {
+    "doc": "使用Remarkable Paper Pro",
+    "title": "使用Remarkable Paper Pro",
+    "content": " ",
+    "url": "/docs/tips/2025-05-25-rpp/",
+    
+    "relUrl": "/docs/tips/2025-05-25-rpp/"
+  },"31": {
+    "doc": "Markdown语法参考手册",
+    "title": "如何修改Markdown Table的样式",
+    "content": "Makedown table可以使用以下代码生成。在浏览器render为&lt;table&gt;的时候，没有增加特别的控制代码，比如id或class属性，这对修改table样式增加了困难，如果不做特殊处理的时候，表格只能使用全网站默认的样式呈现。 . | 表头 1 | 表头 2 | ------ | ------ | 内容 1 | 内容 2 | /* html table */ &lt;table&gt; ... &lt;/table&gt; . ",
+    "url": "/docs/technologies/2025-05-26-markdown-lan/#%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9markdown-table%E7%9A%84%E6%A0%B7%E5%BC%8F",
+    
+    "relUrl": "/docs/technologies/2025-05-26-markdown-lan/#如何修改markdown-table的样式"
+  },"32": {
+    "doc": "Markdown语法参考手册",
+    "title": "解决方案",
+    "content": "在表格前面增加一个&lt;div&gt;对象，并指定特别的class，比如”class=’special__table’“，以便后续通过css选择器找到该对象以及相对位置的对象。 . 这里会使用”Next sibling combinator (+)”选择器找到这个&lt;div&gt;对象的邻居&lt;table&gt;对象，再通过css控制&lt;table&gt;的显示样式。 . /* Add the div element with special class */ &lt;div class=\"special__table\"&gt;&lt;/div&gt; | 表头 1 | 表头 2 | ------ | ------ | 内容 1 | 内容 2 | /* find the table object through (+) combinators in css */ &lt;style&gt; div.special__table + table { border-collapse: collapse; } div.special__table + table th{ ... } div.special__table + table tr{ ... } div.special__table + table td{ border: 0.5px dashed #808080; padding: 10px; vertical-align: top; font-size: 0.9rem; } &lt;/style&gt; /* html code rendered */ &lt;div class=\"special__table\"&gt;&lt;/div&gt; &lt;table&gt; ... &lt;/table&gt; . ",
+    "url": "/docs/technologies/2025-05-26-markdown-lan/#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88",
+    
+    "relUrl": "/docs/technologies/2025-05-26-markdown-lan/#解决方案"
+  },"33": {
+    "doc": "Markdown语法参考手册",
+    "title": "Markdown语法参考手册",
+    "content": "Markdown 教程 . 最全面的 Markdown 语法参考手册 . ",
+    "url": "/docs/technologies/2025-05-26-markdown-lan/",
+    
+    "relUrl": "/docs/technologies/2025-05-26-markdown-lan/"
+  },"34": {
+    "doc": "升降桌错误无法升降",
+    "title": "LED显示屏显示”AST”错误",
+    "content": "解决方法: 显示AST说明需要还原，这时候长按下降按钮，直到显示正常数字，此时恢复正常。 . ",
+    "url": "/docs/tips/2025-05-31-lift-table-reset/#led%E6%98%BE%E7%A4%BA%E5%B1%8F%E6%98%BE%E7%A4%BAast%E9%94%99%E8%AF%AF",
+    
+    "relUrl": "/docs/tips/2025-05-31-lift-table-reset/#led显示屏显示ast错误"
+  },"35": {
+    "doc": "升降桌错误无法升降",
+    "title": "LED显示屏显示”LOC”错误",
+    "content": "解决方法: 显示LOC说明启动了儿童锁，这时候长按M按钮，直到显示正常数字，此时恢复正常。相反，如果需要启动儿童锁，同样长按M按钮，知道出现LOC。 . ",
+    "url": "/docs/tips/2025-05-31-lift-table-reset/#led%E6%98%BE%E7%A4%BA%E5%B1%8F%E6%98%BE%E7%A4%BAloc%E9%94%99%E8%AF%AF",
+    
+    "relUrl": "/docs/tips/2025-05-31-lift-table-reset/#led显示屏显示loc错误"
+  },"36": {
+    "doc": "升降桌错误无法升降",
+    "title": "升降桌错误无法升降",
+    "content": "在使用升降桌的时候，有时候会出现无法升降的错误。针对遇到的问题，解决方法总结如下。 . ",
+    "url": "/docs/tips/2025-05-31-lift-table-reset/",
+    
+    "relUrl": "/docs/tips/2025-05-31-lift-table-reset/"
+  },"37": {
+    "doc": "SQL date time format",
+    "title": "CONVERT function | CONVERT(nvarchar(10), count_time, 121)",
+    "content": "| 1st arg | size after conversion. | . | 2nd arg | target date time. | . | 3rd arg | format. | . ",
+    "url": "/docs/technologies/2025-05-31-sql-datetime-convert/#convert-function--convertnvarchar10-count_time-121",
+    
+    "relUrl": "/docs/technologies/2025-05-31-sql-datetime-convert/#convert-function--convertnvarchar10-count_time-121"
+  },"38": {
+    "doc": "SQL date time format",
+    "title": "Here’s the format table",
+    "content": "| Number | Code | Format | . | 0 | 0 or 100 | mon dd yyyy hh:miAM(或PM) | . | 1 | 101 | mm/dd/yy | . | 2 | 102 | yy-mm-dd | . | 3 | 103 | dd/mm/yy | . | 4 | 104 | dd-mm-yy | . | 5 | 105 | dd-mm-yy | . | 6 | 106 | dd mon yy | . | 7 | 107 | mon dd,yy | . | 8 | 108 | hh:mm:ss | . | 9 | 9 or 109 | mon dd yyyy hh:mi:ss:mmmmAM(或PM) | . | 10 | 110 | mm-dd-yy | . | 11 | 111 | yy/mm/dd | . | 12 | 112 | yymmdd | . | 11 | 13 or 113 | dd mon yyyy hh:mi:ss:mmm(24小时制) | . | 14 | 114 | hh:mi:ss:mmm(24小时制) | . | 15 | 20 or 120 | yyyy-mm-dd hh:mi:ss(24小时制) | . | 16 | 21 or 121 | yyyy-mm-dd hh:mi:ss:mmm(24小时制) | . ",
+    "url": "/docs/technologies/2025-05-31-sql-datetime-convert/#heres-the-format-table",
+    
+    "relUrl": "/docs/technologies/2025-05-31-sql-datetime-convert/#heres-the-format-table"
+  },"39": {
+    "doc": "SQL date time format",
+    "title": "Samples",
+    "content": "| SQL | Output | . | SELECT CONVERT ( varchar (100), GETDATE(), 0) | 05 16 2006 10:57AM | . | SELECT CONVERT ( varchar (100), GETDATE(), 1) | 05/16/06 | . | SELECT CONVERT ( varchar (100), GETDATE(), 2) | 06.05.16 | . | SELECT CONVERT ( varchar (100), GETDATE(), 3) | 16/05/06 | . | SELECT CONVERT ( varchar (100), GETDATE(), 4) | 16.05.06 | . | SELECT CONVERT ( varchar (100), GETDATE(), 5) | 16-05-06 | . | SELECT CONVERT ( varchar (100), GETDATE(), 6) | 16 05 06 | . | SELECT CONVERT ( varchar (100), GETDATE(), 7) | 05 16, 06 | . | SELECT CONVERT ( varchar (100), GETDATE(), 8) | 10:57:46 | . | SELECT CONVERT ( varchar (100), GETDATE(), 9) | 05 16 2006 10:57:46:827AM | . | SELECT CONVERT ( varchar (100), GETDATE(), 10) | 05-16-06 | . | SELECT CONVERT ( varchar (100), GETDATE(), 11) | 06/05/16 | . | SELECT CONVERT ( varchar (100), GETDATE(), 12) | 060516 | . | SELECT CONVERT ( varchar (100), GETDATE(), 13) | 16 05 2006 10:57:46:937 | . | SELECT CONVERT ( varchar (100), GETDATE(), 14) | 10:57:46:967 | . | SELECT CONVERT ( varchar (100), GETDATE(), 20) | 2006-05-16 10:57:47 | . | SELECT CONVERT ( varchar (100), GETDATE(), 21) | 2006-05-16 10:57:47.157 | . | SELECT CONVERT ( varchar (100), GETDATE(), 22) | 05/16/06 10:57:47 AM | . | SELECT CONVERT ( varchar (100), GETDATE(), 23) | 2006-05-16 | . | SELECT CONVERT ( varchar (100), GETDATE(), 24) | 10:57:47 | . | SELECT CONVERT ( varchar (100), GETDATE(), 25) | 2006-05-16 10:57:47.250 | . | SELECT CONVERT ( varchar (100), GETDATE(), 100) | 05 16 2006 10:57AM | . | SELECT CONVERT ( varchar (100), GETDATE(), 101) | 05/16/2006 | . | SELECT CONVERT ( varchar (100), GETDATE(), 102) | 2006.05.16 | . | SELECT CONVERT ( varchar (100), GETDATE(), 103) | 16/05/2006 | . | SELECT CONVERT ( varchar (100), GETDATE(), 104) | 16.05.2006 | . | SELECT CONVERT ( varchar (100), GETDATE(), 105) | 16-05-2006 | . | SELECT CONVERT ( varchar (100), GETDATE(), 106) | 16 05 2006 | . | SELECT CONVERT ( varchar (100), GETDATE(), 107) | 05 16, 2006 | . | SELECT CONVERT ( varchar (100), GETDATE(), 108) | 10:57:49 | . | SELECT CONVERT ( varchar (100), GETDATE(), 109) | 05 16 2006 10:57:49:437AM | . | SELECT CONVERT ( varchar (100), GETDATE(), 110) | 05-16-2006 | . | SELECT CONVERT ( varchar (100), GETDATE(), 111) | 2006/05/16 | . | SELECT CONVERT ( varchar (100), GETDATE(), 112) | 20060516 | . | SELECT CONVERT ( varchar (100), GETDATE(), 113) | 16 05 2006 10:57:49:513 | . | SELECT CONVERT ( varchar (100), GETDATE(), 114) | 10:57:49:547 | . | SELECT CONVERT ( varchar (100), GETDATE(), 120) | 2006-05-16 10:57:49 | . | SELECT CONVERT ( varchar (100), GETDATE(), 121) | 2006-05-16 10:57:49.700 | . | SELECT CONVERT ( varchar (100), GETDATE(), 126) | 2006-05-16T10:57:49.827 | . | SELECT CONVERT ( varchar (100), GETDATE(), 130) | 18 ???? ?????? 1427 10:57:49:907AM | . | SELECT CONVERT ( varchar (100), GETDATE(), 131) | 18/04/1427 10:57:49:920AM | . ",
+    "url": "/docs/technologies/2025-05-31-sql-datetime-convert/#samples",
+    
+    "relUrl": "/docs/technologies/2025-05-31-sql-datetime-convert/#samples"
+  },"40": {
+    "doc": "SQL date time format",
+    "title": "SQL date time format",
+    "content": " ",
+    "url": "/docs/technologies/2025-05-31-sql-datetime-convert/",
+    
+    "relUrl": "/docs/technologies/2025-05-31-sql-datetime-convert/"
+  },"41": {
+    "doc": "PMBOK® Big Picture",
+    "title": "Table of contents",
+    "content": ". | 5大过程组 (Process Group) | 10大知识领域 (Knowledge Area) | 49个流程定义 (Process) | . 在现实中，任何事情都可以当作一个项目来执行，因此具备项目管理技能以及拥有项目管理思维对每个人都很重要。 . PMBOK® Guide帮助总结了项目管理的5大过程组 (Process Group)、10大知识领域 (Knowledge Area)和49个流程定义 (Process)，是项目管理知识和实践的高度总结。 . ",
+    "url": "/docs/management/2025-06-01-PMP/#table-of-contents",
+    
+    "relUrl": "/docs/management/2025-06-01-PMP/#table-of-contents"
+  },"42": {
+    "doc": "PMBOK® Big Picture",
+    "title": "5大过程组 (Process Group)",
+    "content": "启动 (Initiating) –&gt; 规划 (Planning) –&gt; 执行 (Executing) –&gt; 监控 (Monitoring and Controlling) –&gt; 收尾 (Closing) . %%{init: {\"theme\": \"default\",\"logLevel\": \"info\"}}%% flowchart LR Initiating[\"`启动 (Initiating)`\"] Planning[\"`规划 (Planning)`\"] Executing[\"`执行 (Executing)`\"] Monitoring[\"`监控 (Monitoring and Controlling)`\"] Closing[\"`收尾 (Closing)`\"] Initiating --&gt; Planning Planning --&gt; Executing Executing --&gt; Monitoring Monitoring --&gt; Closing . ",
+    "url": "/docs/management/2025-06-01-PMP/#5%E5%A4%A7%E8%BF%87%E7%A8%8B%E7%BB%84-process-group",
+    
+    "relUrl": "/docs/management/2025-06-01-PMP/#5大过程组-process-group"
+  },"43": {
+    "doc": "PMBOK® Big Picture",
+    "title": "10大知识领域 (Knowledge Area)",
+    "content": ". | 项目整合管理 (Project Integration Management) | 项目范围管理 (Project Scope Management) | 项目进度管理 (Project Schedule Management) | 项目成本管理 (Project Cost Management) | 项目质量管理 (Project Quality Management) | 项目人力资源管理 (Project Human Resources Management) | 项目沟通管理 (Project Communications Management) | 项目风险管理 (Project Risk Management) | 项目采购管理 (Project Procurement Management) | 项目干系人管理 (Project Stakeholder Management) | . ",
+    "url": "/docs/management/2025-06-01-PMP/#10%E5%A4%A7%E7%9F%A5%E8%AF%86%E9%A2%86%E5%9F%9F-knowledge-area",
+    
+    "relUrl": "/docs/management/2025-06-01-PMP/#10大知识领域-knowledge-area"
+  },"44": {
+    "doc": "PMBOK® Big Picture",
+    "title": "49个流程定义 (Process)",
+    "content": "每个知识领域都需要依照5大流程组顺序进行，流程组也就是我们在项目管理中经常提到的项目阶段(Phase)，即每个知识领域都需要具备5个阶段。在每个阶段中，针对每个知识领域PMBOK Guide定义了不同的流程(Process)指导具体的执行。 . 因此，5大流程组、10大知识领域和49个流程定义组成的矩阵结构形成了项目管理的最佳实践(Best Practice)。 . |   | P1. 启动(Initiating) | P2. 规划(Planning) | P3. 执行(Executing) | P4. 监控(Monitoring and Controlling) | P5. 收尾(Closing) | . | 1. 整合管理(Integration Management) | 1. Develop Project Charter | 3. Develop Project Management Plan | 27. Direct and Manage Project Work28. Manage Project Knowledge | 37. Monitor and Control Project Work38. Perform Integrated Change Control | 49. Close Project or Phase | . | 2. 范围管理(Scope Management) |   | 4. Plan Scope Management5. Collect Requirements6. Define Scope7. Create WBS |   | 39. Validate Scope40. Control Scope |   | . | 3. 进度管理(Schedule Management) |   | 8. Plan Schedule Management 9. Define Activities 10. Sequence Activities 11. Estimate Activity Durations 12. Develop Schedule |   | 41. Control Schedule |   | . | 4. 成本管理(Cost Management) |   | 13. Plan Cost Management14. Estimate Costs15. Determine Budget |   | 42. Control Costs |   | . | 5. 质量管理(Quality Management) |   | 16. Plan Quality Management | 29. Manage Quality | 43. Control Quality |   | . | 6. 人力资源管理(Human Resources Management) |   | 17. Plan Resource Management18. Estimate Activity Resources | 30. Acquire Resources31. Develop Team32. Manage Team | 44. Control Resources |   | . | 7. 沟通管理(Communications Management) |   | 19. Plan Communications Management | 33. Manage Communications | 45. Monitor Communications |   | . | 8. 风险管理(Risk Management) |   | 20. Plan Risk Management21. Identify Risks22. Perform Qualitative Risk Analysis23. Perform Quantitative Risk Analysis24. Plan Risk Responses | 34. Implement Risk Responses | 46. Monitor Risks |   | . | 9. 采购管理(Procurement Management) |   | 25. Plan Procurement Management | 35. Conduct Procurements | 47. Control Procurements |   | . | 10. 干系人管理(Stakeholder Management) | 2. Identify Stakeholders | 26. Plan Stakeholder Engagement | 36. Manage Stakeholder Engagement | 48. Monitor Stakeholder Engagement |   | . ",
+    "url": "/docs/management/2025-06-01-PMP/#49%E4%B8%AA%E6%B5%81%E7%A8%8B%E5%AE%9A%E4%B9%89-process",
+    
+    "relUrl": "/docs/management/2025-06-01-PMP/#49个流程定义-process"
+  },"45": {
+    "doc": "PMBOK® Big Picture",
+    "title": "PMBOK® Big Picture",
+    "content": " ",
+    "url": "/docs/management/2025-06-01-PMP/",
+    
+    "relUrl": "/docs/management/2025-06-01-PMP/"
+  },"46": {
+    "doc": "《滕王阁序》赏析",
+    "title": "原文",
+    "content": "滕王阁1 (滕王阁：为唐高祖的儿子滕王李元婴任洪州都督时修建，旧址在今江西南昌赣江之滨。)序 . 2 豫章故郡，洪都新府。 (豫章故郡，洪都新府：豫章是汉朝设置的，治所在南昌，所以说“故郡”。唐初把豫章郡改为“洪州”，所以说“新府”。“豫章”一作”南昌”。) 3 星分翼轸（zhěn），地接衡庐。 (星分翼轸（zhěn）：从星宿名说，（洪州）属于翼、轸二星所对着的地面的区域。古人用天上二十八宿（列星）的方位来区分地面的区域，某个星宿对看地面的某个区域，叫做某地在某星的分野。衡庐：指湖南的衡山和江西的庐山。) 4 襟（jīn）三江而带五湖， (襟三江而带五湖：以三江为襟，以五湖为带。即前面有三江屏蔽，周围有五湖环绕。三江，泛指长江中下游。旧说古时长江流过彭蠡（今鄱阳湖），分成三道入海，故称“三江”。五湖，泛指太湖区域的湖泊。一说指太湖、鄱阳湖、青草湖、丹阳湖、洞庭湖，南昌在五湖之间。) 5 控蛮荆而引瓯（ōu）越。 (控蛮荆而引瓯（ōu）越：控制楚地，连接瓯越。控、引：本义都是指拉弓，引申为控制。蛮荆，古楚地（今湖北、湖南一带），这是沿用古代的说法。瓯越，原为族名，古越族的一支，分布于瓯江一带，故名。后也指该族所居之地，相当于今浙江南部地区。) 6 物华天宝，龙光射牛斗之墟； (物华天宝，龙光射牛斗之墟：物产精美，犹如天上的珍宝，宝剑的光芒直射（天上）牛、斗二星所在的区域。龙光，宝剑的光芒。墟：域，所在之处。《晋书·张华传》记载了这样的传说：牛、斗二星之间常现紫气，张华请豫章人雷焕来看，雷焕说那是宝剑的光芒上通于天。后来果然在豫章的丰城地下掘出了双剑，一名龙泉，一名太阿。宝剑出土后，星间紫气也消失了。) 7 人杰地灵，徐孺（rú）下陈蕃（fān）之榻。 (人杰地灵，徐孺下陈蕃之榻：人物俊杰，源于地方的灵秀，徐孺子在太守陈蕃家中下榻。徐孺，名稚，字孺子，南昌人，东汉时名士，家贫，常亲自耕种，德行为人所景仰。当时陈蕃为豫章太守，素来不接待宾客，专为徐稚设一榻，平时挂起，只有徐稚来访才放下。因此后世有“下榻”的说法。下，名词使动用法，使……放下。榻，狭长而低矮的坐卧用具。) 8 雄州雾列， (雄州雾列：雄伟的大州像雾一样涌起，形容洪州的繁盛。州，指洪州。) 9 俊采星驰。 (俊采星驰：杰出的人才像星星一样，形容人才之多。俊采，指人才。星驰，众星是运行着的，所以说“驰”。) 10 台隍枕夷夏之交， (台隍（huáng）枕夷夏之交：南昌城处在瓯越与中原接壤的地方。这是说洪州处于要害之地。台隍，城台和护城壕，这里指南昌城。枕：倚，据。夷，古代称少数民族为夷，这里指上文所说的蛮荆、瓯越之地。夏，古代汉族自称夏，这里指中原地区。交，动词活用名词，接壤的地方。) 11 宾主尽东南之美。 (宾主尽东南之美：（来赴这次宴会的）客人和主人，都是东南一带的俊杰。主，指洪州都督阎公，名字不详。美，形容词活用名词，俊杰。) 12 都督阎公之雅望，棨（qǐ）戟（jǐ）遥临；宇文新州之懿（yì）范，襜（chān）帷暂驻。 (都督阎公之雅望，棨（qǐ）戟（jǐ）遥临；宇文新州之懿（yì）范，襜（chān）帷暂驻：有崇高声望的都督阎公远道来临，有美好德行的新州刺史宇文氏在此地暂时停留。宇文，复姓，名字不详。新州，州名，今广东新兴。懿范，美好的风范。襜帷，车的帷幔，这里借指宇文新州的车马。棨戟，有套的戟，古时官吏出行时用做前导的一种仪仗。都督的仪仗到了，也就是说阎公光临。新州，州名，今广东新兴。) 13 十旬休假， (十旬休假：指恰好赶上十日休假的日子。当时官员十天休息一天，叫做“旬休”。) 14 胜友如云；千里逢迎， (千里逢迎：指迎接千里而来的客人。) 15 高朋满座。腾蛟起凤，孟学士之词宗； (腾蛟（jiāo）起凤，孟学士之词宗：文坛上众望所归的孟学士，文章的辞采有如蛟龙腾空，凤凰飞起（那样灿烂夺目）。孟学士，名字不详。学士，掌管文学撰述的官。词宗，文词的宗主。) 16 紫电青霜，王将军之武库。 (紫电青霜，王将军之武库：王将军的兵器库里藏有锋利的宝剑，意在显示王将军的勇武和韬略。紫电，宝剑名。晋·崔豹《古今注·舆服》：“吴大皇帝（孙权）有宝刀三，宝剑六，二曰紫电。”青霜，也指剑。《西京杂记》卷一：“高祖（汉高祖）斩白蛇剑，……刃上常若霜雪。”也可写作“清霜”。王将军，名字不详。) 17 家君作宰，路出名区；童子何知，躬逢胜饯。 (家君作宰，路出名区；童子何知，躬逢胜饯：家父作交趾县的县令，自己因探望父亲路过这个有名的地方（指洪州）；年幼无知，（却有幸）参加这场盛大的宴会。宰，县令，这里指交趾县的县令。出，过。何，宾语前置，应为“知何”，懂得什么。饯，送行的宴会。) . 18 时维九月，序属三秋。 (时维九月，序属（zhǔ）三秋：指当时正是深秋九月。维，语气词。序，时序（春夏秋冬）。属，适值。三秋，秋季，这里指秋天的第三个月，即九月。) 19 潦水尽而寒潭清，烟光凝而暮山紫。俨骖（cān）騑（𬴂，fēi）于上路&lt;， (俨骖（cān）騑（fēi）于上路：驾着车在高高的道路上（前行）。俨：使整齐，整治。骖騑，驾车的马。上，高。) 20 访风景于崇阿。临帝子之长洲，得天人之旧馆。 (临帝子之长洲，得天人之旧馆：意思是说到滕王阁来观赏。帝子、天人，都指滕王。长洲，指滕王阁前的沙洲。旧馆，指滕王阁。有版本为“得仙人之旧馆”。) 21 层峦耸翠，上出重霄；飞阁流丹，下临无地。 (层峦耸翠，上出重霄；飞阁流丹，下临无地：（在这里可以望见）重叠的峰峦耸起一片苍翠，上达重霄；凌空架起的阁道上，涂饰的朱红色油彩鲜艳欲滴，从阁道往下看，地好像没有了似的。飞阁，架空建筑的阁道。流，形容彩画鲜艳欲滴。丹，丹漆，这里泛指彩绘。临，从高处往下探望。飞阁流丹一作飞阁翔丹。) 22 鹤汀（tīng）凫（fú）渚（zhǔ），穷岛屿之萦（yíng）回；桂殿兰宫，即冈峦之体势。 (鹤汀凫（fú）渚（zhǔ），穷岛屿之萦（yíng）回；桂殿兰宫，即冈峦之体势：鹤、野鸭止息的水边平地和小洲，极尽岛屿曲折回环的景致；用桂木、木兰修筑的宫殿，（高低起伏）像冈峦的样子。桂、兰，两种名贵的树，这里是形容宫殿的华丽、讲究。) . 23 披绣闼（tà），俯雕甍（méng）， (披绣闼（tà），俯雕甍（méng）：打开精美的阁门，俯瞰雕饰的屋脊。绣，指雕刻得精美细致。) 24 山原旷其盈视，川泽纡其骇（hài）瞩。 (山原旷其盈视，川泽纡其骇瞩：放眼远望，辽阔的山岭、平原充满人们的视野，迂回的河流、湖泽让人看了吃惊。盈视，极目遥望，满眼都是。骇瞩，对所见的景物感到惊异。) 25 闾（lǘ）阎（yán）扑地，钟鸣鼎食之家；舸舰弥津，青雀黄龙之舳。 (闾（lǘ）阎（yán）扑地，钟鸣鼎食之家；舸（gě）舰弥津，青雀黄龙之舳：房屋遍地，有不少官宦人家；船只停满渡口，有许多装饰着青雀、黄龙头形的大船。闾阎，里门，这里代指房屋。钟鸣鼎食之家，指大家世族，因古代贵族吃饭时要鸣钟列鼎，鼎中盛食物。青雀黄龙之舳，船头作鸟头形、龙头形。) 26 云销雨霁，彩彻区明。 (云销雨霁（jì），彩彻区明：云消雨停，阳光普照，天空明朗。) 27 渔舟唱晚，响穷彭蠡（lǐ）之滨； (彭蠡（lǐ）：古代大泽，即现在的鄱阳湖。) 28 雁阵惊寒，声断衡阳之浦。 (声断衡阳之浦：鸣声到衡阳之浦而止。断，止。相传衡阳有回雁峰，雁至此就不再南飞，待春而回。) . 29 遥襟甫畅，逸兴遄（chuán）飞。 (遥襟甫畅，逸兴遄（chuán）飞：登高望远的胸怀顿时舒畅，飘逸脱俗的兴致油然而生。) 30 爽籁发而清风生，纤歌凝而白云遏。 (爽籁（lài）发而清风生，纤歌凝而白云遏（è）：宴会上，排箫响起，好像清风拂来；柔美的歌声缭绕不散，遏止了白云飞动。爽，形容籁的发音清脆。籁，排箫，一种由多根竹管编排而成的管乐器。) 31 睢园绿竹，气凌彭泽之樽； (睢（suī）园绿竹，气凌彭泽之樽（zūn）：今日的宴会，好比当年睢园竹林的聚会，在座的文人雅士，豪爽善饮的气概超过了陶渊明。睢园，西汉梁孝王在睢水旁修建的竹园，他常和一些文人在此饮酒赋诗。) 32 邺水朱华，光照临川之笔。 (邺（yè）水朱华，光照临川之笔：这是借诗人曹植、谢灵运来比拟参加宴会的文人。邺，今河北临漳，是曹魏兴起的地方。曹植曾在这里作过《公宴诗》，诗中有“朱华冒绿池”的句子。临川之笔，指谢灵运，他曾任临川（今属江西）内史。) 33 四美具， (四美：指良辰、美景、赏心、乐事。) 34 二难并。穷睇眄于中天， (睇（dì）眄（miǎn）：眼睛左转右动地观望。睇，斜视。眄，也是斜视的意思。) 35 极娱游于暇日。天高地迥，觉宇宙之无穷；兴尽悲来，识盈虚之有数。 (识盈虚之有数：知道事务的兴衰成败是有定数的。) 36 望长安于日下，目吴会于云间。 (望长安于日下，目吴会于云间：远望长安，遥看吴会。长安，唐朝的国都。吴会，吴地的古称。) 37 地势极而南溟深，天柱高而北辰远。 (地势极而南溟（míng）深，天柱高而北辰远：地势偏远，南海深邃；天柱高耸，北极星远悬。天柱，《神异经》记载，昆仑山上铜柱，高入天穹，叫做“天柱”。北辰，北极星，这里暗指国君。) 38 关山难越，谁悲失路之人；萍水相逢，尽是他乡之客。怀帝阍而不见，奉宣室以何年？ (帝阍（hūn）：原指天帝的守门者。这里指皇帝的宫门。宣室：汉未央宫前殿正室叫宣室。汉文帝曾坐宣室接见贾谊，谈话到半夜。) . 39 嗟乎！时运不齐， (时运不齐：命运不好。不齐，有蹉跎、有坎坷。) 40 命途多舛。 (舛（chuǎn）：不顺。) 41 冯唐易老，李广难封。 (冯唐：西汉人，有才能却一直不受重用。汉武帝时选求贤良，有人举荐冯唐，可是他已九十多岁，难再做官了。李广：汉武帝时的名将，多年抗击匈奴，军功大，却终身没有封侯。) 42 屈贾谊于长沙，非无圣主； (屈贾谊于长沙，非无圣主：汉文帝本想任贾谊为公卿，但因朝中权贵反对，就疏远了贾谊，任他为长沙王太傅。屈，使动用法，使……屈。) 43 窜梁鸿于海曲，岂乏明时？ (窜梁鸿于海曲，岂乏明时：使梁鸿逃到海边（隐居），难道不是在政治昌明的时代吗？窜，使动用法，使……逃。梁鸿，东汉人，因作诗讽刺君王，得罪了汉章帝，被迫逃到齐鲁一带躲避。海曲，海隅，指齐鲁一带临海的地方。明时，政治昌明的时代。) 44 所赖君子见机，达人知命。 (见机：事前洞察事物的动向。达人知命：通达事理的人，知道命运。) 45 老当益壮，宁移白首之心？ (宁移白首之心：哪能在白发苍苍的老年改变心志？) 46 穷且益坚，不坠青云之志。 (青云之志：比喻远大崇高的志向。) 47 酌贪泉而觉爽，处涸辙以犹欢。 (酌（zhuó）贪泉而觉爽：喝下贪泉的水，仍觉得心境清爽。古代传说广州有水名贪泉，人喝了这里的水就会变得贪婪。这句是说有德行的人在污浊的环境中也能保持纯正，不被污染。处涸辙以犹欢：处在奄奄待毙的时候，仍然乐观开朗。处涸辙：原指鲋鱼处在干涸的车辙里。比喻人陷入危急之中。《庄子·外物》有鲋鱼在干涸的车辙中求活的寓言。) 48 北海虽赊，扶摇可接； (北海虽赊（shē），扶摇可接：北海虽然遥远，乘着旋风还可以到达。北海，即《庄子·逍遥游》中的“北冥”。) 49 东隅已逝，桑榆非晚。 (东隅已逝，桑榆非晚：早年的时光虽然已经逝去，珍惜将来的岁月，为时还不晚。东隅，指日出的地方，表示早。桑榆，指日落的地方，表示晚。古人有“失之东隅，收之桑榆”的说法。) 50 孟尝高洁，空余报国之情； (孟尝高洁，空余报国之情：孟尝品行高洁，却空有一腔报国热情。这是作者借孟尝以自比，带有怨意。孟尝，东汉人，为官清正贤能，但不被重用，后来归田。) 51 阮籍猖狂，岂效穷途之哭！ (阮籍猖狂，岂效穷途之哭：怎能效法阮籍不拘礼法，在无路可走时便恸哭而还呢？意思是说，虽然怀才不遇，但也不放任自流。阮籍，三国魏诗人。他有时独自驾车出行，到无路处便恸哭而返，借此宣泄不满于现实的苦闷心情。猖狂，狂放、不拘礼法。) . 52 勃，三尺微命， (三尺微命：指地位低下。三尺，士佩三尺长的绅（古代礼服上束带的下垂部分）。微命，犹如说身份卑微。王勃做过虢州参军，所以这样说。) 53 一介书生。无路请缨，等终军之弱冠； (无路请缨（yīng），等终军之弱冠：自己和终军的年龄相同，却没有请缨报国的机会。请缨，请求皇帝赐给长缨（长绳）。《汉书·终军传》记载，汉武帝想让南越（今广东、广西一带）王归顺，派终军前往劝说，终军请求给他长缨，必缚住南越王，带回到皇宫门前（意思是一定完成使命）。后来用“请缨”指投军报国。弱冠，指二十岁，古代以二十岁为弱年，行冠礼，为成年人。) 54 有怀投笔，慕宗悫之长风。 (投笔：指投笔从军，用班超投笔从戎的典故。宗悫：南朝宋人，少年时很有抱负，说“愿乘长风破万里浪”。) 55 舍簪笏于百龄，奉晨昏于万里。 (舍簪（zān）笏（hù）于百龄，奉晨昏于万里：自己宁愿舍弃一生的功名富贵，到万里以外去朝夕侍奉父亲。簪笏，这里代指官职。簪，束发戴冠用来固定帽子的簪。笏，朝见皇帝时用来记事的手版。) 56 非谢家之宝树，接孟氏之芳邻。 (非谢家之宝树，接孟氏之芳邻：自己并不是像谢玄那样出色的人才，却能在今日的宴会上结识各位名士。谢家之宝树，指谢玄。《晋书·谢玄传》记载，晋朝谢安曾问子侄们：“为什么人们总希望自己的子弟好？”侄子谢玄回答：“譬如芝兰玉树，欲使其生于庭阶耳。”后来就称谢玄为谢家宝树。孟氏之芳邻，这里借孟子的母亲为寻找邻居而三次搬家的故事，来指赴宴的嘉宾。) 57 他日趋庭，叨陪鲤对； (他日趋庭，叨陪鲤对：过些时候自己将到父亲那里陪侍和聆听教诲。趋庭，快步走过庭院，这是表示对长辈的恭敬。叨，惭愧地承受，表示自谦。鲤对，孔鲤是孔子的儿子，鲤对指接受父亲教诲。事见《论语·季氏》：（孔子）尝独立，（孔）鲤趋而过庭。（子）曰：“学诗乎？”对曰：“未也。”“不学诗，无以言。”鲤退而学诗。他日，又独立，鲤趋而过庭。（子）曰：“学礼乎？”对曰：‘未也。”“不学礼，无以立。”鲤退而学礼。) 58 今兹捧袂，喜托龙门。 (捧袂（mèi）：举起双袖作揖，指谒见阎公。喜托龙门：（受到阎公的接待）十分高兴，好像登上龙门一样。托，指寄托身子，这是客气话。龙门，地名，在今山西河津西北的黄河中，那里两岸夹山，水险流急，相传鲤鱼跃过龙门则变为飞龙。这里借“登龙门”的说法，表示由于谒见名人而提高了自己的身份。) 59 杨意不逢，抚凌云而自惜； (杨意不逢，抚凌云而自惜：没有遇到杨得意那样引荐的人，虽有文才也（只能）独自叹惋。这里是以司马相如自比，又叹惜遇不到引荐的人。杨意：即蜀人杨得意，任掌管天子猎犬的官，西汉辞赋家司马相如是由他推荐给汉武帝的。凌云，这里指司马相如的赋。《史记·司马相如传》记载，相如献《大人赋》，“天子大悦，飘飘有凌云之气，似游天地之间”。) 60 钟期既遇，奏流水以何惭？ (钟期既遇，奏流水以何惭：既然遇到钟子期那样的知音，演奏高山流水的乐曲又有什么羞惭呢？意思是说，遇到阎公这样的知音，自己愿意在宴会上赋诗作文。钟期，即钟子期。《列子·汤问》记载，俞伯牙弹琴，钟子期能听出他是“志在高山”还是“志在流水”，遂成知音。) . 61 呜乎！胜地不常，盛筵难再； (难再：难以第二次遇到。) 62 兰亭已矣， (兰亭已矣：当年兰亭宴饮集会的盛况已成为陈迹了。) 63 梓泽丘墟。 (梓（zǐ）泽丘墟：繁华的金谷园也已变为荒丘废墟。梓泽，金谷园的别称，为西晋石崇所建，故址在今河南洛阳西北。) 64 临别赠言，幸承恩于伟饯；登高作赋，是所望于群公。 (登高作赋，是所望于群公：登高而作赋，那是在座诸公的事了。《韩诗外传》卷七：“孔子曰：‘君子登高必赋。’”) 65 敢竭鄙怀，恭疏短引； (恭疏短引：恭敬地写此小序。) 66 一言均赋，四韵俱成。 (一言均赋，四韵俱成：我这首诗铺陈出来，成为四韵。) 67 请洒潘江，各倾陆海云尔。 (请洒潘江，各倾陆海云尔：请各位宾客竭尽文才，写出好作品。洒、倾各与江、海对应，意思是竭尽才能，写诗作文。潘岳、陆机都是晋朝人，南朝梁人钟嵘的《诗品》云“陆才如海，潘才如江”。云尔，语气助词，用在句尾，表示述说完了。) . 滕王高阁临江渚，佩玉鸣鸾罢歌舞。 . 画栋朝飞南浦云，珠帘暮卷西山雨。 . 闲云潭影日悠悠，物换星移几度秋。 . 阁中帝子今何在？槛外长江空自流。 . ",
+    "url": "/docs/brilliant-writtings/2025-06-01-Tengwanggexu/#%E5%8E%9F%E6%96%87",
+    
+    "relUrl": "/docs/brilliant-writtings/2025-06-01-Tengwanggexu/#原文"
+  },"47": {
+    "doc": "《滕王阁序》赏析",
+    "title": "译文",
+    "content": "滕王阁序 . 这里是汉代的南昌郡城，如今是洪州都督府，天上的方位属于翼、轸两星宿的分野，地上连结着衡山和庐山。以三江为衣襟，以五湖为衣带，控制楚地，连接闽越。这里有物类精华、天产珍宝，宝剑的光芒直冲上牛、斗二星之间。人中有英杰，大地有灵气，陈蕃专为徐孺设下几榻。雄伟的洪州城，房屋像雾般罗列，英俊的人才，像繁星一样活跃。城池坐落在夷夏交界之地，主人与宾客，汇集了东南地区的青年才俊。都督阎公，享有崇高的名望，远道来到洪州坐镇；宇文州牧，是美德的楷模，赴任途中在此暂留。正逢十旬休假的日子，杰出的朋友云集，高贵的宾客，也都不远千里来此聚会，文坛领袖孟学士，其文采像腾起的蛟龙、飞舞的彩凤，王将军的武库里，藏有像紫电、青霜一样锋利的宝剑。父亲在交趾做县令，我在探亲途中路过这方宝地；我年幼无知，竟然有幸亲自参加了这次盛大的宴会。 . 时值九月深秋，积水消尽，潭水清澈，云烟凝结在暮霭中，山峦呈现一片紫色。在高高的山路上驾着马车，在崇山峻岭中访求风景，来到昔日帝子的长洲，找到仙人居住过的宫殿，这里山峦重叠，山峰耸入云霄。凌空的楼阁，红色的阁道犹如飞翔在天空，从阁上看深不见底、白鹤、野鸭栖息的小洲，极尽岛屿的迂折回环之势，威严的宫殿，依照起伏的山峦而建。 . 打开雕花的阁门，俯视华美的屋脊。山峰平原尽收眼底，湖川曲折令人惊叹。房屋密集，不少富贵人家，船只塞满了渡口，都是雕刻着青雀黄龙花纹的大船。雨过天晴，虹消云散，阳光朗照。落霞与孤雁一起飞翔，秋水长天连成一片。傍晚渔舟中传来歌声，响彻彭蠡湖滨，雁群因寒意而长鸣，到衡阳岸边方止。 . 放眼远望，心胸顿时舒畅，兴致兴起，排箫的音响引来了清风，柔缓的歌声令白云陶醉，像在睢园竹林的聚会，宴会上的人酒量超过陶渊明，像在邺水赞咏莲花，席上人的文采胜过谢灵运。良辰、美景、赏心、乐事这四种美好的事物都已经齐备，贤主、嘉宾千载难逢。向天空中远眺，在假日里尽享欢娱，天高地远，令人感到宇宙的无穷。欢乐逝去，悲哀袭来，我想到了事物的兴衰成败是有定数的。远望长安，东看吴会，陆地的尽头是深不可测的大海，北斗星多么遥远，天柱山高不可攀。关山重重难以跨越，有谁同情不得志的人？萍水相逢，大家都是异乡之客。心系朝廷，却不被召见，什么时候才能像贾谊那样去侍奉君王呢？ . 唉！命运不顺，路途艰险。冯唐容易老，李广封侯难。把贾谊贬到长沙，并不是没有贤明的君主：梁鸿到海边隐居，难道不是在政治昌明的时代吗？不过是君子能够察觉事物的先兆，通达的人知道自己的命数罢了。年纪大了应当更有壮志，哪能在白发苍苍时改变自己的心志？处境艰难反该更加坚强，不能放弃凌云之志。这样即使喝了贪泉的水。仍然觉得心清无尘；处在干涸的车辙中，还能乐观开朗。北海虽然遥远，乘着旋风还是可以到达；过去的时光虽然已经消逝，珍惜将来的日子还不算晚。孟尝品行高洁，却空有报国之心；阮籍狂放不羁，怎能效仿他在无路可走时便恸哭而返？ . 我，地位卑微，一个书生，虽然和终军的年龄相同却没有报国的机会；像班超那样有投笔从戎的豪情，也有宗悫“乘风破浪”的壮志。而今放弃一生的功名，到万里之外去侍奉父亲，不是谢玄那样的人才，却结识了诸位名家。过些天到父亲那里聆听教诲，一定像孔鲤那样有礼；今天有幸参加宴会，如登龙门。司马相如倘若没有杨得意的引荐，虽有文才也只能独自叹惋。既然遇到钟子期那样的知音，演奏高山流水的乐曲又有什么羞愧的呢？ . 唉！名胜不能长存，盛宴难逢。兰亭集会的盛况已成陈迹，繁华的金谷园也变为废墟。有幸参加这次盛宴，故写小文以纪念；登高作赋，那就指望在座诸公了。竭尽心力，恭敬地写下这篇小序，我的一首四韵小诗也已写成请各位像潘岳、陆机那样，展现江海般的文才吧。 . 巍然高大的滕王阁建在江渚之滨，当年滕王宴饮的场面已不再呈现。 . 南浦轻云早晨掠过滕王阁的画栋，西山烟雨傍晚卷起滕王阁的珠帘。 . 悠闲的云朵映在潭水上悠然渡过，变换的景物在星空下历数着春秋。 . 修建这滕王阁的帝子在什么地方？只有槛外的长江水滚滚向东流淌。 . ",
+    "url": "/docs/brilliant-writtings/2025-06-01-Tengwanggexu/#%E8%AF%91%E6%96%87",
+    
+    "relUrl": "/docs/brilliant-writtings/2025-06-01-Tengwanggexu/#译文"
+  },"48": {
+    "doc": "《滕王阁序》赏析",
+    "title": "《滕王阁序》赏析",
+    "content": " ",
+    "url": "/docs/brilliant-writtings/2025-06-01-Tengwanggexu/",
+    
+    "relUrl": "/docs/brilliant-writtings/2025-06-01-Tengwanggexu/"
+  },"49": {
+    "doc": "Enable Mermaid Support",
+    "title": "Steps",
+    "content": ". | Find the latest mermaid javascript (cdnjs as example): https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.5.0/mermaid.min.js | Include the following scripts in html page or layout page. | . &lt;!DOCTYPE html&gt; &lt;html lang=\"en-US\"&gt; &lt;head&gt; ... &lt;script src=\"https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.5.0/mermaid.min.js\" type=\"text/javascript\"&gt;&lt;/script&gt; ... &lt;/head&gt; &lt;body&gt; ... &lt;script&gt; var config = { startOnLoad: true, theme: 'forest', flowchart: { useMaxWidth: false, htmlLabels: true } }; mermaid.initialize(config); window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid')); &lt;/script&gt; &lt;/body&gt; &lt;/html&gt; . ",
+    "url": "/docs/technologies/2025-06-01-mermaid-blog/#steps",
+    
+    "relUrl": "/docs/technologies/2025-06-01-mermaid-blog/#steps"
+  },"50": {
+    "doc": "Enable Mermaid Support",
+    "title": "Test by adding mermaid code block",
+    "content": "```mermaid %%{init: {\"flowchart\": {\"htmlLabels\": false}} }%% flowchart LR markdown[\"`This **is** _Markdown_`\"] newLines[\"`Line1 Line 2 Line 3`\"] markdown --&gt; newLines ``` . %%{init: {\"flowchart\": {\"htmlLabels\": false}} }%% flowchart LR markdown[\"`This **is** _Markdown_`\"] newLines[\"`Line1 Line 2 Line 3`\"] markdown --&gt; newLines . ",
+    "url": "/docs/technologies/2025-06-01-mermaid-blog/#test-by-adding-mermaid-code-block",
+    
+    "relUrl": "/docs/technologies/2025-06-01-mermaid-blog/#test-by-adding-mermaid-code-block"
+  },"51": {
+    "doc": "Enable Mermaid Support",
+    "title": "Optional: tips of changing chart style",
+    "content": "By default, the chart is rendered based on the site css styles. Sometimes, the style doesn’t satisfy requirements. One problem I encountered is, my site background is black and the lines between shapes are also with black color. This made the lines invisible. To fix this problem, I use css selector to find the rendered objects &lt;pre&gt;. The mermaid markdown code is rendered as the following. &lt;pre&gt;&lt;code class=\"language-mermaid\" data-processed=\"true\"&gt; &lt;svg ...&gt;...&lt;/svg&gt;&lt;/code&gt;&lt;/pre&gt; . Select &lt;pre&gt; using (has) combinator and class “language-mermaid” which is rendered by mermaid. Then change css style. Here’s the css I’m using. &lt;style&gt; /* mermaid */ pre:has(code.language-mermaid) { background-color:wheat !important; } &lt;/style&gt; . ",
+    "url": "/docs/technologies/2025-06-01-mermaid-blog/#optional-tips-of-changing-chart-style",
+    
+    "relUrl": "/docs/technologies/2025-06-01-mermaid-blog/#optional-tips-of-changing-chart-style"
+  },"52": {
+    "doc": "Enable Mermaid Support",
+    "title": "Enable Mermaid Support",
+    "content": "Ref. Mermaid Get Started cdnjs . ",
+    "url": "/docs/technologies/2025-06-01-mermaid-blog/",
+    
+    "relUrl": "/docs/technologies/2025-06-01-mermaid-blog/"
+  },"53": {
+    "doc": "D3 OrgChart JS",
+    "title": "Highly customizable d3 based organization chart",
+    "content": "https://github.com/bumbeishvili/org-chart . Organize . Done Undo Redo Cancel ",
+    "url": "/docs/technologies/2025-06-02-d3-orgchart/#highly-customizable-d3-based-organization-chart",
+    
+    "relUrl": "/docs/technologies/2025-06-02-d3-orgchart/#highly-customizable-d3-based-organization-chart"
+  },"54": {
+    "doc": "D3 OrgChart JS",
+    "title": "D3 OrgChart JS",
+    "content": " ",
+    "url": "/docs/technologies/2025-06-02-d3-orgchart/",
+    
+    "relUrl": "/docs/technologies/2025-06-02-d3-orgchart/"
+  },"55": {
+    "doc": "Mermaid OrgChart Test",
+    "title": "Mermaid OrgChart Test",
+    "content": "--- Title: Organizational Chart --- %%{init: {\"theme\": \"default\",\"logLevel\": \"info\", \"htmlLabels\": true, \"curve\": \"natural\" }}%% flowchart TD Head(\"fa:fa-home for peace\")---Lead(Lead) Head---Lead1 subgraph team1 Lead---sub1 Lead---sub2 end subgraph team2 Lead1---sub3 Lead1---sub4 end . ",
+    "url": "/docs/technologies/2025-06-02-mermaid-orgchart/",
+    
+    "relUrl": "/docs/technologies/2025-06-02-mermaid-orgchart/"
+  },"56": {
+    "doc": "Zoom and pan SVG in HTML",
+    "title": "Mermaid tree diagram",
+    "content": "%%{init: {\"theme\": \"default\", \"logLevel\": \"info\", \"useMaxWidth\": true }}%% flowchart TD A[Root] --&gt; B[Child 1] A --&gt; C B --&gt; D D --&gt; E click A callback \"Tooltip\" click B callback \"Tooltip\" click C callback \"Tooltip\" . ",
+    "url": "/docs/technologies/2025-06-02-svg-pan-zoom/#mermaid-tree-diagram",
+    
+    "relUrl": "/docs/technologies/2025-06-02-svg-pan-zoom/#mermaid-tree-diagram"
+  },"57": {
+    "doc": "Zoom and pan SVG in HTML",
+    "title": "Install svg-pan-zoom plugin",
+    "content": ". | Goto https://github.com/bumbu/svg-pan-zoom | Download “svg-pan-zoom.min.js” file. | Include the javascript file in web page. | Call init method. | . Sample code block (mermaid chart as example). Tip: Mermaid.js often generates SVGs dynamically, so need to wait for them to appear. (DOMContentLoaded) Tip: To change the default svg width as “100%”. &lt;head&gt; ... &lt;script src=\"/assets/js/svg-pan-zoom.min.js\" type=\"text/javascript\"&gt;&lt;/script&gt; ... &lt;/head&gt; &lt;body&gt; ... &lt;script&gt; //.... /** svg-pan-zoom plugin */ document.addEventListener('DOMContentLoaded', function () { var svgElements = document.querySelectorAll('.language-mermaid &gt; svg') console.log(\"DOMContentLoaded \" + svgElements.length); if (svgElements.length &gt; 0) { svgElements.forEach(el =&gt; { var panZoomInstance = svgPanZoom(`#${el.id}`, { zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true }); var panZoomContainer = el.querySelector('.svg-pan-zoom-control'); if (panZoomContainer) { // debugger; panZoomContainer.style.transform = \"translate(0, 0) scale(0.7)\"; } }); } }); &lt;/script&gt; &lt;/body&gt; . ",
+    "url": "/docs/technologies/2025-06-02-svg-pan-zoom/#install-svg-pan-zoom-plugin",
+    
+    "relUrl": "/docs/technologies/2025-06-02-svg-pan-zoom/#install-svg-pan-zoom-plugin"
+  },"58": {
+    "doc": "Zoom and pan SVG in HTML",
+    "title": "Zoom and pan SVG in HTML",
+    "content": " ",
+    "url": "/docs/technologies/2025-06-02-svg-pan-zoom/",
+    
+    "relUrl": "/docs/technologies/2025-06-02-svg-pan-zoom/"
+  },"59": {
+    "doc": "Project Manager / 项目经理",
+    "title": "项目经理的重要性",
+    "content": "项目经理是项目团队的角色之一，也是在项目启动之前需要第一个确定的重要角色。项目经理不仅仅是具有一定权力的领导者，更多的是为项目达成预定目标所承担的首要责任人。项目执行效率和最终成功与否与项目经理的管理水平有着非常大的关系。 . 一个组织通常会通过各种各样的项目去实现组织的战略，项目经理就是组织战略和项目团队的纽带。深刻理解组织战略和项目目标之间的关系，将战略和目标正确传达给项目团队，领导团队制定适合的实施策略和方法，是项目经理的重要任务之一。 . 在项目执行过程中，项目经理需要整合资源，管控风险，为团队解决障碍，为达成项目目标护航。没有一名合格的项目经理，项目的执行会变得低效混乱，无法达成项目目标而导致项目失败。 . ",
+    "url": "/docs/management/2025-06-08-PMP-pm/#%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7",
+    
+    "relUrl": "/docs/management/2025-06-08-PMP-pm/#项目经理的重要性"
+  },"60": {
+    "doc": "Project Manager / 项目经理",
+    "title": "项目经理所需要具备的技能",
+    "content": "在所经历或观察到的以往的项目中，有两种极端情况导致项目的低效率执行或最终以失败而告终。一种项目经理个人能力非常强，对项目管理工具技能也很擅长，但非常强势专制，对内不能够团结团队，对外不能够很好地合作；另一种则是没有专业的项目管理能力，在项目执行过程中仅仅起到有限的辅助协调作用，对任务以及目标没有任何责任感。 . 作为一名合格的项目经理，所需要具备的是专业技能和综合能力。仅理解和使用那些被公认为良好做法的知识、工具和技术，还不足以实现有效的项目管理。要有效管理项目，除了应具备特定应用领域的技能和通用管理方面的能力以外，项目经理还需具备以下能力： . | 知识能力。也就是专业的项目管理知识，这种知识能力可以通过参加一些专业的管理培训获得，这也是做好项目经理的基础。 | 实践能力。除了专业知识之外，实践能力非常重要。项目经理要把管理知识和实践真正落实到项目中的每个任务和活动，并能够根据实际情况做出对项目有利的调整。另一方面，不断地实践尝试会增强对项目管理知识的更深刻地理解，为将来更有效地管理项目和成功实现项目目标带来更大的可能性。 | 个人能力。是指项目经理在执行项目或相关活动时的行为方式。比如个人态度、主要性格特征和领导力，这也在很大程度上决定了项目是否有效执行。 | . 在PMBOK®中，项目经理的人际能力（interpersonal Skills）被重点提出。这些能力在沟通管理和干系人管理过程中发挥着巨大的作用，甚至有时候也会对项目的成功与否起着决定性的作用。这些能力包括： . | 能力 | 说明 | . | 领导力（Leadership） | 领导项目团队达成预定目标的能力。 | . | 团队建设（Team building） | 培养良好的、团结的、积极上进的团队文化对项目的成功至关重要。 | . | 激励（Motivation） | 项目团队成员需要持续的激励，激励措施不仅限于物质方面的，精神层次的激励更为重要。每个人都希望自己的价值被认可，对个人取得的成绩要及时得表示认可和赞扬。在团队成员遇到困难的时候要主动关怀并引导逾越障碍。 | . | 沟通（Communication） | 项目经理应该做到积极沟通，做有效的沟通，把沟通结构化管理。良好的沟通方式和方法可以增加团队成员对项目经理的信任度。同时也鼓励团队成员做好沟通，培养团队的良好的沟通氛围，也是团队文化建设的重要部分。 | . | 影响力（Influencing） | 影响力是其它能力的综合体现，项目经理需要具备专业的管理知识之外，还需要主动学习增加对项目的理解和认识，与项目团队建立信任团结的关系，领导团队实现项目目标。 | . | 决策能力（Decision making） |   | . | 政治和文化意识（Political and cultural awareness） |   | . | 谈判（Negotiation） |   | . | 信任建立（Trust building） |   | . | 冲突管理（Conflict management） |   | . | 指导（Coaching） |   | . ",
+    "url": "/docs/management/2025-06-08-PMP-pm/#%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86%E6%89%80%E9%9C%80%E8%A6%81%E5%85%B7%E5%A4%87%E7%9A%84%E6%8A%80%E8%83%BD",
+    
+    "relUrl": "/docs/management/2025-06-08-PMP-pm/#项目经理所需要具备的技能"
+  },"61": {
+    "doc": "Project Manager / 项目经理",
+    "title": "Project Manager / 项目经理",
+    "content": " ",
+    "url": "/docs/management/2025-06-08-PMP-pm/",
+    
+    "relUrl": "/docs/management/2025-06-08-PMP-pm/"
+  },"62": {
+    "doc": "Phase 1 启动（Initiating）",
+    "title": "Key Activities",
+    "content": "项目启动需要做好充足的准备工作。 . 项目启动会（Project Kick-off Meeting） . 召开正式的项目启动会是每个项目必不可少的步骤。在召开启动会之前，做好充足的准备工作是非常有必要的，特别是提前与项目的赞助人（sponsor）和关键干系人（Key Stakeholder）沟通获得他（她）们的支持是最好的实践，这有助于项目的顺利开始。一个准备充分、有条理召开的启动会可以增加重要干系人对项目成功的信心和对项目经理的信任，也是项目经理表现自己专业能力的最佳机会。 . 会议之前的主要准备工作包括： . | 项目经理要非常清楚项目的执行策略（Strategy）和方法（Approach）。比如指导项目执行的方法论（Methodology: waterfall/agile），工作任务包划分（Work Package）,主要的里程碑（Milestone），是否分阶段（Phase）执行等等。 | 准备项目启动会材料（通常以演示文稿形式）。 | 识别关键干系人并计划列入会议邀请人员名单。 | 预约参会人员时间，发送正式启动会邀请。 | . ",
+    "url": "/docs/management/2025-06-08-pm-p1/#key-activities",
+    
+    "relUrl": "/docs/management/2025-06-08-pm-p1/#key-activities"
+  },"63": {
+    "doc": "Phase 1 启动（Initiating）",
+    "title": "Key Deliverables",
+    "content": "在这个过程中，启动会材料至关重要，启动会材料是项目经理沟通项目策略、方法、计划和获得支持的重要载体。当然，启动会材料仅仅是项目经理对项目整体把握的思想体现，如何有条理有信心地表达清楚并且让参会人理解是最重要的。 . 项目章程（Project Charter） . 项目章程是一份正式的简短的项目授权书。项目章程应当简洁并且目的明确，就是为了得到赞助人和关键干系人的授权和审批。所以项目章程与项目简介或项目计划不同。 . 一般来讲项目章程仅包含项目目标、范围和职责，具体章节和内容可以参考以下示例，更多关于项目章程可以参考文章。 . | Project nameName your project. Make sure this is descriptive enough that most people will understand what you’re working on. | Project managerWho is the point of contact for this project? | Last revision dateYour project charter is a living document. Including the last revision date can be helpful for team members who are frequently checking back on the charter. | Project purposeWhy are you working on this project? | Project objectivesWhat deliverables and assets do you plan to achieve by the end of the project? | Project scopeWhat are the boundaries of your project deliverables? Which initiatives are not included in the project? | Project team and resourcesWho is working on this project? Which resources (e.g. people, tools, and budget) are available for this work. | Stakeholders and approversWho are the project stakeholders? Who needs to approve the project charter or any project deliverables? | . 启动会材料（Kick-off Slides） . 通常情况下，项目启动会材料应当具备以下章节。 . | 会议目的概述（可选，一般适用于比较高级的管理层会议） | 项目介绍（Introduction） 背景（Background）和目标（Goal）。 项目范围（范围内/外 In-scope / Out-of-scope） 项目周期（Project Schedule）。包含工作包（Work Package）划分、阶段（Phase）、主要里程碑（Key Milestone）和关键交付物（Deliverable）。 风险分析（Risk Assessment）。识别可能发生的重大风险、可行的应对方案以及需要的支持。建立风险管理列表（ 示例）定期审查、更新和汇报。 . | 角色和职责（Roles &amp; Responsibilities）。项目执行的组织架构包括委员会（Steering Committee）、项目经理和项目组成员以及承担的角色。 | 沟通计划（Communication Plan）。一般包括项目组沟通会议和项目汇报会议，会议的目的、大致内容和频次需要明确。 | 项目管理及沟通工具（Project Management Tools）。包括会议工具（比如Teams, Zoom等），文档库（比如Teams Channel, Shared Drive，Confluence等），需要注意的是，提前制定文档规则和文档库结构非常重要，避免在项目执行过程中的信息散落在不同的地方。 | 下一步计划（Actions and Follow-up）。明确指出下一步的重要任务及分工，以及下次汇报的时间和主要内容。 | 问答（Q&amp;A）及会议总结。 | . ",
+    "url": "/docs/management/2025-06-08-pm-p1/#key-deliverables",
+    
+    "relUrl": "/docs/management/2025-06-08-pm-p1/#key-deliverables"
+  },"64": {
+    "doc": "Phase 1 启动（Initiating）",
+    "title": "Phase 1 启动（Initiating）",
+    "content": "|   | P1. 启动 (Initiating) | 主要活动 (Key Activities) |  关键交付物 (Key Deliverables) 工具(Tools) | . | 1. 整合管理&lt; (Integration Management) | 1. Develop Project Charter |  Project Kick-off Meeting  |  Project Charter  Kick-off slides  Risk list  | . | 10. 干系人管理 (Stakeholder Management) | 2. Identify Stakeholders | Pre-alignment with key stakeholders / sponsors   |  Stakeholder List  | . ",
+    "url": "/docs/management/2025-06-08-pm-p1/",
+    
+    "relUrl": "/docs/management/2025-06-08-pm-p1/"
+  },"65": {
+    "doc": "D3 Foundation Knowledge",
+    "title": "Example1 - load .csv data",
+    "content": "&lt;div id=\"container__1\"&gt;&lt;/div&gt; &lt;script&gt; d3.csv('/assets/data/food.csv', function(data){ return { \"food\": data.Food, \"deliciousness\": data.Deliciousness } }).then(function(dataset){ // console.log(\"dataset\", dataset); var body = d3.select(\"#container__1\"); body.selectAll (\"p\") .data(dataset) .enter() .append(\"p\") .text(function(d){ return d.food; }).style(\"color\", function(d){ return \"rgb(0, \" + d.deliciousness * 255 + \", 255)\"; }) }); &lt;/script&gt; . ",
+    "url": "/docs/technologies/2025-06-14-d3-learn/#example1---load-csv-data",
+    
+    "relUrl": "/docs/technologies/2025-06-14-d3-learn/#example1---load-csv-data"
+  },"66": {
+    "doc": "D3 Foundation Knowledge",
+    "title": "Example2 - Draw Circles",
+    "content": "&lt;div id=\"container__2\"&gt;&lt;/div&gt; &lt;script&gt; var dataset2 = [5, 10, 15, 20, 25]; var w = 500; var h= 100; var svg = d3.select(\"#container__2\") .append(\"svg\") .attr(\"width\", w) .attr(\"height\", h); var circles = svg.selectAll(\"circle\") .data(dataset2) .enter() .append(\"circle\") .attr(\"cx\", function(d,i){ return i * 50 + d * 2; }).attr(\"cy\", function(d,i){ return h/2; }).attr(\"r\", function(d,i){ return d; }).attr(\"fill\",function(d){ return \"rgb(\" + d*10 + \", 140, 255)\" }) .attr(\"stroke\", function(d){ return \"rgb(0, 140, \" + d*10 + \")\"; }) .attr(\"stroke-width\", function(d){ return d / 5; }); &lt;/script&gt; . ",
+    "url": "/docs/technologies/2025-06-14-d3-learn/#example2---draw-circles",
+    
+    "relUrl": "/docs/technologies/2025-06-14-d3-learn/#example2---draw-circles"
+  },"67": {
+    "doc": "D3 Foundation Knowledge",
+    "title": "Example3 - Scales functions",
+    "content": "Map from an input domain to an output range. var xScale = d3.scaleLinear() .domain([0, d3.max(dataset, function(d){ return d[0]; })]).range([0, w]); . ",
+    "url": "/docs/technologies/2025-06-14-d3-learn/#example3---scales-functions",
+    
+    "relUrl": "/docs/technologies/2025-06-14-d3-learn/#example3---scales-functions"
+  },"68": {
+    "doc": "D3 Foundation Knowledge",
+    "title": "Example4 - D3 tree graph",
+    "content": " ",
+    "url": "/docs/technologies/2025-06-14-d3-learn/#example4---d3-tree-graph",
+    
+    "relUrl": "/docs/technologies/2025-06-14-d3-learn/#example4---d3-tree-graph"
+  },"69": {
+    "doc": "D3 Foundation Knowledge",
+    "title": "D3 Foundation Knowledge",
+    "content": " ",
+    "url": "/docs/technologies/2025-06-14-d3-learn/",
+    
+    "relUrl": "/docs/technologies/2025-06-14-d3-learn/"
+  },"70": {
+    "doc": "D3 Tree Example",
+    "title": "D3 Tree Example",
+    "content": "&lt;div id=\"root\"&gt;&lt;/div&gt; &lt;script&gt; const svg = d3 .select(\"#root\") .append(\"svg\") .attr(\"width\", 600) .attr(\"height\", 380); const group = svg.append(\"g\").attr(\"transform\", \"translate(50,50)\"); const color = d3.scaleOrdinal(d3.schemeCategory10); /** const data = { name: \"中国\", children: [ { name: \"北京\" }, { name: \"陕西\", children: [{ name: \"宝鸡\" }, { name: \"西安\" }] }, { name: \"上海\" }, { name: \"浙江\", children: [{ name: \"杭州\" }, { name: \"温州\" }] } ] }; // 将数据进行层次化 const dataset = d3.hierarchy(data); */ let data = [ {\"name\": \"Eve\", \"parent\": \"\"}, {\"name\": \"Cain\", \"parent\": \"Eve\"}, {\"name\": \"Seth\", \"parent\": \"Eve\"}, {\"name\": \"Enos\", \"parent\": \"Seth\"}, {\"name\": \"Noam\", \"parent\": \"Seth\"}, {\"name\": \"Abel\", \"parent\": \"Eve\"}, {\"name\": \"Awan\", \"parent\": \"Eve\"}, {\"name\": \"Enoch\", \"parent\": \"Awan\"}, {\"name\": \"Azura\", \"parent\": \"Eve\"} ] const dataset = d3.stratify() .id(function(d) { return d.name; }) .parentId(function(d) { return d.parent; }) (data) // 创建树布局 const tree = d3.tree().size([300, 300]); // 所有节点 const nodes = tree(dataset); group .selectAll(\".link\") .data(nodes.links()) .join(\"path\") .attr(\"class\", \"link\") .attr( \"d\", d3 .linkHorizontal() .x((d) =&gt; d.x) .y((d) =&gt; d.y) ) .attr(\"fill\", \"none\") .attr(\"stroke\", \"#ccc\"); const nodeGroups = group .selectAll(\".node\") .data(nodes.descendants()) .join(\"g\") .attr(\"calss\", (d) =&gt; { return \"node\" + (d.children ? \" node--internal\" : \" node--leaf\"); }) .attr(\"transform\", (d) =&gt; { return `translate(${d.x},${d.y})`; }); nodeGroups .append(\"circle\") .attr(\"r\", 20) .attr(\"fill\", (d, i) =&gt; color(i)); nodeGroups .append(\"text\") .attr(\"dy\", \".33em\") .attr(\"font-size\", \"12px\") .attr(\"text-anchor\", \"middle\") .attr(\"fill\", \"#fff\") .text((d) =&gt; d.data.name); &lt;/script&gt; . ",
+    "url": "/docs/technologies/2025-06-14-d3-tree/",
+    
+    "relUrl": "/docs/technologies/2025-06-14-d3-tree/"
+  },"71": {
+    "doc": "Enlarge/minimize DIV",
+    "title": "Demo",
+    "content": "This is the the demo. ",
+    "url": "/docs/technologies/2025-06-19-css-enlarge/#demo",
+    
+    "relUrl": "/docs/technologies/2025-06-19-css-enlarge/#demo"
+  },"72": {
+    "doc": "Enlarge/minimize DIV",
+    "title": "This is the Title",
+    "content": "This is a centered popup window! . This is a centered popup window! . This is a centered popup window! . This is a centered popup window! . This is a centered popup window! . This is a centered popup window! . This is a centered popup window! . This is a centered popup window! . This is a centered popup window! . ",
+    "url": "/docs/technologies/2025-06-19-css-enlarge/",
+    
+    "relUrl": "/docs/technologies/2025-06-19-css-enlarge/"
+  },"73": {
+    "doc": "Enlarge/minimize DIV",
+    "title": "Code",
+    "content": "Full code below. HTML Elements . These are HTML elements. &lt;div class=\"overlay\" id=\"overlay\"&gt;&lt;/div&gt; &lt;div class=\"tree-container\" id=\"tree-container\"&gt; &lt;div class=\"toolbar\"&gt; &lt;button onclick=\"enlarge()\" id=\"enlarge-button\" style=\"display: block;\"&gt; &lt;i class=\"fa-solid fa-up-right-and-down-left-from-center\"&gt;&lt;/i&gt; &lt;/button&gt; &lt;button onclick=\"minimize()\" id=\"minimize-button\" style=\"display: none;\"&gt; &lt;i class=\"fa-solid fa-minimize\"&gt;&lt;/i&gt; &lt;/button&gt; &lt;/div&gt; &lt;h2&gt;This is the Title&lt;/h2&gt; &lt;p&gt;This is a centered popup window!&lt;/p&gt; &lt;p&gt;This is a centered popup window!&lt;/p&gt; &lt;p&gt;This is a centered popup window!&lt;/p&gt; &lt;p&gt;This is a centered popup window!&lt;/p&gt; &lt;p&gt;This is a centered popup window!&lt;/p&gt; &lt;p&gt;This is a centered popup window!&lt;/p&gt; &lt;p&gt;This is a centered popup window!&lt;/p&gt; &lt;p&gt;This is a centered popup window!&lt;/p&gt; &lt;p&gt;This is a centered popup window!&lt;/p&gt; &lt;/div&gt; . Style . Default styles . &lt;style&gt; .overlay { display: none; /* Hidden by default */ position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */ z-index: 1; /* Sit on top */ } .tree-container { display: block; width: 100%; /* Center the popup */ background-color: rgba(255, 255, 255, 0.451); padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); z-index: 2; /* Sit on top of the overlay */ } .tree-container .toolbar { display: flex; justify-content: flex-end; margin-bottom: 10px; } .tree-container .toolbar button { background: none; border: none; cursor: pointer; font-size: 1.2em; margin-left: 10px; } &lt;/style&gt; . Javascript . Javascript code as below. &lt;script&gt; const overlay = document.getElementById(\"overlay\"); const container = document.getElementById(\"tree-container\"); const enlargeButton = document.getElementById(\"enlarge-button\"); const minimizeButton = document.getElementById(\"minimize-button\"); let originalPosition = { top: container.top, left: container.left, height: container.height, }; function enlarge() { overlay.style.display = \"block\"; container.style.position = \"fixed\"; container.style.top = \"50%\"; container.style.left = \"50%\"; container.style.height = `${window.innerHeight}px`; container.style.transform = \"translate(-50%, -50%)\"; enlargeButton.style.display = \"none\"; minimizeButton.style.display = \"block\"; } function minimize() { overlay.style.display = \"none\"; container.style.position = \"static\"; container.style.top = `${originalPosition.top}px`; container.style.height = `${originalPosition.height}px`; container.style.transform = \"none\"; enlargeButton.style.display = \"block\"; minimizeButton.style.display = \"none\"; } &lt;/script&gt; . ",
+    "url": "/docs/technologies/2025-06-19-css-enlarge/#code",
+    
+    "relUrl": "/docs/technologies/2025-06-19-css-enlarge/#code"
+  },"74": {
+    "doc": "Enlarge/minimize DIV",
+    "title": "Enlarge/minimize DIV",
+    "content": " ",
+    "url": "/docs/technologies/2025-06-19-css-enlarge/",
+    
+    "relUrl": "/docs/technologies/2025-06-19-css-enlarge/"
+  },"75": {
+    "doc": "Beautiful English Sentences",
+    "title": "Beautiful English Sentences",
+    "content": ". | Our localized AI-driven campaigns successfully penetrated Southeast Asian markets, achieving 35% market share within six months. 我们的本地化 AI 驱动活动成功渗透到东南亚市场，在 6 个月内获得了 35% 的市场份额。 | By leveraging gamified loyalty programs, we boosted annual client retention rates from 62% to 89%. 通过利用游戏化的忠诚度计划，我们将年客户保留率从 62% 提高到 89%。 | We upsold premium cybersecurity packages to 40% of existing SMB clients during Q3 renewal cycles. 在第 3 季度续订周期中，我们向 40% 的现有 SMB 客户追加销售了高级网络安全包。 | By streamlining the approval process with RPA, we reduced project launch time from 14 days to 72 hours. 通过使用 RPA 简化审批流程，我们将项目启动时间从 14 天缩短到 72 小时。 | Our new compliance framework mitigated 98% of GDPR-related risks during our EU expansion. 在欧盟扩张期间，我们新的合规框架降低了 98% 的 GDPR 相关风险。 | We leveraged historical campaign data to predict 2024 consumer trends with 91% accuracy. 我们利用历史活动数据来预测 2024 年的消费者趋势，准确率达到 91%。 | Our team pioneered blockchain based supply chain solutions in the luxury sector, securing 8 industry awards. 我们的团队在奢侈品领域开创了基于区块链的供应链解决方案，获得了 8 个行业奖项。 | The legacy CRM system was overhauled with AI integration, cutting customer query resolution time by 65%. 传统的 CRM 系统通过 AI 集成进行了全面改造，将客户查询解决时间缩短了 65%。 | This scalable SaaS architecture supports 10x user growth without infrastructure upgrades. 这种可扩展的 SaaS 架构支持用户增长 10 倍，而无需升级基础设施。 | We orchestrated a 15-country product launch with synchronized AR experiences and real-time multilingual support. 我们精心策划了一场面向 15 个国家/地区的产品发布会，提供同步的 AR 体验和实时多语言支持。 | . ",
+    "url": "/docs/life-lessons/2025-06-30-english-sentences/",
+    
+    "relUrl": "/docs/life-lessons/2025-06-30-english-sentences/"
+  },"76": {
+    "doc": "VSCode编辑器配置",
+    "title": "常用的插件安装",
+    "content": "| 插件名称 | 用途说明 | . | Github Copilot | AI Pair Programming | . | Markdown All in One | 适合用Markdown文章编写，可以提供Markdown Formatter等功能。 | . | Rainbow CSV | 用不同颜色显示不同的Column，以方便识别不同列值。 | . | Prettier - Code formatter | Code formatter | . ",
+    "url": "/docs/technologies/2025-06-30-vscode-config/#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85",
+    
+    "relUrl": "/docs/technologies/2025-06-30-vscode-config/#常用的插件安装"
+  },"77": {
+    "doc": "VSCode编辑器配置",
+    "title": "中英文等宽字体设置",
+    "content": "下载Ubuntu Mono字体文件 . | Ubuntu Mono derivative Powerline Bold Italic.ttf | Ubuntu Mono derivative Powerline Bold.ttf | Ubuntu Mono derivative Powerline Italic.ttf | Ubuntu Mono derivative Powerline.ttf | . 配置VSCode . | 打开VSCode -&gt; “Settings” -&gt; “Text Editor” -&gt; “Font” | 找到”Font Family”配置，在已有字体名称前增加“’Ubuntu Mono derivative Powerline’（必须与系统字体文件名称一致）。 例如：’Ubuntu Mono derivative Powerline’, Consolas, ‘Courier New’, monospace | 设置完毕后，重启VSCode。 | . ",
+    "url": "/docs/technologies/2025-06-30-vscode-config/#%E4%B8%AD%E8%8B%B1%E6%96%87%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE",
+    
+    "relUrl": "/docs/technologies/2025-06-30-vscode-config/#中英文等宽字体设置"
+  },"78": {
+    "doc": "VSCode编辑器配置",
+    "title": "VSCode编辑器配置",
+    "content": " ",
+    "url": "/docs/technologies/2025-06-30-vscode-config/",
+    
+    "relUrl": "/docs/technologies/2025-06-30-vscode-config/"
+  },"79": {
+    "doc": "常用的Windows快捷键",
+    "title": "常用的Windows快捷键",
+    "content": "| 功能 | 快捷键 | . | 多显示器模式下快速移动当前窗口到另一个显示器 | Win + Shift + -&gt; / &lt;- | . | 窗口最大化 | Win + Up | . | 窗口最大化 | Win + Down | . | 窗口最大化到屏幕左右侧 | Win + -&gt; / &lt;- | . | 关闭窗口 | Alt + F4 | . | 显示桌面/恢复窗口 | Win + D | . | 打开资源浏览器 | Win + E | . | 切换当前打开的窗口 | Alt + D | . ",
+    "url": "/docs/technologies/2025-06-30-windows-shortcuts/",
+    
+    "relUrl": "/docs/technologies/2025-06-30-windows-shortcuts/"
+  },"80": {
+    "doc": "d3.js📚",
+    "title": "d3.js📚",
+    "content": "Ref.: d3.js . ",
+    "url": "/docs/technologies/2025-06-d3js/",
+    
+    "relUrl": "/docs/technologies/2025-06-d3js/"
+  },"81": {
+    "doc": "AI - MCP",
+    "title": "AI - MCP",
+    "content": "随着AI技术的快速发展，越来越多的名词铺天盖地地涌现出来，让我这个IT老兵一时无法适从。由于年龄和国内环境的原因，我从一个土生土长的程序员被推到了技术管理岗位，自然也多年没有接触太多代码工作了。对于AI也是观望而已，最多也是使用公司的AI工具做一些简单的办公效率提升的事情，比如搜索、翻译、帮助写一下PPT之类的基本工作，并没有深入研究，也甚至产生了躺平的念头。 . 2005年春节放假回来，突然国内被DeepSeek的事情搅动起来，公司在各级管理层会议上非AI不讨论的地步，讲什么都尽可能跟AI沾点边。突然我也有了危机感，平时瞧不上的某些人也张嘴闭嘴Promopt, ChatGPT，LLM之类的夸夸其谈了，顿时让我也感到了危机，深感如果不了解AI可能会很快被淘汰。所以也平时刻意去了解一些AI的知识。 . MCP是最近听说最多的新名词之一，在油管上看了一个简短的视频觉得很有启发意义，特别是对于我这种AI小白的人来说，言简意赅，所以就总结了其中的精华，作者以一个示例图阐述了整个交互过程，在此分享。 . MCP是为AI模型推理提供标准化的上下文交信息互协议。我们大致可以用电脑和显示器的连接方式来做类比解释。 . | 我们会使用各种连接线来连接电脑和显示器，比如符合HDMI, DP，MINI-DP，USB-A/B/C和其它接口协议的连接线，这些连接方式都能够达到最终效果，但如果不同的显示器和电脑有时候会仅支持某种或某一两种接口规范，有时候我们不得不购买支持较多接口规范的中间适配器（Adaptor）。 | MCP就类似与适配器，在客户端和AI模型之间建立了一个统一的规范，对于客户端来讲，可以通过统一的入口使用到各种不同的AI能力。 | . 下面的流程图就阐述了整个交互过程。（备注：Cline是Code Agent工具, MCP Server - 以weather服务为例） . --- Title: MCP交互示意图 --- %%{init: {\"theme\": \"default\",\"logLevel\": \"info\", \"htmlLabels\": true, \"curve\": \"natural, \"fontSize\": 12 }}%% sequenceDiagram actor User participant MCP Server participant Cline participant Model critical 在Cline中首次注册MCP Server过程 Cline-&gt;&gt;MCP Server: 启动MCP Server Cline-&gt;&gt;MCP Server: Hi, this is Cline. MCP Server-&gt;&gt;Cline: Hi, this is Weather. Cline-&gt;&gt;MCP Server: 你都有什么工具？ MCP Server-&gt;&gt;Cline: 我有get-forecast和get-alerts工具 end User-&gt;&gt;Cline: 纽约明天天气如何？ Cline-&gt;&gt;Model: 纽约明天天气如何？我还有一些工具，分别是... Model-&gt;&gt;Cline: 你可以调用get-forecast工具，参数是... Cline-&gt;&gt;MCP Server: 我要调用get-forecast工具，参数是... MCP Server-&gt;&gt;Cline: 调用完毕，结果是... Cline-&gt;&gt;Model: 调用完毕，结果是... Model-&gt;&gt;Cline: 纽约明天的天气是这样的... Cline-&gt;&gt;User: 纽约明天的天气是这样的... ",
+    "url": "/docs/ai/2025-07-05-ai-mcp/",
+    
+    "relUrl": "/docs/ai/2025-07-05-ai-mcp/"
+  },"82": {
+    "doc": "PMBOK®阅读大纲",
+    "title": "PMBOK®阅读大纲",
+    "content": "--- Title: PMBOK® Guide --- %%{init: {\"theme\": \"default\",\"logLevel\": \"info\", \"htmlLabels\": true, \"curve\": \"natural\" }}%% flowchart LR P[PMBOK® Guide] --&gt; P01[\"1 - Intorduction / Concepts\"] P01 --&gt; Definitions P --&gt; P02[\"2 - Organizational Influence &amp; Project Life Cycle\"] P02 --&gt; OrganizationalInfluenceFators P02 --&gt; StakeholdersTeams P02 --&gt; ProjectLifeCycle P --&gt; P03[\"3 - Project Management Processes Overview\"] --&gt; ProjectManagementProcesses P --&gt; P04[\"4-13 - 10 Knowledge Areas\"] subgraph Definitions[\"Definitions / Relationship\"] direction LR P0101[Project] P0102[Project Management] P0103[Portfolio Management] P0104[Program Management] P0105[Organizational Strategy] P0106[Project Management Office] P0107[Business Value] P0108[Project Manager] P0101 ~~~ P0102 ~~~ P0103 ~~~ P0104 P0105 ~~~ P0106 ~~~ P0107 ~~~ P0108 end subgraph OrganizationalInfluenceFators[\"Organizational Influences\"] direction TB P020101[Culture] P020102[Communications] P020103[Organization Structures] P020104[Process Assets] P020105[Environmental Factors] end subgraph StakeholdersTeams[\"Stakeholder / Teams\"] direction TB P020201[Project Stakeholders] P020202[Project Teams] end subgraph ProjectLifeCycle[\"Project Life Cycle\"] direction TB P020301[Project Life Cycle] P020302[Project Phases] end subgraph ProjectManagementProcesses[\"Processes\"] direction TB P0301[5 Process Groups] P0302[10 Knowledge Areas] end . ",
+    "url": "/docs/management/2025-08-03-pmbok-how-to-read/",
+    
+    "relUrl": "/docs/management/2025-08-03-pmbok-how-to-read/"
+  },"83": {
+    "doc": "CSS Styles",
+    "title": "根据设备调整CSS - MQ (Media Queries)",
+    "content": "Media Queries是一种常用的CSS技术，用来检测正常访问网页的设备特征，比如设备宽度/高度（Width/Height）、视区方向（Orientation of ViewPort）以及分辨率（Resolution）等。通过获得设备的特征，开发人员可以调整css style已确保网页内容以合适地方式在这些设备（比如各种电脑、Tablet和手机等）上呈现。 .  Ref.: W3schools - CSS Media Queries . 语法： . &lt;style&gt; @media not|only mediatype and (media feature) and (media feature) { CSS-Code; } &lt;/style&gt; . 示例： . &lt;style&gt; /* for iPhone 14 Pro Max*/ @media only screen and (max-width: 430px) { .container { width: 98%; } } /* for devices with wider screen &gt; 430px */ @media only screen and (min-width: 431px) { .container { width: 90%; } } &lt;/style&gt; . ",
+    "url": "/docs/technologies/2025-08-30-css/#%E6%A0%B9%E6%8D%AE%E8%AE%BE%E5%A4%87%E8%B0%83%E6%95%B4css---mq-media-queries",
+    
+    "relUrl": "/docs/technologies/2025-08-30-css/#根据设备调整css---mq-media-queries"
+  },"84": {
+    "doc": "CSS Styles",
+    "title": "元素垂直居中",
+    "content": "&lt;style&gt; .container { display: flex; align-items: center; /* 垂直居中 */ } &lt;/style&gt; &lt;div class=\"container\"&gt; &lt;img src=\"/assets/images/bmw.png\" alt=\"bmw\" /&gt; &lt;span&gt;BMW Group&lt;/span&gt; &lt;div&gt; . ",
+    "url": "/docs/technologies/2025-08-30-css/#%E5%85%83%E7%B4%A0%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD",
+    
+    "relUrl": "/docs/technologies/2025-08-30-css/#元素垂直居中"
+  },"85": {
+    "doc": "CSS Styles",
+    "title": "&lt;div&gt;始终在底部",
+    "content": "&lt;style&gt; .footer { position: fixed; bottom: 0; width: 100%; } &lt;/style&gt; &lt;div class=\"footer\"&gt; this is footer. &lt;/div&gt; . ",
+    "url": "/docs/technologies/2025-08-30-css/#div%E5%A7%8B%E7%BB%88%E5%9C%A8%E5%BA%95%E9%83%A8",
+    
+    "relUrl": "/docs/technologies/2025-08-30-css/#div始终在底部"
+  },"86": {
+    "doc": "CSS Styles",
+    "title": "根据子元素选择",
+    "content": "以下示例表示选择具有 “class=’language-mermaid’” 的子元素的&lt;pre&gt;元素。 . pre:has(code.language-mermaid) { background-color: white !important; } /*以下prev元素会被选择*/ &lt;pre&gt; &lt;code class='language-mermaid'&gt; ... &lt;code&gt; &lt;/pre&gt; . ",
+    "url": "/docs/technologies/2025-08-30-css/#%E6%A0%B9%E6%8D%AE%E5%AD%90%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9",
+    
+    "relUrl": "/docs/technologies/2025-08-30-css/#根据子元素选择"
+  },"87": {
+    "doc": "CSS Styles",
+    "title": "悬浮&lt;div&gt;",
+    "content": "以下代码会让&lt;div&gt;悬浮在父容器的右上角。 . &lt;style&gt; .floating-div { position: absolute; top: 20px; right: 20px; width: 300px; position: sticky; z-index: 1020; float: right; padding: 10px; font-size: 12px; } &lt;/style&gt; &lt;div class=\"floating-div\"&gt; here's the content of the window. &lt;/div&gt; . ",
+    "url": "/docs/technologies/2025-08-30-css/#%E6%82%AC%E6%B5%AEdiv",
+    
+    "relUrl": "/docs/technologies/2025-08-30-css/#悬浮div"
+  },"88": {
+    "doc": "CSS Styles",
+    "title": "带圆圈的数字",
+    "content": "&lt;style&gt; .circle { background: #e3e3e3; border-radius: 50%; color: #6e6e6e; display: inline-block; font-weight: bold; line-height: 40px; margin-right: 5px; text-align: center; width: 40px; } &lt;/style&gt; &lt;span class=\"circle\"&gt;1&lt;/span&gt; . 1 2 3 … 10 . ",
+    "url": "/docs/technologies/2025-08-30-css/#%E5%B8%A6%E5%9C%86%E5%9C%88%E7%9A%84%E6%95%B0%E5%AD%97",
+    
+    "relUrl": "/docs/technologies/2025-08-30-css/#带圆圈的数字"
+  },"89": {
+    "doc": "CSS Styles",
+    "title": "居中方案（上下左右居中）",
+    "content": "&lt;style&gt; .perfect-center { display: grid; place-items: center; } &lt;/style&gt; &lt;div class=\"perfect-center\"&gt;Center&lt;/div&gt; . 说明： . Grid 布局的place-items属性将align-items和justify-items合二为一，一步实现双向完美居中，且浏览器兼容性高。 . 它适用于： . | 单个或多个元素 | 未知宽高 | 动态内容 | 任意类型容器 | . 示例： . Center Text . ",
+    "url": "/docs/technologies/2025-08-30-css/#%E5%B1%85%E4%B8%AD%E6%96%B9%E6%A1%88%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3%E5%B1%85%E4%B8%AD",
+    
+    "relUrl": "/docs/technologies/2025-08-30-css/#居中方案上下左右居中"
+  },"90": {
+    "doc": "CSS Styles",
+    "title": "页眉、页脚、三栏结构",
+    "content": "&lt;style&gt; .holy-grail { display: grid; grid-template: \"header header header\" auto \"nav main aside\" 1fr \"footer footer footer\" auto / auto 1fr auto; min-height: 100vh; } .holy-grail &gt; header { grid-area: header; } .holy-grail &gt; nav { grid-area: nav; } .holy-grail &gt; main { grid-area: main; } .holy-grail &gt; aside { grid-area: aside; } .holy-grail &gt; footer { grid-area: footer; } &lt;/style&gt; . 演示 . ",
+    "url": "/docs/technologies/2025-08-30-css/#%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A%E4%B8%89%E6%A0%8F%E7%BB%93%E6%9E%84",
+    
+    "relUrl": "/docs/technologies/2025-08-30-css/#页眉页脚三栏结构"
+  },"91": {
+    "doc": "CSS Styles",
+    "title": "响应式卡片网格",
+    "content": "&lt;style&gt; .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1.5rem; } &lt;/style&gt; &lt;div class=\"card-grid\"&gt; &lt;div class=\"card\"&gt; &lt;img src=\"card-image-1.jpg\" alt=\"Card Image 1\"&gt; &lt;h3&gt;Card Title 1&lt;/h3&gt; &lt;p&gt;Card content goes here...&lt;/p&gt; &lt;/div&gt; &lt;div class=\"card\"&gt; &lt;img src=\"card-image-2.jpg\" alt=\"Card Image 2\"&gt; &lt;h3&gt;Card Title 2&lt;/h3&gt; &lt;p&gt;Card content goes here...&lt;/p&gt; &lt;/div&gt; &lt;div class=\"card\"&gt; &lt;img src=\"card-image-3.jpg\" alt=\"Card Image 3\"&gt; &lt;h3&gt;Card Title 3&lt;/h3&gt; &lt;p&gt;Card content goes here...&lt;/p&gt; &lt;/div&gt; &lt;div class=\"card\"&gt; &lt;img src=\"card-image-4.jpg\" alt=\"Card Image 4\"&gt; &lt;h3&gt;Card Title 4&lt;/h3&gt; &lt;p&gt;Card content goes here...&lt;/p&gt; &lt;/div&gt; &lt;/div&gt; . 说明 . | auto-fit：尽可能多地创建列 | minmax()：确保每列不小于 20rem，也不超出可用空间 | min()：防止在小屏幕上溢出 | . 示例： . Card Title 1 . Card content goes here... Card Title 2 . Card content goes here... Card Title 3 . Card content goes here... Card Title 4 . Card content goes here... ",
+    "url": "/docs/technologies/2025-08-30-css/#%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8D%A1%E7%89%87%E7%BD%91%E6%A0%BC",
+    
+    "relUrl": "/docs/technologies/2025-08-30-css/#响应式卡片网格"
+  },"92": {
+    "doc": "CSS Styles",
+    "title": "CSS Styles",
+    "content": " Ref.: W3Schools CSS Tutorial . ",
+    "url": "/docs/technologies/2025-08-30-css/",
+    
+    "relUrl": "/docs/technologies/2025-08-30-css/"
+  },"93": {
+    "doc": "Mermaid Charts (Examples)",
+    "title": "Gantt Diagram",
+    "content": "gantt title A Gantt Diagram dateFormat YYYY-MM-DD section Section A task :a1, 2014-01-01, 30d Another task :after a1, 20d section Another Task in Another :a2, 2014-01-12, 12d another task :after a2, 24d . ",
+    "url": "/docs/technologies/2025-08-30-mermaid-chart/#gantt-diagram",
+    
+    "relUrl": "/docs/technologies/2025-08-30-mermaid-chart/#gantt-diagram"
+  },"94": {
+    "doc": "Mermaid Charts (Examples)",
+    "title": "Mindmap Diagram",
+    "content": "mindmap root((mindmap)) Origins Long history ::icon(fa fa-book) Popularisation British popular psychology author Tony Buzan Research On effectiveness&lt;br/&gt;and features On Automatic creation Uses Creative techniques Strategic planning Argument mapping Tools Pen and paper Mermaid . ",
+    "url": "/docs/technologies/2025-08-30-mermaid-chart/#mindmap-diagram",
+    
+    "relUrl": "/docs/technologies/2025-08-30-mermaid-chart/#mindmap-diagram"
+  },"95": {
+    "doc": "Mermaid Charts (Examples)",
+    "title": "Mermaid Charts (Examples)",
+    "content": " ",
+    "url": "/docs/technologies/2025-08-30-mermaid-chart/",
+    
+    "relUrl": "/docs/technologies/2025-08-30-mermaid-chart/"
+  },"96": {
+    "doc": "CSS border animiation",
+    "title": "Animate Borders",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ad exercitationem voluptatem ullam et, natus impedit quae veniam optio a doloremque officiis beatae, itaque nesciunt nostrum quasi molestiae laudantium dolor asperiores soluta sint sed ratione cupiditate. Laudantium earum reiciendis enim. ",
+    "url": "/docs/technologies/2025-08-31-css-border-animation/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-border-animation/"
+  },"97": {
+    "doc": "CSS border animiation",
+    "title": "CSS border animiation",
+    "content": ". ",
+    "url": "/docs/technologies/2025-08-31-css-border-animation/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-border-animation/"
+  },"98": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"99": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"100": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"101": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"102": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"103": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"104": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"105": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"106": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"107": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"108": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"109": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"110": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"111": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"112": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"113": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"114": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"115": {
+    "doc": "Responsible Grid Layout",
+    "title": "Lorem Ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio placeat iure aliquid eaque sed aliquam dicta maiores cupiditate earum quasi. ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"116": {
+    "doc": "Responsible Grid Layout",
+    "title": "Responsible Grid Layout",
+    "content": ". ",
+    "url": "/docs/technologies/2025-08-31-css-responsive-grid-layout/",
+    
+    "relUrl": "/docs/technologies/2025-08-31-css-responsive-grid-layout/"
+  },"117": {
+    "doc": "常用Linux Commands",
+    "title": "常用Linux Commands",
+    "content": "54 Essential Linux Commands . | pwd: Show current working directory. | ls: list all files under the current working directly. | ls -l: show more details. | ls - lh: with more readable file size, like 3k, 20K, etc. | ls -a: show all files including hidden ones. | ls –color=auto: highlight folders using colors automatically. | . | clear: clear up current screen. Shortcut: Ctrl + l. | mkdir: create new directory. | cd: change current working directory. | cd {directory name} | cd {part of directory} and press tab: automatically match if there is. | cd -: back to previous directory. | cd / cd ~: change to home directory. | . | alias: make alias. For example, . | alias ls=”ls –color=auto” | alas cls=”clear” | . | which: show the path of executable path, for example, which pwd, which cd, etc. | whereis: show exectuable file, for example, whereis mkdir, whereis clear, etc. | man: get help on commands, for example, man clear, man ls, etc. | whatis: give quick summary about command. For example, whatis cd, whatis mkdir, etc. | touch: to create a new file. | echo: print messages or strings. For exmple, . | echo “hello world”. | echo “hello world” &gt; file.txt: the string will replace content in file.txt. | echo “hello world” » file.txt: the string will be appended to file.txt. | . | cat: view content of file. | less: view content of file with pager. Continuous operation keys, . | j: scroll down | k: scroll up | f: move down a page | b: move up a page | /: search | q: quit | . | nano: edit a file. | vim: edit filr using vim editor. | cp: copy file. | mv: move or rename file. | rm: remove file. | rmdir: remove empty directory. | rm -r {dir}: to remove non-empty directory. | rm -i: remove after confirmation. | cmp: compare two files. | diff: show difference abour the two files. | whoami: show username. | adduser: add new user. | sudo: execute command using administrator, password is asked to provide. | su: switch user, password is to be provided. | exit: logout user. | userdel: remove user. For example, sudo userdel -r: delete user and everything of the user. | passwd: change password. | uname: show system name. | uname -a: show details of system. | apt . | sudo apt update: list all upgradable packages. | sudo apt upgrade: upgrade packages. | sudo apt install {package name} | . | wget: download file from internet, wget {url} | grep: search. For example, ls | grep xxx. | chmod: change file permission . | r: read | w: write | x: execution | . | ln | curl | jq | awk | sed | zip | unzip | find | ip | ping | free | df | ps | kill | pkill | top | htop | systemctl | history | Outro | . ",
+    "url": "/docs/technologies/2025-10-05-linux-commands/",
+    
+    "relUrl": "/docs/technologies/2025-10-05-linux-commands/"
+  },"118": {
+    "doc": "RaspberryPi E-Ink",
+    "title": "Table of contents",
+    "content": ". | 1. 硬件准备 | 2. 树莓派刷机 . | 2.1 烧录树莓派操作系统（此次借助 Windows PC） | 2.2 启动和配置树莓派电脑 | . | 3. 连接 Waveshare 电子墨水屏并安装驱动调试 | 应用安装及调试（PaperPi） | 总结 | . ",
+    "url": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/#table-of-contents",
+    
+    "relUrl": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/#table-of-contents"
+  },"119": {
+    "doc": "RaspberryPi E-Ink",
+    "title": "1. 硬件准备",
+    "content": "| 设备名称 | 数量 | 价格（大致） | 购买渠道 | 图片 | . | RaspberryPi Zero 2w（带焊接排针）32G MicroSD 卡+读卡器HDMI 转换头 | 套餐 | 150.00 元 | 咸鱼 |    | . | Waveshare e-Paper 4.26inch HAT（带驱动板） | * 1 | 180.00 元 | 淘宝 |   | . | Micro-USB 充电线 | * 1 | 0.00 元 | 自备 | | . 其它说明： . | 由于本人没有电路板焊接经验，所以直接购买了带焊接排针的树莓派电脑，正好可以跟电子墨水屏的驱动板通过排针直接连接。动手能力强的可以自己焊接排针，也可以选择其它的屏幕和连接方式。 | 树莓派 Zero 2w 支持 WIFI 和蓝牙连接，可以通过远程 SSH 连接操作，但如果想直接使用树莓派操作系统，可以通过 HDMI 转接头连接电脑显示器。 | 树莓派 Zero 2w 自带四个外设接口：Micro-usb 电源接口、Micro-usb OTG 接口（可以连接鼠标键盘等）、Mini HDMI 接口和 MicroSD 存储卡插槽。如需要连接更多外部设备，如鼠标键盘网线等，可以单独购买扩展板。 | . ",
+    "url": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/#1-%E7%A1%AC%E4%BB%B6%E5%87%86%E5%A4%87",
+    
+    "relUrl": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/#1-硬件准备"
+  },"120": {
+    "doc": "RaspberryPi E-Ink",
+    "title": "2. 树莓派刷机",
+    "content": "可以分为两个步骤：烧录操作系统镜像和启动配置树莓派电脑 . 2.1 烧录树莓派操作系统（此次借助 Windows PC） . | 首先在树莓派官网下载最新的Raspberry Pi Imager | 在 PC 中安装 Raspberry Pi Imager | 将 MicroSD 存储卡插入读卡器，并连接 PC | 运行 Raspberry PI Imager 打开烧录 Image 向导 | 根据向导选择需要烧录的操作系统版本，此次我选择 Raspberry Pi OS (64bit) | 由于步骤比较简单，细节不再赘述。但其中自定义设置步骤比较关键，在询问是否自定义设置时，可以选择“编辑设置”进行一些重要的参数设置，特别是用户名密码和 WIFI 热点连接。设置好后，后面启动树莓派电脑时可以自动联网并可以通过工具远程操作树莓派电脑。当然也可以跳过自定义设置，但在后面启动树莓派电脑时必须借助鼠标和键盘进行设置。    | 等待一段时间树莓派操作系统被成功烧录到存储卡中，可以断开 PC 连接，取出存储卡准备用来启动树莓派电脑。 | . 2.2 启动和配置树莓派电脑 . | 将烧录好操作系统的 MicroSD 卡插入树莓派插槽中 | 通过 Mini HDMI 转接口连接电脑显示器 | 如需要使用鼠标键盘，可以通过 OTG 接口连接 | 接通电源线，树莓派电脑有绿色指示灯闪烁，树莓派电脑启动，可以在电脑显示屏上看到启动信心 | 原则上如果在烧录过程中已经设置了 WIFI 和开启了 SSH 服务，不需要任何其它配置 | 如需要体验树莓派操作系统或调整设置，可以借助鼠标键盘进行操作 | . 至此，树莓派电脑已经成功安装。接下来就可以跟使用 Windows 或 MacOS 操作系统一样使用树莓派电脑了。 . ",
+    "url": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/#2-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%88%B7%E6%9C%BA",
+    
+    "relUrl": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/#2-树莓派刷机"
+  },"121": {
+    "doc": "RaspberryPi E-Ink",
+    "title": "3. 连接 Waveshare 电子墨水屏并安装驱动调试",
+    "content": "此次我购买和使用的是 Waveshare 4.26inch e-Paper HAT 带驱动版本的电子墨水屏。由于自带驱动板，连接比较容易，只需要将 40 针 GPIO 插入即可与树莓派电脑连接。 连接后，需要进行驱动程序的安装。安装步骤可以依照 Waveshare 官网的详细说明，在此仅描述几个关键步骤和安装过程中遇到的问题的解决方法。 . 其实 Waveshare 官网已经给出了非常详细的安装及测试步骤，但由于在大陆很多资源不能按正常方式获得，所以在执行官网步骤之前，可以先做以下调整。 . | 软件库的镜像源替换。 . 查看树莓派操作系统系统版本。 . lsb_release -a . 打开清华大学 Raspbian 软件仓库，选择操作系统版本，并复制软件仓库地址。编辑 sources.list，将软件仓库地址配置在文件中。 . sudo nano /etc/apt/sources.list . 打开Raspberrypi 软件仓库, 选择操作系统版本，并复制地址。编辑 raspi.list，将地址配置在文件中。 . sudo nano /etc/apt/sources.list.d/raspi.list . 分别运行以下命令更新软件 . sduo apt-get update . sudo apt-get upgrade . 参考文章：树莓派替换镜像源 . | 安装 Waveshare 软件。参考Waveshare 4.26inch e-Paper HAT Manual | 运行测试程序，如果电子屏幕有页面变化，证明已经成功安装电子屏相关软件 . cd ~/e-Paper/RaspberryPi_JetsonNano/ cd c sudo make clean sudo make -j4 EPD=epd4in26 sudo ./epd . cd ~/e-Paper/RaspberryPi_JetsonNano/ cd python/examples/ python3 epd_4in26_test.py . | . ",
+    "url": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/#3-%E8%BF%9E%E6%8E%A5-waveshare-%E7%94%B5%E5%AD%90%E5%A2%A8%E6%B0%B4%E5%B1%8F%E5%B9%B6%E5%AE%89%E8%A3%85%E9%A9%B1%E5%8A%A8%E8%B0%83%E8%AF%95",
+    
+    "relUrl": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/#3-连接-waveshare-电子墨水屏并安装驱动调试"
+  },"122": {
+    "doc": "RaspberryPi E-Ink",
+    "title": "应用安装及调试（PaperPi）",
+    "content": "https://github.com/txoof/PaperPi . ",
+    "url": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/#%E5%BA%94%E7%94%A8%E5%AE%89%E8%A3%85%E5%8F%8A%E8%B0%83%E8%AF%95paperpi",
+    
+    "relUrl": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/#应用安装及调试paperpi"
+  },"123": {
+    "doc": "RaspberryPi E-Ink",
+    "title": "总结",
+    "content": " ",
+    "url": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/#%E6%80%BB%E7%BB%93",
+    
+    "relUrl": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/#总结"
+  },"124": {
+    "doc": "RaspberryPi E-Ink",
+    "title": "RaspberryPi E-Ink",
+    "content": " ",
+    "url": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/",
+    
+    "relUrl": "/docs/technologies/2025-10-06-RaspberryPi-Waveshare/"
+  },"125": {
+    "doc": "[CSS] Hover Cards",
+    "title": "[CSS] Hover Cards",
+    "content": ". Design . Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at. Read More Code . Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at. Read More Launch . Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at. Read More ",
+    "url": "/docs/technologies/2025-10-16-Hover%20CSS%20Cards/",
+    
+    "relUrl": "/docs/technologies/2025-10-16-Hover%20CSS%20Cards/"
+  },"126": {
+    "doc": "CSS Countdown Clock",
+    "title": "\n                    0\n                    1\n                    2\n                    3\n                    4\n                    5\n                ",
+    "content": " ",
+    "url": "/docs/technologies/2025-10-16-countdown-clock-w-html-css/",
+    
+    "relUrl": "/docs/technologies/2025-10-16-countdown-clock-w-html-css/"
+  },"127": {
+    "doc": "CSS Countdown Clock",
+    "title": "\n                    0\n                    1\n                    2\n                    3\n                    4\n                    5\n                    6\n                    7\n                    8\n                    9\n                ",
+    "content": "Seconds . ",
+    "url": "/docs/technologies/2025-10-16-countdown-clock-w-html-css/",
+    
+    "relUrl": "/docs/technologies/2025-10-16-countdown-clock-w-html-css/"
+  },"128": {
+    "doc": "CSS Countdown Clock",
+    "title": "CSS Countdown Clock",
+    "content": " ",
+    "url": "/docs/technologies/2025-10-16-countdown-clock-w-html-css/",
+    
+    "relUrl": "/docs/technologies/2025-10-16-countdown-clock-w-html-css/"
+  },"129": {
+    "doc": "Infinite scroll animation",
+    "title": "Infinite scroll animation",
+    "content": "Item 1 Item 2 Item 3 Item 4 Item 1 Item 2 Item 3 Item 4 ",
+    "url": "/docs/technologies/2025-10-20-infinite-scroll-animation/",
+    
+    "relUrl": "/docs/technologies/2025-10-20-infinite-scroll-animation/"
+  },"130": {
+    "doc": "Timer ticker",
+    "title": "Timer ticker",
+    "content": ". ",
+    "url": "/docs/technologies/2025-10-20-timer-ticker/",
+    
+    "relUrl": "/docs/technologies/2025-10-20-timer-ticker/"
+  },"131": {
+    "doc": "Responsive Sidebar Menu",
+    "title": "Responsive Sidebar Menu",
+    "content": ". ",
+    "url": "/docs/technologies/2025-10-22-grid-nav/",
+    
+    "relUrl": "/docs/technologies/2025-10-22-grid-nav/"
+  },"132": {
+    "doc": "MAUI Development (MacOS)",
+    "title": "Table of contents",
+    "content": ". | Preparations | Setup Steps . | Step #1: Install above software, SDK and VScode extensions. | Step #2: Create MAUI Project in VSCode | Step #3: Run Application in Simulators | . | End | . ",
+    "url": "/docs/technologies/2025-11-10-maui-on-macos/#table-of-contents",
+    
+    "relUrl": "/docs/technologies/2025-11-10-maui-on-macos/#table-of-contents"
+  },"133": {
+    "doc": "MAUI Development (MacOS)",
+    "title": "Preparations",
+    "content": "The followings are used in my case. | Type | Resource | Remark | . | Hardware | Mackbook Pro (Apple silicon) | Development Machine | . | Software | Xcode 26.0.1 | By Nov-25, version 26.1 and above versions are not supported. | . | Software | Android Studio | Latest version | . | SDK | Android SDK | Latest version | . | SDK | Java SDK | Version &gt;= 17 | . | Software | Visual Studio Code | Latest version | . | SDK | .NET SDK | version 9.0 | . | VSCode Extensions | C#, C# Dev Kit, .NET MAUI |   | . ",
+    "url": "/docs/technologies/2025-11-10-maui-on-macos/#preparations",
+    
+    "relUrl": "/docs/technologies/2025-11-10-maui-on-macos/#preparations"
+  },"134": {
+    "doc": "MAUI Development (MacOS)",
+    "title": "Setup Steps",
+    "content": "  . Step #1: Install above software, SDK and VScode extensions. Something important need pay attention to during installation. | Java SDK. Java runtime environment is one of key dependencies for others like Xcode, Android Studio, etc. So it is better to install it first. (Note: I downloaded from Microsoft (Download the Microsoft Build of OpenJDK) . Check if $JAVA_HOME and version is correctly configured or not. If correct path is retured, ignore the next JAVA_HOME configuration steps. # Check JAVA_HOME system variable % echo $JAVA_HOME # Check Java version % java -version . To configure $JAVA_HOME, find where java home is firstly using following commands (notes: not all of them are necessarily used.). Remember the path found out. % $(dirname $(readlink $(which javac)))/java_home # or use java command to find % java -XshowSettings:properties -version % java -XshowSettings:properties -version 2&gt;&amp;1 &gt; /dev/null | grep 'java.home' java.home = /Users/{your username}}/Library/Java/JavaVirtualMachines/corretto-19.0.2/Contents/Home . Configure $JAVA_HOME and \\bin in $PATH in ~/.bashrc and ~/.zshrc files. Add the following lines in the end of the two files. # Add JAVA_HOME export JAVA_HOME=\"/Users/{your username}/Library/Java/JavaVirtualMachines/corretto-19.0.2/Contents/Home\" export PATH=\"$JAVA_HOME/bin:$PATH\" . Open a new Terminal window to check if JAVA_HOME is correctly configured. # Check JAVA_HOME system variable % echo $JAVA_HOME # Check Java version % java -version . | Android Studio . Download from Google Developers - Android Studio . Open Android Studio, go to “Settings” –&gt; “SDK Manager” –&gt; “SDK Tools” tab. Make sure “Android SDK Build-tools”, “Android SDK Command-line Tools (latest)”, “Android Emulator” and “Android SDK Platform-Tools” are selected and installed. Remember the Android SDK location. It is to be configured as $ANDROID_HOME sytem variable. Configure $ANDROID_HOME in ~/.bashrc and ~/.zshrc files. # Add ANDROID_HOME export ANDROID_HOME=\"/Users/{your username}/Library/Android/sdk\" . Open a new Terminal window to check if ANDROID_HOME is correctly configured. % echo $ANDROID_HOME . | Xcode . Only Xcode command line might not be enough. Xcode app should be installed because device emulators are used for debugging and running locally. Don’t install Xcode from Mac App Store directly because Microsoft MAUI may not support the latest Xcode version. In my case, Xcode 26.1 is not supported. I had to install Xcode 26.0 specially. Download Xcode from Apple Resources. Select “View available Xcode betas” link (important). You may be asked for Apple account login. On the download page, slect the suitable version to download the installation package. The package is named like “Xcode_26.0.1_Apple_silicon.xip”. Double click it to uncompress. This will take some time. Rename uncompressed file “Xcode” as “Xcode_26.0.1” to reflect version number. Copy the renamed Xcode file into “Applications”. It will trig the migration and take some time. Open the Xcode by run it through the command. You may be asked to download additional platform support like iOS simulator, watchOS, tvOS and visionOS. Choose as what simulator(s) you want to use. % /Applications/Xcode_26.0.1.app/Contents/MacOS/Xcode . Select menu “Xcode” –&gt; “Settings” –&gt; “Locations”, select “Command Line Tools” to use the path “/Applications/Xcode_26.0.1.app” NOT the path of “Download” folder or other version’s Xcode. | Visusal Studio Code . Download from official website. Install Visusal Studio Code and its Extensions including C#, C# Dev Kit and .NET MAUI. Install dotnet MAUI workload by the following command lines. % dotnet workload install maui # to check installed workload % dotnet workload list . | Accept Android Licenses . This step is to remove errors of .NET MAUI project in later steps. Make sure the previous steps are done. Android SDK is installed. Android Command Line Tool is installed. $JAVA_HOME and $ANDROID_HOME are configured correctly. Run command line using elevated permission (Assume the Android SDK is installed in the path below). Accept all the promopted questions by input “y” (yes). % sudo /Users/{your username}/Library/Android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses . | . Step #2: Create MAUI Project in VSCode . | Open VSCode. Open command palette by shortcut “Cmd+Shift+P”. | Select command “.NET: New Project…” –&gt; “.NET MAUI App” –&gt; “{your project name}”… | Make sure the created new project is opened in VScode. By default, it can be runned without any changes. Our target is to run it in different platforms / simulators including Maccatalyst, iOS and Android. (Note: Windows platform is not supported in MacOS. Refer to the article) . | Your Operating System | Supported Target Platforms | . | Windows | Windows, Android | . | macOS | Android, iOS, macOS | . | Linux | Android | . | Open Terminal window by select menu “Terminal”. By default, the current path is the path of your .NET solution. For example, . # \"dotnet-learn\" is the path where my .net solution file is located. dotnet-learn % . | . Step #3: Run Application in Simulators . | In VSCode, open .csproj file in project folder. | VSCode will automatically do some pre-checks for a few seconds. You may find loading icons populated in status bar at the bottom of VSCode. | Once pre-checks are done. Click “{} XML” toolbar button. It will show the readiness of running the project similar as below. | Select the links to configure the project. Normally you should configure as below. “Launch Configuration” &gt; a simulator: Android/iOS phone, iPad, etc. “C# Startup Project” &gt; your MAUI project name. “Debug Target Framework” &gt; .net9.0-iOS, .net9.0-android or .net9.0-maccatalyst . | After configuration, click “Run and Debug” button in the left toolbar of VSCode. | Click the link “create a launch.json file”. This will create launch.json file in project folder “.vscode/launch.json”. Accept the default and some json configuraiton code lines are generated in the file. Save the default, for example “.NET MAUI” in my case. | In the “Run and Debug” section, make sure “.NET MAUI” is selected in the dropdown. Click the arrow button or press F5 to run the application. | After the build is done, the select simulator will be started. Your app will be installed and started in the simulator. | You may play the app to experience the demo. | You can also switch to different simulator and platform by change the configuration. | . ",
+    "url": "/docs/technologies/2025-11-10-maui-on-macos/#setup-steps",
+    
+    "relUrl": "/docs/technologies/2025-11-10-maui-on-macos/#setup-steps"
+  },"135": {
+    "doc": "MAUI Development (MacOS)",
+    "title": "End",
+    "content": "Till now, the first MAUI project is set up and able to run successfully in different simulators of platforms. Enjoy MAUI for cross-platforms development and have fun! . ",
+    "url": "/docs/technologies/2025-11-10-maui-on-macos/#end",
+    
+    "relUrl": "/docs/technologies/2025-11-10-maui-on-macos/#end"
+  },"136": {
+    "doc": "MAUI Development (MacOS)",
+    "title": "MAUI Development (MacOS)",
+    "content": "This article mainly focus on setting up a local MAUI development environment in MacOS. It includes the toolings, detailed steps and also a small hello-world demo. Finally the demo is able to run in Android, iOS and MacOS emulators successfully. So, let’s start… . ",
+    "url": "/docs/technologies/2025-11-10-maui-on-macos/",
+    
+    "relUrl": "/docs/technologies/2025-11-10-maui-on-macos/"
+  },"137": {
+    "doc": "China alternative resources",
+    "title": "China alternative resources",
+    "content": "| Global | China | . | https://rubygems.org | https://mirrors.tuna.tsinghua.edu.cn/rubygems/ | . | https://pypi.org/simple/ | https://pypi.tuna.tsinghua.edu.cn/simple | . ",
+    "url": "/docs/technologies/2025-11-11-cn-alt-resources/",
+    
+    "relUrl": "/docs/technologies/2025-11-11-cn-alt-resources/"
+  },"138": {
+    "doc": "常用Git命令",
+    "title": "Common used git commands",
+    "content": ". | Reset proxy (global) git config –global –unset http.proxy git config –global –unset https.proxy . | Commit git commit -m “message” . | . ",
+    "url": "/docs/technologies/2025-11-15-git-commands/#common-used-git-commands",
+    
+    "relUrl": "/docs/technologies/2025-11-15-git-commands/#common-used-git-commands"
+  },"139": {
+    "doc": "常用Git命令",
+    "title": "常用Git命令",
+    "content": " ",
+    "url": "/docs/technologies/2025-11-15-git-commands/",
+    
+    "relUrl": "/docs/technologies/2025-11-15-git-commands/"
+  },"140": {
+    "doc": "Pagefind Plugin",
+    "title": "Table of contents",
+    "content": ". | Assumptions | Targets | Step1 - Pagefind Setup in Local Environment | Step 2: Integrate Pagefind into GitHub Actions | . ",
+    "url": "/docs/technologies/2025-12-17-enable-pagefind/#table-of-contents",
+    
+    "relUrl": "/docs/technologies/2025-12-17-enable-pagefind/#table-of-contents"
+  },"141": {
+    "doc": "Pagefind Plugin",
+    "title": "Assumptions",
+    "content": ". | IDE environment: Windows + Visual Studio Code | A static blog website built using Jekyll framework. | The website is hosted in GitHub Pages and the source is from main branch of GitHub repository with default Jekyll configuration. | Local development/debugging environment is set up. | . For Jekyll website set-up, you may refer to my another articles how to set up Jekyll for personal webiste. ",
+    "url": "/docs/technologies/2025-12-17-enable-pagefind/#assumptions",
+    
+    "relUrl": "/docs/technologies/2025-12-17-enable-pagefind/#assumptions"
+  },"142": {
+    "doc": "Pagefind Plugin",
+    "title": "Targets",
+    "content": ". | To set up Pagefind in existing local development/debugging environment. | Enable content indexing and search for the published _site directory. | Configure GitHub workflow action to automatically enable Pagefind for production website in GitHub Pages. | . ",
+    "url": "/docs/technologies/2025-12-17-enable-pagefind/#targets",
+    
+    "relUrl": "/docs/technologies/2025-12-17-enable-pagefind/#targets"
+  },"143": {
+    "doc": "Pagefind Plugin",
+    "title": "Step1 - Pagefind Setup in Local Environment",
+    "content": ". | Set up nodejs | Open website source code using VSCode. | Create folder “_plugins” under the root folder. | Create a file named “pagefind_hook.rb” and update it using the code lines below. Jekyll::Hooks.register :site, :post_write do |site| puts \"&gt;&gt;&gt; Pagefind hook triggered for #{site.dest}\" system(\"npx pagefind --source \\\"#{site.dest}\\\"\") end . | Create “search.md” file for Pagefind search page. Code as below. --- layout: default title: Site Search permalink: /search/ --- &lt;link href=\"/_pagefind/pagefind-ui.css\" rel=\"stylesheet\" /&gt; &lt;script src=\"/_pagefind/pagefind-ui.js\"&gt;&lt;/script&gt; &lt;div id=\"search\"&gt;&lt;/div&gt; &lt;script&gt; window.addEventListener(\"DOMContentLoaded\", (event) =&gt; { new PagefindUI({ element: \"#search\", showSubResults: true }); }); &lt;/script&gt; . | Run command to indexing content under _site folder. jekyll serve ... &gt;&gt;&gt; Pagefind hook triggered for C:/Users/xxx/source/repos/xxx/_site Running Pagefind v1.4.0 (Extended) Running from: \"C:/Users/xxx/source/repos/xxx\" Source: \"_site\" Output: \"_site\\\\pagefind ... | Preview search by “https://localhost:4000/search” | . ",
+    "url": "/docs/technologies/2025-12-17-enable-pagefind/#step1---pagefind-setup-in-local-environment",
+    
+    "relUrl": "/docs/technologies/2025-12-17-enable-pagefind/#step1---pagefind-setup-in-local-environment"
+  },"144": {
+    "doc": "Pagefind Plugin",
+    "title": "Step 2: Integrate Pagefind into GitHub Actions",
+    "content": "By default, . | GitHub Pages builds websites using Jekyll in “safe mode”. | In safe mode, custom plugins in “_plugins/” are ignored. That means the pagefind_hook.rb never runs on GitHub’s servers. | Pagefind itself is a Node-based tool, not a Ruby gem, so GitHub Pages won’t install or execute it during the build. | . To enable Pagefind, we have to override using customized GitHub action. Here’re steps: . | Goto GitHub and open your repository. | Navigate to “Settings &gt; Pages”. | Under “Build and deployment” section. Change Source from “Deploy from a branch” to “GitHub Actions”. | Click “Configure” button of Jekyll template. It will automatically create a yaml file “jekyll.yml”. | Rename to “.github/workflows/jekyll_node_pagefind_deploy.yml”. | Update the yml file. Find the code below... env: JEKYLL_ENV: production . Add below code lines after above lines. # 👉 Add Node + Pagefind here - name: Setup Node.js uses: actions/setup-node@v4 with: node-version: '20' - name: Install Pagefind run: npm install -g pagefind - name: Run Pagefind run: pagefind --source \"_site\" - name: Upload artifact # Automatically uploads an artifact from the './_site' directory by default uses: actions/upload-pages-artifact@v3 . | Commit the GitHub action. It will automaticall trigger the build and deployment. | Review final result by “https://yoursite/search”. | . ",
+    "url": "/docs/technologies/2025-12-17-enable-pagefind/#step-2-integrate-pagefind-into-github-actions",
+    
+    "relUrl": "/docs/technologies/2025-12-17-enable-pagefind/#step-2-integrate-pagefind-into-github-actions"
+  },"145": {
+    "doc": "Pagefind Plugin",
+    "title": "Pagefind Plugin",
+    "content": "In this article, I will demostrate how to enable Pagefind in my Jekyll website. ",
+    "url": "/docs/technologies/2025-12-17-enable-pagefind/",
+    
+    "relUrl": "/docs/technologies/2025-12-17-enable-pagefind/"
+  },"146": {
+    "doc": "Daily English Words",
+    "title": "Daily English Words",
+    "content": ". 📅 2025-12-31 . | Orchestra 🔊 管弦乐队 | Orchestration 🔊 编排 | Syria 🔊 叙利亚 | Incentive 🔊 激励/激励措施 | Zelenskyy 🔊 泽连斯基 | North Atlantic Treaty Organization (NATO) 🔊 北约（北大西洋合约组织） | Allege 🔊 声称 | Netanyahu 🔊 内塔尼亚胡 | Maduro 🔊 马杜罗 | Cartel 🔊 卡特尔，企业联盟 | Drug Cartel 🔊 毒品Cartel，指毒品网络 | Oil Cartel 🔊 石油Cartel，例如OPEC | Vessel 🔊 容器，船舶，血管 | Israel 🔊 以色列 | Middle East 🔊 中东 | Hamas 🔊 哈马斯 | Gaza 🔊 加沙 | Disarm 🔊 解除武装 | Vanish 🔊 消失 | Ballistic Missile 🔊 弹道导弹 | Saudi Arabia 🔊 沙特阿拉伯 | Vowel 🔊 元音 | Consonant 🔊 辅音 | Syllable 🔊 音节 | Slur 🔊 诋毁(v.), 诋毁行言辞(n.)，含糊其辞 | Clash 🔊 冲突 | Islam 🔊 伊斯兰 | Muslim 🔊 穆斯林 | Iran 🔊 伊朗 | Iranian 🔊 伊朗人 | Tehran 🔊 德黑兰 | Regime 🔊 政权 | Humiliation 🔊 羞辱 | Kurds 🔊 库尔德人 | Uprising 🔊 起义 | Persia/Persian 🔊 波斯/波斯人 | Rigged Election 🔊 被操纵的选举 | Symbolic 🔊 象征性的 | . 📅 2025-12-29 . | Metaphor 🔊 隐喻，比喻 | Pavement 🔊 人行道 | Essence 🔊 本质 | Lecture 🔊 讲座 | Lecture Room 🔊 课堂 | Florida 🔊 弗罗里达 | Drum/Drummer 🔊 敲鼓/鼓手 | Motto 🔊 座右铭，箴言，口号 | Radical 🔊 激进的 | Frailty 🔊 脆弱 | Defy 🔊 违抗，抗拒 | Unkindness 🔊 恶意 | Swoon 🔊 陶醉，昏厥 | Apple CEO: Tim Cook I don’t care who is doing better than me. Because the truth is, I’m not in competetion with anyone else. The only person I need to be better than is the person I was yesterday. Last year I was different: I’ve grown, improved, and learned a lot. That’s what really matter. It’s me versus me. Every day I wake up ready to push myself further, to challenge my limits and to become the best version of myself. I don’t let other people’s success make me feel small. Their journey is theirs and mine is mine. | Vegetables: . | Wasabi 🔊山葵，芥末 | Cilantro 🔊 香菜，芫荽 | Coriander 🔊 香菜，芫荽 | Lettuce 🔊 生菜 | Spinach 🔊 菠菜 | Pea 🔊 豌豆 | Cucumber 🔊 黄瓜 | Celery 🔊 芹菜 | Okra 🔊 秋葵 | Broccoli 🔊 西兰花 | Cabbage 🔊 卷心菜 | Bok Choy 🔊 油菜 | Chives 🔊 韭菜 | . | . 📅 2025-12-26 . | Venezuela 🔊 委内瑞拉 | Nigeria 🔊 尼日利亚 | Marijuana 🔊 大麻 | Crunchy 🔊 酥脆的 | Carbs 🔊 碳水化合物 | Wardrobe 🔊 衣柜 | Maldives 🔊 马尔代夫 | Reciprocate 🔊 回报 | Meatloaf 🔊 肉饼 | Soft nature of a person doesn’t mean weakness. Remember nothing is softer than water. But its force can break the strongest of rocks. | Man: The city is beautiful at night. Woman: Yes. I didn’t notice it until we walked around. | What am I doing? . | I’m wiping the mirror. | I’m washing the dishes. | I’m drying the glass. | I’m ironing the T-shirt. | I’m chaning the light bulb. | I’m dressing the child. | I’m hanging the laundry. | I’m scrubbing the toilet. (Scrub 🔊 擦洗) | I’m making the bed. | I’m sharpening the knife. | I’m watering the plants. | I’m putting the pillow in the case. | I’m sweeping the floor. | I’m mopping the floor. (Mop 🔊 拖把) | I’m vacuumming the floor. (vacuumm 🔊 真空/吸尘) | . | Whoop 🔊 揍 | Placement Test 🔊 分级测试 | Installment 🔊 分期/分期付款 | . ",
+    "url": "/docs/life-lessons/2025-12-26-english-words/",
+    
+    "relUrl": "/docs/life-lessons/2025-12-26-english-words/"
+  },"147": {
+    "doc": "Excel Timeline",
+    "title": "Excel Timeline",
+    "content": "⬇ Excel timline template . Chart Type: Line &gt; Line with Markers . ",
+    "url": "/docs/technologies/2025-12-26-excel-timeline/",
+    
+    "relUrl": "/docs/technologies/2025-12-26-excel-timeline/"
+  },"148": {
+    "doc": "Excel📚",
+    "title": "Excel📚",
+    "content": "Ref.: Excel . ",
+    "url": "/docs/technologies/2025-12-26-excel/",
+    
+    "relUrl": "/docs/technologies/2025-12-26-excel/"
+  },"149": {
+    "doc": "CSS/HTML/JavaScript📚",
+    "title": "CSS/HTML/JavaScript📚",
+    "content": "Ref.: Mozilla Development Network (MDN) . ",
+    "url": "/docs/technologies/2025-css/",
+    
+    "relUrl": "/docs/technologies/2025-css/"
+  },"150": {
+    "doc": "PMBOK® Guide📚",
+    "title": "PMBOK® Guide📚",
+    "content": "Ref.: Project Management Institute . ",
+    "url": "/docs/management/2025-pmp-series/",
+    
+    "relUrl": "/docs/management/2025-pmp-series/"
+  },"151": {
+    "doc": "Glossary",
+    "title": "A",
+    "content": "Artificial Intelligence (人工智能) . Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. 人工智能（AI）是计算机系统执行通常与人类智能相关的任务的能力，例如学习、推理、解决问题、感知和决策。 . ",
+    "url": "/docs/ai/2026-01-04-glossary/#a",
+    
+    "relUrl": "/docs/ai/2026-01-04-glossary/#a"
+  },"152": {
+    "doc": "Glossary",
+    "title": "E",
+    "content": "Expert Systems (专家系统) . Expert Systems are designed to simulate the decision-making ability of human experts. These systems use a set of predefined “if-then” rules and knowledge from specialists in specific fields to make informed decisions similar to how a medical professional would diagnose a disease. They are useful in areas where expert knowledge is important but not always easily accessible. 专家系统旨在模拟人类专家的决策能力。这些系统使用一套预定义的“如果-那么”规则和特定领域专家的知识，做出类似于医疗专业人员诊断疾病的明智决策。它们在专家知识重要但不易获取的领域非常有用。 . ",
+    "url": "/docs/ai/2026-01-04-glossary/#e",
+    
+    "relUrl": "/docs/ai/2026-01-04-glossary/#e"
+  },"153": {
+    "doc": "Glossary",
+    "title": "G",
+    "content": "Generative Artificial Intelligence (生成式人工智能) . Generative AI (GenAI) refers to artificial intelligence systems, often trained on massive datasets, that create new, original content like text, images, code, or music, rather than just classifying data or making decisions like traditional AI. These models learn patterns from existing data to generate novel outputs, powering tools from ChatGPT (text) to DALL-E (images), automating tasks, enhancing creativity, and transforming industries by understanding and producing human-like material in response to prompts. 生成式人工智能（GenAI）指的是人工智能系统，通常在海量数据集上进行训练，能够创作新的、原创的内容，如文本、图像、代码或音乐，而不仅仅像传统人工智能那样进行数据分类或决策。这些模型从现有数据中学习模式以生成新的输出，驱动从 ChatGPT（文本）到 DALL-E（图像）的工具，自动化任务、增强创意，并通过理解和生成类似人类的内容来响应提示，从而改变各行各业。 . ",
+    "url": "/docs/ai/2026-01-04-glossary/#g",
+    
+    "relUrl": "/docs/ai/2026-01-04-glossary/#g"
+  },"154": {
+    "doc": "Glossary",
+    "title": "M",
+    "content": "Machine Learning (ML, 机器学习) . Machine Learning is a subset of artificial intelligence (AI) that focuses on building systems that can learn from and make decisions based on data. Instead of being explicitly programmed to perform a task, a machine learning model uses algorithms to identify patterns within data and improve its performance over time without human intervention. 机器学习是人工智能（AI）的一个子集，专注于构建能够从数据中学习并基于数据做出决策的系统。机器学习模型不是通过明确编程来执行任务，而是使用算法识别数据中的模式，并随着时间的推移在无需人工干预的情况下提高其性能。 . Models (模型) . AI models are programs that learn from data and make decisions or predictions based on what they’ve learned. These models help AI perform tasks by recognizing patterns in data similar to how humans learn from experience. Different models use various learning approaches depending on how they are trained. 人工智能模型是通过数据学习并根据所学内容做出决策或预测的程序。这些模型通过识别数据中的模式来帮助人工智能完成任务，类似于人类通过经验学习的方式。不同的模型根据训练方式使用不同的学习方法。 . Model Context Protocol (MCP, 模型上下文协议) . ",
+    "url": "/docs/ai/2026-01-04-glossary/#m",
+    
+    "relUrl": "/docs/ai/2026-01-04-glossary/#m"
+  },"155": {
+    "doc": "Glossary",
+    "title": "N",
+    "content": "Natural Language Processing (NLP, 自然语言处理) . Natural Language Processing (NLP) allows machines to understand and interact with human language in a way that feels natural. It enables speech recognition systems like Siri or Alexa to interpret what we say and respond accordingly. It combines linguistics and computer science to help computers process, understand and generate human language allowing for tasks like language translation, sentiment analysis and real-time conversation. 自然语言处理（NLP）使机器能够以自然的方式理解和与人类语言互动。它使语音识别系统（如 Siri 或 Alexa）能够理解我们的语言并作出相应的回应。自然语言处理结合了语言学和计算机科学，帮助计算机处理、理解和生成自然语言，从而实现语言翻译、情感分析和实时对话等任务。 . Neural Network (神经网络) . ",
+    "url": "/docs/ai/2026-01-04-glossary/#n",
+    
+    "relUrl": "/docs/ai/2026-01-04-glossary/#n"
+  },"156": {
+    "doc": "Glossary",
+    "title": "P",
+    "content": "Prompt (提示词) . ",
+    "url": "/docs/ai/2026-01-04-glossary/#p",
+    
+    "relUrl": "/docs/ai/2026-01-04-glossary/#p"
+  },"157": {
+    "doc": "Glossary",
+    "title": "Glossary",
+    "content": "Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. A E G M N P . ",
+    "url": "/docs/ai/2026-01-04-glossary/",
+    
+    "relUrl": "/docs/ai/2026-01-04-glossary/"
+  },"158": {
+    "doc": "Homebrew加速（中国）",
+    "title": "在～/.zshrc文件中设置环境变量如下。",
+    "content": "~~~bash ####### brew安装镜像加速 # # 阿里: https://mirrors.aliyun.com/homebrew # tuna: https://mirrors.tuna.tsinghua.edu.cn # ustc: https://mirrors.ustc.edu.cn # export HOMEBREW_BREW_GIT_REMOTE=\"https://mirrors.ustc.edu.cn/brew.git\" export HOMEBREW_CORE_GIT_REMOTE=\"https://mirrors.ustc.edu.cn/homebrew-core.git\" export HOMEBREW_BOTTLE_DOMAIN=\"https://mirrors.ustc.edu.cn/homebrew-bottles\" # brew4.x API加速 export HOMEBREW_API_DOMAIN=\"https://mirrors.ustc.edu.cn/homebrew-bottles/api\" # hide export HOMEBREW_NO_ENV_HINTS=\"1\" ~~~ . ",
+    "url": "/docs/technologies/2026-01-04-macos-homebrew/#%E5%9C%A8zshrc%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%A6%82%E4%B8%8B",
+    
+    "relUrl": "/docs/technologies/2026-01-04-macos-homebrew/#在zshrc文件中设置环境变量如下"
+  },"159": {
+    "doc": "Homebrew加速（中国）",
+    "title": "刷新配置令其生效",
+    "content": "~~~bash source ~/.zshrc ~~~ . ",
+    "url": "/docs/technologies/2026-01-04-macos-homebrew/#%E5%88%B7%E6%96%B0%E9%85%8D%E7%BD%AE%E4%BB%A4%E5%85%B6%E7%94%9F%E6%95%88",
+    
+    "relUrl": "/docs/technologies/2026-01-04-macos-homebrew/#刷新配置令其生效"
+  },"160": {
+    "doc": "Homebrew加速（中国）",
+    "title": "Homebrew加速（中国）",
+    "content": " ",
+    "url": "/docs/technologies/2026-01-04-macos-homebrew/",
+    
+    "relUrl": "/docs/technologies/2026-01-04-macos-homebrew/"
+  },"161": {
+    "doc": "MacOS📚",
+    "title": "MacOS📚",
+    "content": "Ref.: Mozilla Development Network (MDN) . ",
+    "url": "/docs/technologies/2026-01-04-macos/",
+    
+    "relUrl": "/docs/technologies/2026-01-04-macos/"
+  },"162": {
+    "doc": "AI Introduction",
+    "title": "AI Introduction",
+    "content": "AI, or artificial intelligence, is the ability of a computer system to learn from past data and errors, enabling it to make increasingly accurate predictions for future behavior. This encompasses a broad range of activities, such as problem solving, speech recognition, learning, and decision making. 人工智能（AI）是计算机系统从过去的数据和错误中学习的能力，使其能够对未来行为做出越来越准确的预测。这涵盖了广泛的活动，如问题解决、语音识别、学习和决策。 . Data, models, algorithms, and neural networks are building blocks of AI. AI uses data for learning and reasoning, models and algorithms for knowledge representation and processing, and neural networks for learning from large datasets and accomplishing complex tasks. 数据、模型、算法和神经网络是人工智能的构建模块。人工智能使用数据进行学习和推理，使用模型和算法进行知识表示和处理，使用神经网络从大型数据集中学习并完成复杂任务。 . AI has numerous real-world applications. For example, in healthcare, it can be used for diagnosing diseases, detecting tumors, and developing patient treatment plans. 人工智能在现实世界中有许多应用。例如，在医疗领域，它可用于诊断疾病、检测肿瘤以及制定患者治疗方案。 . https://www.geeksforgeeks.org/artificial-intelligence/what-is-artificial-intelligence-ai/ . ",
+    "url": "/docs/ai/2026-01-06-ai-intro/",
+    
+    "relUrl": "/docs/ai/2026-01-06-ai-intro/"
+  },"163": {
+    "doc": "202601 Sentences",
+    "title": "202601 Sentences",
+    "content": " ",
+    "url": "/docs/life-lessons/202601-sentences/",
+    
+    "relUrl": "/docs/life-lessons/202601-sentences/"
+  },"164": {
+    "doc": "2026/01 All Sentences",
+    "title": "2026/01 All Sentences",
+    "content": " ",
+    "url": "/docs/life-lessons/202601-sentencesall/",
+    
+    "relUrl": "/docs/life-lessons/202601-sentencesall/"
+  },"165": {
+    "doc": "202601 Words",
+    "title": "202601 Words",
+    "content": " ",
+    "url": "/docs/life-lessons/202601-words/",
+    
+    "relUrl": "/docs/life-lessons/202601-words/"
+  },"166": {
+    "doc": "2026/01 All",
+    "title": "2026/01 All",
+    "content": " ",
+    "url": "/docs/life-lessons/202601-wordsall/",
+    
+    "relUrl": "/docs/life-lessons/202601-wordsall/"
+  },"167": {
+    "doc": "2026/01 小然",
+    "title": "2026/01 小然",
+    "content": " ",
+    "url": "/docs/life-lessons/202601-xiaoran/",
+    
+    "relUrl": "/docs/life-lessons/202601-xiaoran/"
+  },"168": {
+    "doc": "2026/01/01 Words",
+    "title": "2026/01/01 Words",
+    "content": " ",
+    "url": "/docs/life-lessons/20260101-words/",
+    
+    "relUrl": "/docs/life-lessons/20260101-words/"
+  },"169": {
+    "doc": "2026/01/02 Sentences",
+    "title": "2026/01/02 Sentences",
+    "content": " ",
+    "url": "/docs/life-lessons/20260102-sentences/",
+    
+    "relUrl": "/docs/life-lessons/20260102-sentences/"
+  },"170": {
+    "doc": "2026/01/02 Words",
+    "title": "2026/01/02 Words",
+    "content": " ",
+    "url": "/docs/life-lessons/20260102-words/",
+    
+    "relUrl": "/docs/life-lessons/20260102-words/"
+  },"171": {
+    "doc": "2026/01/04 Sentences",
+    "title": "2026/01/04 Sentences",
+    "content": " ",
+    "url": "/docs/life-lessons/20260104-sentences/",
+    
+    "relUrl": "/docs/life-lessons/20260104-sentences/"
+  },"172": {
+    "doc": "2026/01/04 Words",
+    "title": "2026/01/04 Words",
+    "content": " ",
+    "url": "/docs/life-lessons/20260104-words/",
+    
+    "relUrl": "/docs/life-lessons/20260104-words/"
+  },"173": {
+    "doc": "2026/01/05 Sentences",
+    "title": "2026/01/05 Sentences",
+    "content": "Is truly open-source AI possible? There are two sides to the software industry. One faces outwards, with products and services generating billions for trillion-dollar companies. The other faces inwards, creating, updating and sharing—often for free—the basic software tools that make the digital world tick. 软件行业有两面性。一面朝外，产品和服务为万亿美元的公司创造数十亿美元的收入。另一面朝内，创造、更新和分享（通常是免费的）构成数字世界基础的软件工具。 . This second side is known as open-source software. It underpins (巩固) platforms like Google’s Android, Apple’s iOS, and major web browsers. By making software freely available, developers can strengthen their code through collaboration (合作), gain trust by proving its reliability and earn recognition from peers. Some open-source projects even make money by selling support to users of the free products. 这第二面被称为开源软件。它支撑着（巩固）谷歌的 Android、苹果的 iOS 和主要的网络浏览器等平台。通过免费提供软件，开发者可以通过协作（合作）来强化他们的代码，通过证明其可靠性来赢得信任，并获得同行的认可。一些开源项目甚至通过向免费产品的用户销售支持来赚钱。 . Unluckily, modern tech giants have stretched the term into meaninglessness. Many so-called “free” products are restricted, developed in secrecy and unable to bring about true innovation. This has led to a heated debate about the real meaning of open source in the age of AI. 不幸的是，现代科技巨头已经将这个词延伸到毫无意义的地步。许多所谓的“免费”产品受到限制，在秘密状态下开发，无法带来真正的创新。这引发了一场关于人工智能时代开源真正含义的激烈辩论。 . In traditional software, the term is well-defined. A developer lets others use their original lines of code written to create a piece of software. This allows any other developer to download, modify (修改) and repurpose the code. Typically, the original developer will ask for the modified version to be shared, too. Over time, original code can evolve into entirely new products. Android, for instance, is based on Linux, originally written for computers. 在传统软件中，这个术语有明确的定义。开发者允许其他人使用他们为创建软件而编写的原始代码行。这使得任何其他开发者都可以下载、修改（修改）和重新利用代码。通常，原始开发者会要求也分享修改后的版本。随着时间的推移，原始代码可以演变成全新的产品。例如，Android 就是基于最初为计算机编写的 Linux。 . Meta, the parent company of Facebook, proudly claims that its large language model (LLM), Llama 3, is “open source”. However, the tech giant also places restrictions on its use, including a ban on using the model to build products with more than 700 million monthly active users. Other labs have also released LLMs for free use, but with similar limits. Facebook 的母公司 Meta 自豪地宣称其大型语言模型（LLM）Llama 3 是“开源”的。然而，这家科技巨头也对其使用施加了限制，包括禁止使用该模型构建每月活跃用户超过 7 亿的产品。其他实验室也发布了供免费使用的 LLM，但也有类似的限制。 . What Meta shares freely is the weights (权重) of the artificial neurons (人工神经元) in its LLM, rather than all the source code and training data. This is certainly not sufficient for someone to build their own version of Llama 3 from scratch. Unlike traditional software development, AI training involves creating a blueprint of the model and feeding it large amounts of data, which the system then uses to adjust its structure through a series of unpredictable steps. Over time, the model improves its performance to an acceptable level. Even if someone were to train an AI model using the same data and hardware as Llama 3, the result would not be identical. That limits the benefits of the open-source approach. While the code can be examined, there’s no certainty that it will perform exactly as the original. Meta 免费分享的是其 LLM 中人工神经元（人工神经元）的权重（权重），而不是所有的源代码和训练数据。这对于某人从零开始构建自己的 Llama 3 版本来说绝对不够。与传统软件开发不同，人工智能训练涉及创建模型的蓝图，并向其输入大量数据，系统随后通过一系列不可预测的步骤使用这些数据来调整其结构。随着时间的推移，模型的性能会提高到可接受的水平。即使有人使用与 Llama 3 相同的数据和硬件来训练人工智能模型，结果也不会完全相同。这限制了开源方法的好处。虽然代码可以被检查，但不能确定它的性能会与原始版本完全一样。 . There are other challenges when it comes to truly open-source AI. Training a cutting-edge AI model that can compete with the latest releases from OpenAI or its peers, for example, costs at least $1 billion. This discourages the developers who have already spent a fortune from sharing. There are also safety concerns. The powerful models may be misused for dangerous purposes, such as spreading harmful content. 在实现真正的开源人工智能方面还存在其他挑战。例如，训练一个可以与 OpenAI 或其同行最新发布的产品竞争的尖端人工智能模型的成本至少为 10 亿美元。这阻碍了已经花费巨资的开发者进行分享。还存在安全隐患。强大的模型可能被滥用用于危险目的，例如传播有害内容。 . ",
+    "url": "/docs/life-lessons/20260105-sentences/",
+    
+    "relUrl": "/docs/life-lessons/20260105-sentences/"
+  },"174": {
+    "doc": "2026/01/05 Words",
+    "title": "2026/01/05 Words",
+    "content": " ",
+    "url": "/docs/life-lessons/20260105-words/",
+    
+    "relUrl": "/docs/life-lessons/20260105-words/"
+  },"175": {
+    "doc": "2026/01/06 Sentences",
+    "title": "2026/01/06 Sentences",
+    "content": "AI Introduction AI, or artificial intelligence, is the ability of a computer system to learn from past data and errors, enabling it to make increasingly accurate AI, or artificial intelligence, is the ability of a computer system to learn from past data and errors, enabling it to make increasingly accurate predictions for future behavior. This encompasses a broad range of activities, such as problem solving, speech recognition, learning, and decision making. 人工智能（AI）是计算机系统从过去的数据和错误中学习的能力，使其能够对未来行为做出越来越准确的预测。这涵盖了广泛的活动，如问题解决、语音识别、学习和决策。 . Data, models, algorithms, and neural networks are building blocks of AI. AI uses data for learning and reasoning, models and algorithms for knowledge representation and processing, and neural networks for learning from large datasets and accomplishing complex tasks. 数据、模型、算法和神经网络是人工智能的构建模块。人工智能使用数据进行学习和推理，使用模型和算法进行知识表示和处理，使用神经网络从大型数据集中学习并完成复杂任务。 . AI has numerous real-world applications. For example, in healthcare, it can be used for diagnosing diseases, detecting tumors, and developing patient treatment plans. 人工智能在现实世界中有许多应用。例如，在医疗领域，它可用于诊断疾病、检测肿瘤以及制定患者治疗方案。 . 🔗 Key learning words . New Leader Greeting Email Dear Colleagues, . As we step into 2026, I am both honored and excited to join the organization as xxx, starting on xxx. This year marks not just a new chapter for me but also a renewed commitment to innovation and collaboration within our incredible team. First and foremost - Happy New Year! I am confident that the year 2026 will bring prosperity, breakthroughs, and shared success to all of us. Under the new frame of “xxx” and the upcoming changes in the next months, we will bring more responsibilities and decision making for the Chinese market and enable faster development speeds. This will take our “in China for China” strategy to the next level. I’m eager to meet each of you, learn about your impactful work, and together drive China R&amp;D initiatives to achieve these targets. Your expertise and dedication are the backbone of our achievements. And I look forward to supporting and amplifying your efforts. Let’s connect, share ideas, and align on how we can push boundaries in 2026. Here’s to a year of bold innovation and collective growth. ",
+    "url": "/docs/life-lessons/20260106-sentences/",
+    
+    "relUrl": "/docs/life-lessons/20260106-sentences/"
+  },"176": {
+    "doc": "2026/01/06 Words",
+    "title": "2026/01/06 Words",
+    "content": "🔗 AI Introduction . ",
+    "url": "/docs/life-lessons/20260106-words/",
+    
+    "relUrl": "/docs/life-lessons/20260106-words/"
+  },"177": {
+    "doc": "2026/01/08 Sentences",
+    "title": "2026/01/08 Sentences",
+    "content": "Xiexiu: Beyond Wuxia, Into Life 邪修：超越武侠，走进生活 Picture yourself as the hero in a Chinese martial-arts novel. Intent on honing (磨炼) your powers or perhaps attaining immortality, there are two paths available to you. Do you choose zhengxiu, the orthodox (正统的) one that typically demands decades of meditation (打坐) in a cave? Or do you risk xiexiu, the heretical (异教的) way? It is swifter. But it also involves moral compromise. In the novels, those who opt for the latter usually end up either corrupt or dead. Traditional mores (传统习俗) warn against those who cheat established systems. 想象自己成为一部中国武侠小说中的英雄。你决心磨炼自己的功力，或者追求长生不老，现在有两条道路可供选择。你会选择正统的正修吗？通常这条路需要在山洞中打坐数十年。还是你会冒险选择异教的邪修之路？它速度更快，但也意味着道德上的妥协。在小说中，选择后者的人通常最终要么堕落，要么死去。传统习俗警告人们不要欺骗既定的体系。 . But xiexiu has acquired a new lease of life among certain youngsters. Detached from its literary origins, it now denotes (表示) a departure from the proper way: more efficient, more creative or simply less bound by convention (惯例). In recent months videos tagged with the term have drawn billions of views on Douyin and Xiaohongshu, a pair of social platforms. Businesses have joined the fun, selling products in strange combinations. Some departures are just rebranded life hacks (生活技巧), such as rendering lard (熬猪油) in a microwave or learning English through fan fiction. Others veer (转向) into the absurd: reading advanced mathematics as a cure for insomnia (失眠), dining in the nude to shame oneself into getting in shape or melting ice cream to make carbonara sauce (一种意大利面酱). 但谢修在一些年轻人中获得了新生。脱离了其文学起源，它现在表示一种偏离正道的行为：更高效、更具创意，或者只是少受惯例束缚。近几个月，带有该词标签的视频在抖音和小红书这两个社交平台上吸引了数十亿的观看。企业也加入了这股热潮，销售一些奇怪组合的产品。有些偏离只是重新包装的生活技巧，例如用微波炉熬猪油或通过同人小说学习英语。其他的则走向荒诞：通过阅读高等数学来治疗失眠、裸身用餐以逼自己锻炼身材，或者将冰淇淋融化来制作意大利面酱碳ara。 . Many of those embracing the trend are young adults, who see xiexiu as a middle path between striving hard (“996” office culture) and “lying flat” (resigning oneself to dull employment to avoid intolerable stress). More than a shortcut, xiexiu signals disillusionment (醒悟). When young people face the usual hurdles (难关) of stepping into adulthood, such as balancing life’s demands and future prospects, they often seek options that suit their needs better. That’s why xiexiu becomes a choice for some. 许多接受这一趋势的人是年轻人，他们将“躺休”视为努力奋斗（“996”办公文化）与“躺平”（为了避免难以承受的压力而甘于平淡工作）之间的一条中间道路。躺休不仅仅是一种捷径，它还意味着迷茫和觉醒（醒悟）。当年轻人面对步入成年所遇到的常见难关（难关），例如平衡生活的需求与未来的前景时，他们往往会寻找更适合自己需求的选择。这也是为什么躺休会成为一些人的选择。 . Last month, the social account of Guangming Daily declared the fad (一时的潮流) a cheerful way for the young to counter (反驳) uncertainty and gain initiative. The commentary stopped short of calling it a rebellion, instead describing it as “a way to seek improvement”. Easier perhaps, to let the young channel their anxiety through quirky (古怪的) hacks than to focus on the more complicated aspects of what lies ahead. But an inclination towards xiexiu should not be dismissed. “Heretical practice isn’t really about teaching you how to cook，it’s teaching you how to rethink,” reads one clear-eyed comment. 上个月，《光明日报》的社交账号称这种潮流是一种让年轻人以愉快方式应对不确定性并获得主动权的方式。评论没有直接称其为叛逆，而是把它描述为“寻求进步的一种方式”。或许，让年轻人通过古怪的小技巧来纾解焦虑，比让他们关注未来更复杂的方面来得容易。然而，对斜修的倾向不应被忽视。一条清晰的评论写道：“异端的做法并不是真的教你如何烹饪，而是在教你如何重新思考。” . 🔗 Key learning words . ",
+    "url": "/docs/life-lessons/20260108-sentences/",
+    
+    "relUrl": "/docs/life-lessons/20260108-sentences/"
+  },"178": {
+    "doc": "2026/01/08 Words",
+    "title": "2026/01/08 Words",
+    "content": "🔗 Xiexiu: Beyond Wuxia, Into Life 邪修：超越武侠，走进生活 . ",
+    "url": "/docs/life-lessons/20260108-words/",
+    
+    "relUrl": "/docs/life-lessons/20260108-words/"
+  },"179": {
+    "doc": "ℹ️ About",
+    "title": "Release Notes",
+    "content": " ",
+    "url": "/about/#release-notes",
+    
+    "relUrl": "/about/#release-notes"
+  },"180": {
+    "doc": "ℹ️ About",
+    "title": "References",
+    "content": ". | Jekyll | Just-the-Docs | GitHub Pages | Plugin: jekyll-glossary_tooltip | Plugin: Last Modified At | Site search: Lunr Languages | Site search: Lunr Languages (Chinese： lunr.zh.js) | . ",
+    "url": "/about/#references",
+    
+    "relUrl": "/about/#references"
+  },"181": {
+    "doc": "ℹ️ About",
+    "title": "ℹ️ About",
+    "content": " ",
+    "url": "/about/",
+    
+    "relUrl": "/about/"
+  },"182": {
+    "doc": "🤖 AI",
+    "title": "🤖 AI",
+    "content": "Artificial Intelligence (AI) . ",
+    "url": "/docs/ai/",
+    
+    "relUrl": "/docs/ai/"
+  },"183": {
+    "doc": "🌿 Brilliant Writtings",
+    "title": "🌿 Brilliant Writtings",
+    "content": " ",
+    "url": "/docs/brilliant-writtings/",
+    
+    "relUrl": "/docs/brilliant-writtings/"
+  },"184": {
+    "doc": "🧭 Management",
+    "title": "🧭 Management",
+    "content": "Management theories, project management . ",
+    "url": "/docs/management/",
+    
+    "relUrl": "/docs/management/"
+  },"185": {
+    "doc": "💡 Tips",
+    "title": "💡 Tips",
+    "content": " ",
+    "url": "/docs/tips/",
+    
+    "relUrl": "/docs/tips/"
+  },"186": {
+    "doc": "💻 Technologies",
+    "title": "💻 Technologies",
+    "content": "CSS/HTML/JavaScript, C#, Blazor, MAUI, Static Website, etc. ",
+    "url": "/docs/technologies/",
+    
+    "relUrl": "/docs/technologies/"
+  },"187": {
+    "doc": "✨ Life Lessons",
+    "title": "✨ Life Lessons",
+    "content": " ",
+    "url": "/docs/life-lessons/",
+    
+    "relUrl": "/docs/life-lessons/"
+  }
+}

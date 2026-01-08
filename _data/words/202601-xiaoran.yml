@@ -1,0 +1,24 @@
+month: "202601-xiaoran"
+days:
+- date: "2026/01/01"
+  words:
+  - en: village
+    cn: 村庄
+  - en: mountain
+    cn: 山
+  - en: river
+    cn: 河流
+  - en: forest
+    cn: 森林
+  - en: sky
+    cn: 天空
+- date: "2026/01/02"
+  words:
+  - en: happy
+    cn: 快乐的
+  - en: sad
+    cn: 伤心的
+  - en: angry
+    cn: 生气的
+  - en: excited
+    cn: 兴奋的

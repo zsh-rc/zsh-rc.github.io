@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+{% if page.title %}
+<h1>{{ page.title }}</h1>
+{% endif %}
+
+<div class="page-metadata fs-2">
+  {% if page.author %}
+  <span>👤 {{ page.author }}</span>
+  {% endif %}
+
+  {% if page.date %}
+  <span> | 📅 Created: {{ page.date | date: "%Y-%m-%d" }}</span>
+  {% endif %}
+
+  {% if page.last_modified_at %}
+  <span> | 📅 Last updated: {{ page.last_modified_at | date: "%Y-%m-%d" }}</span>
+  {% endif %}
+
+  {% if page.tags %}
+  | 🏷️ Tags:
+    {% for tag in page.tags %}
+      {% assign lowercase_tag = tag | downcase %}
+      {% if lowercase_tag == "word-test" %}
+        | &nbsp;
+        <span class="fs-3 label label-yellow" id="start" style="font-size: 9px !important"> 
+          <a href="javascript:void(0)" onclick="startTest()" title="Test">📝 Start Test</a> 
+        </span>
+        <span class="fs-3 label label-yellow d-none" id="close" style="font-size: 9px !important"> 
+          <a href="javascript:void(0)" onclick="closeTest()" title="Close">✖ Close Test</a>
+        </span>       
+      {% else %}
+        <span class="label label-purple" style="font-size: 9px !important">{{ tag }}</span>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+</div>
+
+{% if page.excerpt %}
+<div class="fs-6 fw-300 mt-5">{{ page.excerpt }}</div>
+{% endif %}
+
+{{ content }}
