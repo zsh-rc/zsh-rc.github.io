@@ -201,8 +201,10 @@ layout: post
       document.getElementById("result").textContent = "Correct!";
       setTimeout(nextWord, 500);
     } else {
-      document.getElementById("result").textContent =
-        "Not quite. Correct answer: " + correct;
+      document.getElementById("result").innerHTML =
+        "<span>Not quite. Correct answer: </span>" 
+        + "<a href='javascript:void(0)' onclick='playVoice(\"" + current.en + "\");'>" + current.en + " 🔊 " + current.cn + "</a>&nbsp;→&nbsp;"
+        + "<a href='https://dict.youdao.com/result?word=" + current.en +"&lang=en' target='_blank'>🔗</a>";
       document.getElementById("errors").innerHTML += `<div>❌ ${mode === "en_to_cn" ? current.en : current.cn} → ${correct} (Your answer: ${user})</div>`;
     }
 
@@ -218,8 +220,10 @@ layout: post
     }
 
     const correct = mode === "en_to_cn" ? current.cn : current.en;
-    document.getElementById("result").textContent =
-      "Review answer: " + correct;
+      document.getElementById("result").innerHTML =
+        "<span>Review: </span>" 
+        + "<a href='javascript:void(0)' onclick='playVoice(\"" + current.en + "\");'>" + current.en + " 🔊 " + current.cn + "</a>&nbsp;→&nbsp;"
+        + "<a href='https://dict.youdao.com/result?word=" + current.en +"&lang=en' target='_blank'>🔗</a>";
     document.getElementById("answer").value = correct;    
 
     updateStats();    
