@@ -1,24 +1,2258 @@
 month: "202601-xiaoran"
 days:
-- date: "2026/01/01"
+- date: "2026/01/10"
   words:
-  - en: village
-    cn: 村庄
+  - en: morning
+    cn: 上午
+  - en: afternoon
+    cn: 下午
+  - en: book
+    cn: 书本
+  - en: ruler
+    cn: 尺子
+  - en: pencil
+    cn: 铅笔
+  - en: rubber
+    cn: 橡皮
+  - en: eye
+    cn: 眼睛
+  - en: mouth
+    cn: 嘴巴
+  - en: face
+    cn: 脸
+  - en: nose
+    cn: 鼻子
+  - en: ear
+    cn: 耳朵
+  - en: dance
+    cn: 跳舞
+  - en: read
+    cn: 阅读
+  - en: sing
+    cn: 唱歌
+  - en: draw
+    cn: 绘画
+  - en: grandmother
+    cn: 祖母
+  - en: grandfather
+    cn: 祖父
+  - en: father
+    cn: 父亲
+  - en: mother
+    cn: 母亲
+  - en: me
+    cn: 我
+- date: "2026/01/11"
+  words:
+  - en: fat
+    cn: 肥胖的
+  - en: thin
+    cn: 瘦的
+  - en: tall
+    cn: 高的
+  - en: short
+    cn: 矮小的
+  - en: one
+    cn: 一
+  - en: two
+    cn: 二
+  - en: three
+    cn: 三
+  - en: four
+    cn: 四
+  - en: five
+    cn: 五
+  - en: six
+    cn: 六
+  - en: apple
+    cn: 苹果
+  - en: pear
+    cn: 梨
+  - en: peach
+    cn: 桃子
+  - en: orange
+    cn: 橘子
+  - en: hamburger
+    cn: 汉堡
+  - en: pizza
+    cn: 比萨饼
+  - en: cake
+    cn: 蛋糕
+  - en: pie
+    cn: 馅饼
+  - en: chick
+    cn: 小鸡
+  - en: duck
+    cn: 鸭子
+- date: "2026/01/12"
+  words:
+  - en: cow
+    cn: 牛
+  - en: pig
+    cn: 猪
+  - en: bear
+    cn: 棕熊
+  - en: tiger
+    cn: 老虎
+  - en: monkey
+    cn: 猴子
+  - en: panda
+    cn: 熊猫
+  - en: red
+    cn: 红色
+  - en: blue
+    cn: 蓝色
+  - en: yellow
+    cn: 黄色
+  - en: green
+    cn: 绿色
+  - en: frog
+    cn: 青蛙
+  - en: rabbit
+    cn: 兔子
+  - en: bee
+    cn: 蜜蜂
+  - en: bird
+    cn: 鸟
+  - en: sheep
+    cn: 绵羊
+  - en: hen
+    cn: 母鸡
+  - en: dog
+    cn: 狗
+  - en: cat
+    cn: 猫
+  - en: rice
+    cn: 米饭
+  - en: soup
+    cn: 汤
+  - en: egg
+    cn: 鸡蛋
+  - en: noodles
+    cn: 面条
+  - en: ball
+    cn: 球
+  - en: doll
+    cn: 娃娃
+  - en: bicycle
+    cn: 自行车
+  - en: kite
+    cn: 风筝
+  - en: jelly
+    cn: 果冻
+  - en: "ice cream"
+    cn: 冰淇淋
+  - en: sweet
+    cn: 糖果
+  - en: biscuit
+    cn: 饼干
+  - en: cola
+    cn: 可乐
+  - en: juice
+    cn: 果汁
+  - en: milk
+    cn: 牛奶
+  - en: water
+    cn: 水
+  - en: warm
+    cn: 暖和的
+  - en: hot
+    cn: 热的
+  - en: spring
+    cn: 春天
+  - en: summer
+    cn: 夏天
+  - en: sunny
+    cn: 晴朗的
+  - en: cloudy
+    cn: 多云的
+  - en: rainy
+    cn: 下雨的
+  - en: windy
+    cn: 刮风的
+  - en: T-shirt
+    cn: T裇
+  - en: dress
+    cn: 连衣裙
+  - en: shorts
+    cn: 短裤
+  - en: blouse
+    cn: 女士衬衫
+  - en: ride
+    cn: 骑
+  - en: skip
+    cn: 跳
+  - en: play
+    cn: 玩
+  - en: fly
+    cn: 飞
+  - en: gift
+    cn: 礼物
+  - en: card
+    cn: 卡片
+  - en: firecracker
+    cn: 爆竹
+  - en: firework
+    cn: 烟花
+  - en: boy
+    cn: 男孩
+  - en: wolf
+    cn: 狼
+  - en: farmer
+    cn: 农民
+  - en: Mr
+    cn: 先生
+  - en: Mrs
+    cn: 女士
+  - en: one
+    cn: 一
+  - en: two
+    cn: 二
+  - en: three
+    cn: 三
+  - en: four
+    cn: 四
+  - en: five
+    cn: 五
+  - en: six
+    cn: 六
+  - en: seven
+    cn: 七
+  - en: eight
+    cn: 八
+  - en: nine
+    cn: 九
+  - en: ten
+    cn: 十
+  - en: fat
+    cn: 肥胖的
+  - en: thin
+    cn: 瘦的
+  - en: tall
+    cn: 高的
+  - en: short
+    cn: 矮小的
+  - en: boy
+    cn: 男孩
+  - en: girl
+    cn: 女孩
+  - en: grandfather
+    cn: 祖父
+  - en: grandmother
+    cn: 祖母
+  - en: father
+    cn: 父亲
+  - en: mother
+    cn: 母亲
+  - en: brother
+    cn: 兄弟
+  - en: sister
+    cn: 姐妹
+  - en: me
+    cn: 我
+  - en: eye
+    cn: 眼睛
+  - en: hair
+    cn: 头发
+  - en: nose
+    cn: 鼻子
+  - en: ear
+    cn: 耳朵
+  - en: mouth
+    cn: 嘴巴
+  - en: school
+    cn: 学校
+  - en: library
+    cn: 图书馆
+  - en: toilet
+    cn: 洗手间
+  - en: hall
+    cn: 会场
+  - en: playground
+    cn: 操场
+  - en: classroom
+    cn: 教室
+  - en: "an apple"
+    cn: 一个苹果
+  - en: "an orange"
+    cn: 一个橘子
+  - en: "a banana"
+    cn: 一个香蕉
+  - en: "a peach"
+    cn: 一个桃子
+  - en: apples
+    cn: 苹果（复数）
+  - en: oranges
+    cn: 橘子（复数）
+  - en: bananas
+    cn: 香蕉（复数）
+  - en: peaches
+    cn: 桃子（复数）
+  - en: boat
+    cn: 小船
+  - en: balloon
+    cn: 气球
+  - en: flower
+    cn: 花朵
+  - en: kite
+    cn: 风筝
+  - en: ladybird
+    cn: 瓢虫
+  - en: bee
+    cn: 蜜蜂
+  - en: butterfly
+    cn: 蝴蝶
+  - en: ant
+    cn: 蚂蚁
+  - en: chick
+    cn: 小鸡
+  - en: hen
+    cn: 母鸡
+  - en: duck
+    cn: 鸭子
+  - en: pig
+    cn: 猪
+  - en: dog
+    cn: 狗
+  - en: cat
+    cn: 猫
+  - en: leaves
+    cn: 树叶（复数）
+  - en: branch
+    cn: 树枝
+  - en: trunk
+    cn: 树干
+  - en: roots
+    cn: 根
+  - en: aeroplane
+    cn: 飞机
+  - en: bus
+    cn: 公共汽车
+  - en: ship
+    cn: 轮船
+  - en: car
+    cn: 小轿车
+  - en: pineapple
+    cn: 菠萝
+  - en: cake
+    cn: 蛋糕
+  - en: bread
+    cn: 面包
+  - en: glass
+    cn: 玻璃杯、玻璃
+  - en: bag
+    cn: 包
+  - en: sweet
+    cn: 糖果、甜的
+  - en: lemon
+    cn: 柠檬
+  - en: sour
+    cn: 酸的
+  - en: salt
+    cn: 盐
+  - en: salty
+    cn: 咸的
+  - en: coffee
+    cn: 咖啡
+  - en: bitter
+    cn: 苦的
+  - en: tiger
+    cn: 老虎
+  - en: lion
+    cn: 狮子
+  - en: panda
+    cn: 熊猫
+  - en: monkey
+    cn: 猴子
+  - en: "toy train"
+    cn: 玩具火车
+  - en: doll
+    cn: 洋娃娃
+  - en: skateboard
+    cn: 溜冰板
+  - en: robot
+    cn: 机器人
+  - en: hat
+    cn: 帽子
+  - en: scarf
+    cn: 围巾
+  - en: jacket
+    cn: 夹克
+  - en: "a pair of gloves"
+    cn: 一副手套
+  - en: "a pair of socks"
+    cn: 一双袜子
+  - en: "a pair of shoes"
+    cn: 一双鞋子
+  - en: circle
+    cn: 圆形
+  - en: square
+    cn: 正方形
+  - en: triangle
+    cn: 三角形
+  - en: star
+    cn: （五角）星形
+  - en: rectangle
+    cn: 长方形（矩形）
+  - en: sky
+    cn: 天空
+  - en: sea
+    cn: 海
   - en: mountain
     cn: 山
   - en: river
     cn: 河流
-  - en: forest
-    cn: 森林
-  - en: sky
-    cn: 天空
-- date: "2026/01/02"
-  words:
+  - en: plant
+    cn: 种植
+  - en: picnic
+    cn: 野餐
+  - en: ice-skate
+    cn: 滑冰
+  - en: ski
+    cn: 滑雪
+  - en: head
+    cn: 头
+  - en: body
+    cn: 身体
+  - en: finger
+    cn: 手指
+  - en: knee
+    cn: 膝盖
+  - en: foot（feet）
+    cn: 脚
+  - en: shoulder
+    cn: 肩膀
+  - en: arm
+    cn: 手臂
+  - en: hand
+    cn: 手
+  - en: leg
+    cn: 腿
+  - en: park
+    cn: 公园
+  - en: cinema
+    cn: 电影院
+  - en: zoo
+    cn: 动物园
+  - en: eleven
+    cn: 十一
+  - en: twelve
+    cn: 十二
+  - en: thirteen
+    cn: 十三
+  - en: fourteen
+    cn: 十四
+  - en: fifteen
+    cn: 十五
+  - en: sixteen
+    cn: 十六
+  - en: her
+    cn: 她的
+  - en: his
+    cn: 他的
+  - en: every
+    cn: 每一个
+  - en: desk
+    cn: 课桌
+  - en: live
+    cn: 居住
+  - en: mask
+    cn: 面具
+  - en: meet
+    cn: 遇见
+  - en: near
+    cn: 在......附近；靠近
+  - en: number
+    cn: 号码
+  - en: sit
+    cn: 坐
+  - en: skip
+    cn: 跳绳
+  - en: student
+    cn: 学生
+  - en: walk
+    cn: 走;步行
+  - en: well
+    cn: 好
+  - en: classmate
+    cn: 同学
+  - en: bird
+    cn: 鸟
+  - en: both
+    cn: 两个都
+  - en: climb
+    cn: 爬
+  - en: crisp
+    cn: 薯片
+  - en: dolphin
+    cn: 海豚
+  - en: draw
+    cn: 绘画
+  - en: everyone
+    cn: 每人；大家
+  - en: fast
+    cn: 快；快速
+  - en: fly
+    cn: 飞
+  - en: guest
+    cn: 嘉宾；客人
+  - en: her
+    cn: 她（宾格）
+  - en: high
+    cn: 高；在高处
+  - en: hop
+    cn: 单脚跳行
+  - en: interview
+    cn: 采访；访问
+  - en: jump
+    cn: 跳
+  - en: paint
+    cn: 用颜料画画
+  - en: picture
+    cn: 照片；图画
+  - en: read
+    cn: 阅读
+  - en: run
+    cn: 跑；跑步
+  - en: swim
+    cn: 游泳
+  - en: time
+    cn: 时间；时光
+  - en: very
+    cn: 非常，很
+  - en: wasp
+    cn: 黄蜂
+  - en: welcome
+    cn: 欢迎
+  - en: write
+    cn: 写；写字
+  - en: back
+    cn: 回来
+  - en: biscuit
+    cn: 饼干
+  - en: bottle
+    cn: 瓶；瓶子
+  - en: bright
+    cn: 明亮的
+  - en: crow
+    cn: 乌鸦
+  - en: drink
+    cn: 喝
+  - en: dry
+    cn: 干燥的
+  - en: "each other"
+    cn: 互相
+  - en: full
+    cn: 饱的
   - en: happy
     cn: 快乐的
+  - en: home
+    cn: 到家
+  - en: hungry
+    cn: 饿的
+  - en: idea
+    cn: 主意
+  - en: "lamp post"
+    cn: 路灯柱
+  - en: new
+    cn: 新的
+  - en: pebble
+    cn: 砾石；鹅卵石
+  - en: postman
+    cn: 邮递员
   - en: sad
-    cn: 伤心的
+    cn: 难过的
+  - en: so
+    cn: 太
+  - en: then
+    cn: 那么；既然如此
+  - en: thirsty
+    cn: 口渴的
+  - en: tired
+    cn: 累的；疲倦的
+  - en: toast
+    cn: 烤面包片
+  - en: water
+    cn: 水
+  - en: word
+    cn: 单词
+  - en: aunt
+    cn: 姑母；姨母；舅母；婶婶
+  - en: cloud
+    cn: 云
+  - en: cool
+    cn: 酷的；妙极了
+  - en: cousin
+    cn: 表兄妹；堂兄妹
+  - en: dish
+    cn: 碟子
+  - en: dive
+    cn: 跳水
+  - en: fish
+    cn: 鱼
+  - en: garden
+    cn: 花园
+  - en: man
+    cn: 男子
+  - en: mooncake
+    cn: 月饼
+  - en: "police officer"
+    cn: 警察
+  - en: riddle
+    cn: 谜语
+  - en: right
+    cn: 对的；正确的
+  - en: sometimes
+    cn: 有时
+  - en: uncle
+    cn: 叔；舅；姨夫；姑父
+  - en: wash
+    cn: 洗
+  - en: afraid
+    cn: 害怕的
+  - en: bus
+    cn: 公共汽车
+  - en: "bus driver"
+    cn: 公交车司机
+  - en: busy
+    cn: 忙碌的
+  - en: cook
+    cn: 厨师
+  - en: dangerous
+    cn: 危险的
+  - en: doctor
+    cn: 医生
+  - en: dress
+    cn: 裙子
+  - en: driver
+    cn: 驾驶员
+  - en: fire
+    cn: 火
+  - en: "fire engine"
+    cn: 消防车
+  - en: firefighter
+    cn: 消防员
+  - en: "fire station"
+    cn: 消防站
+  - en: job
+    cn: 工作
+  - en: nurse
+    cn: 护士
+  - en: people
+    cn: 人们
+  - en: "police station"
+    cn: 警察局
+  - en: princess
+    cn: 公主
+  - en: teacher
+    cn: 教师
+  - en: bite
+    cn: 咬
+  - en: blouse
+    cn: 女士衬衣
+  - en: friend
+    cn: 朋友
+  - en: grey
+    cn: 灰色的
+  - en: jeans
+    cn: 牛仔裤
+  - en: net
+    cn: 网
+  - en: pink
+    cn: 粉红色的
+  - en: sharp
+    cn: 锋利的
+  - en: shirt
+    cn: 衬衫
+  - en: shorts
+    cn: 短裤
+  - en: skate
+    cn: 滑板；滑冰
+  - en: skirt
+    cn: 短裙
+  - en: strong
+    cn: 强壮的
+  - en: sweater
+    cn: 毛衣；线衣
+  - en: tooth
+    cn: 牙齿
+  - en: T-shirt
+    cn: T恤衫
+  - en: "a lot of"
+    cn: 许多
+  - en: behind
+    cn: 在......后面
+  - en: bookshelf
+    cn: 书架
+  - en: building
+    cn: 大楼；建筑物
+  - en: busy
+    cn: 忙碌的
+  - en: canteen
+    cn: 食堂
+  - en: clean
+    cn: 干净的
+  - en: computer
+    cn: 电脑；计算机
+  - en: "computer lab"
+    cn: 电脑房
+  - en: cupboard
+    cn: 橱柜
+  - en: floor
+    cn: 楼层
+  - en: forest
+    cn: 森林
+  - en: grandpa
+    cn: （外）祖父；爷爷；外公
+  - en: gym
+    cn: 体育馆
+  - en: "have lunch"
+    cn: 吃午餐
+  - en: "in front of"
+    cn: 在前面
+  - en: lesson
+    cn: 课
+  - en: lunch
+    cn: 午餐
+  - en: office
+    cn: 办公室
+  - en: rabbit
+    cn: 兔子
+  - en: show...around
+    cn: 带领（某人）参观
+  - en: think
+    cn: 认为
+  - en: tidy
+    cn: 整洁的；整齐的
+  - en: try
+    cn: 尝试
+  - en: around
+    cn: 在......周围
+  - en: bakery
+    cn: 面包房
+  - en: between
+    cn: 在......中间
+  - en: centre
+    cn: 中心
+  - en: city
+    cn: 城市
+  - en: corner
+    cn: 街角；拐角
+  - en: hotel
+    cn: 旅馆
+  - en: light
+    cn: （灯）光
+  - en: many
+    cn: 许多
+  - en: "next to"
+    cn: 紧邻；在近旁
+  - en: other
+    cn: 其他的
+  - en: pleasure
+    cn: 乐事
+  - en: "Post office"
+    cn: 邮政局
+  - en: postcard
+    cn: 明信片
+  - en: restaurant
+    cn: 餐馆
+  - en: road
+    cn: 道路
+  - en: send
+    cn: 寄（信等）
+  - en: shop
+    cn: 商店
+  - en: show
+    cn: 给......看；展示
+  - en: slide
+    cn: 滑梯
+  - en: snake
+    cn: 蛇
+  - en: some
+    cn: 一些
+  - en: stay
+    cn: 停留；待
+  - en: street
+    cn: 街道
+  - en: supermarket
+    cn: 超市
+  - en: swing
+    cn: 秋千
+  - en: then
+    cn: 那时
+  - en: thing
+    cn: 东西；物品
+  - en: visit
+    cn: 参观；
+  - en: watch
+    cn: 手表
+  - en: way
+    cn: 路；路线
+  - en: "a bar of"
+    cn: 一块；一条
+  - en: "a bottle of"
+    cn: 一瓶......
+  - en: "a bowl of"
+    cn: 一碗......
+  - en: "a loaf of (bread)"
+    cn: 一条面包
+  - en: "a packet of"
+    cn: 一包......
+  - en: bowl
+    cn: 碗
+  - en: chocolate
+    cn: 巧克力
+  - en: glasses
+    cn: 眼镜
+  - en: magic
+    cn: 有魔力的
+  - en: mole
+    cn: 鼹鼠
+  - en: noodle
+    cn: 面条
+  - en: panda
+    cn: 熊猫
+  - en: "put on"
+    cn: 戴上；穿上
+  - en: section
+    cn: 部分；部门
+  - en: smoke
+    cn: 烟
+  - en: spider
+    cn: 蜘蛛
+  - en: too
+    cn: 太
+  - en: worry
+    cn: 担心
+  - en: bin
+    cn: 垃圾箱
+  - en: corn
+    cn: 谷物
+  - en: cow
+    cn: 母牛；奶牛
+  - en: duck
+    cn: 鸭子
+  - en: farm
+    cn: 农场
+  - en: feed
+    cn: 喂养
+  - en: grass
+    cn: 草；草地
+  - en: hay
+    cn: 干草
+  - en: hen
+    cn: 母鸡
+  - en: litter
+    cn: 乱扔（垃圾）
+  - en: meat
+    cn: 肉
+  - en: outside
+    cn: 在......外面
+  - en: pen
+    cn: 圈；畜栏
+  - en: pick
+    cn: 采；摘
+  - en: rubbish
+    cn: 垃圾
+  - en: stone
+    cn: 石头
+  - en: swing
+    cn: 摆动；摇动
+  - en: throw
+    cn: 扔
+  - en: visit
+    cn: 游览；参观
+  - en: aviary
+    cn: 鸟舍
+  - en: beside
+    cn: 在......旁边
+  - en: cap
+    cn: （有帽舌的）帽子
+  - en: "far away"
+    cn: 距离远
+  - en: fountain
+    cn: 喷泉
+  - en: map
+    cn: 地图
+  - en: sketchbook
+    cn: 写生簿；素描簿
+  - en: sleep
+    cn: 睡觉
+  - en: take
+    cn: 乘坐；拍照
+  - en: watch
+    cn: 观看
+  - en: always
+    cn: 总是
+  - en: April
+    cn: 四月
+  - en: August
+    cn: 八月
+  - en: Australia
+    cn: 澳大利亚
+  - en: "best wishes"
+    cn: 最好的祝愿
+  - en: China
+    cn: 中国
+  - en: Christmas
+    cn: 圣诞节
+  - en: cloudy
+    cn: 多云的
+  - en: come
+    cn: 来
+  - en: December
+    cn: 十二月
+  - en: E-mail
+    cn: 电子邮件
+  - en: fall
+    cn: 掉落
+  - en: February
+    cn: 二月
+  - en: hot
+    cn: 热的
+  - en: January
+    cn: 一月
+  - en: July
+    cn: 七月
+  - en: June
+    cn: 六月
+  - en: "make phone calls"
+    cn: 打电话
+  - en: March
+    cn: 三月
+  - en: May
+    cn: 五月
+  - en: November
+    cn: 十一月
+  - en: October
+    cn: 十月
+  - en: path
+    cn: 小径
+  - en: rainy
+    cn: 多雨的
+  - en: receive
+    cn: 收到；接到
+  - en: September
+    cn: 九月
+  - en: shine
+    cn: 照耀
+  - en: snowy
+    cn: 下雪多的
+  - en: subject
+    cn: 主题
+  - en: sunny
+    cn: 晴朗的
+  - en: tell
+    cn: 告诉
+  - en: warm
+    cn: 暖和的
+  - en: weather
+    cn: 天气
+  - en: wet
+    cn: 湿的
+  - en: why
+    cn: 为什么
+  - en: windy
+    cn: 多风的
+  - en: year
+    cn: 年
+  - en: "a glass of"
+    cn: 一杯
+  - en: cherry
+    cn: 樱桃
+  - en: crunchy
+    cn: （指食物）爽脆的
+  - en: grape
+    cn: 葡萄
+  - en: juice
+    cn: 果汁
+  - en: "not...at all"
+    cn: 一点也不
+  - en: plum
+    cn: 李子；梅子
+  - en: strawberry
+    cn: 草莓
+  - en: vine
+    cn: 葡萄藤
+  - en: want
+    cn: 想要
+  - en: watermelon
+    cn: 西瓜
+  - en: yum
+    cn: （表示味道非常好）
+  - en: all
+    cn: 所有；全体
+  - en: another
+    cn: 另一个
+  - en: blind
+    cn: 盲的；看不见的
+  - en: blunt
+    cn: 钝的；不锋利的
+  - en: floor
+    cn: 地板
+  - en: hard
+    cn: 硬的
+  - en: key
+    cn: 钥匙
+  - en: knife
+    cn: 小刀；刀
+  - en: "lost-property office"
+    cn: 失物招领处
+  - en: pencil
+    cn: 铅笔
+  - en: "pencil case"
+    cn: 铅笔袋；铅笔盒
+  - en: purse
+    cn: （女式）钱包
+  - en: rough
+    cn: 粗糙的
+  - en: sand
+    cn: 沙
+  - en: sharp
+    cn: 尖的；锋利的
+  - en: smooth
+    cn: 光滑的
+  - en: soft
+    cn: 柔软的
+  - en: something
+    cn: 某物
+  - en: "take off"
+    cn: 脱下
+  - en: thick
+    cn: 厚的；粗的
+  - en: thin
+    cn: 薄的；细的
+  - en: whose
+    cn: 谁的
+  - en: again
+    cn: 又；再
+  - en: also
+    cn: 也
+  - en: "at moon"
+    cn: 在中午
+  - en: away
+    cn: 离开
+  - en: back
+    cn: 向后；朝后
+  - en: bench
+    cn: 长椅
+  - en: bite
+    cn: 咬
+  - en: deer
+    cn: 鹿
+  - en: down
+    cn: 向下；朝下；沿着
+  - en: follow
+    cn: 跟随
+  - en: grow
+    cn: 变得
+  - en: high
+    cn: 高的
+  - en: hill
+    cn: 小山；山丘
+  - en: lawn
+    cn: 草坪
+  - en: like
+    cn: 像
+  - en: path
+    cn: 小路
+  - en: rise
+    cn: 升起；上升
+  - en: shadow
+    cn: 影子
+  - en: stay
+    cn: 停留；待
+  - en: （the）sun
+    cn: 太阳
+  - en: tea
+    cn: 茶
+  - en: tear
+    cn: 眼泪
+  - en: wait
+    cn: 等待
+  - en: "go down"
+    cn: 落下
+  - en: ask
+    cn: 问
+  - en: before
+    cn: 在......之前
+  - en: club
+    cn: 俱乐部
+  - en: enjoy
+    cn: 享受.......的乐趣
+  - en: exercise
+    cn: 运动；训练活动
+  - en: fun
+    cn: 有趣的
+  - en: healthy
+    cn: 健康的
+  - en: join
+    cn: 加入；参加
+  - en: make
+    cn: 使；让
+  - en: notice
+    cn: 通知
+  - en: "play badminton"
+    cn: 打羽毛球
+  - en: "play basketball"
+    cn: 打篮球
+  - en: "play football"
+    cn: 踢足球
+  - en: "play table tennis"
+    cn: 打乒乓球
+  - en: "play volleyball"
+    cn: 打排球
+  - en: poster
+    cn: 海报
+  - en: remember
+    cn: 记得
+  - en: sport
+    cn: 体育运动
+  - en: sure
+    cn: 当然；一定
+  - en: "swimming goggles"
+    cn: 泳镜
+  - en: "swimming pool"
+    cn: 游泳池
+  - en: swimsuit
+    cn: 泳衣
+  - en: tomorrow
+    cn: 明天
+  - en: warm-up
+    cn: 准备活动
   - en: angry
     cn: 生气的
-  - en: excited
-    cn: 兴奋的
+  - en: basket
+    cn: 篮子；筐
+  - en: bone
+    cn: 骨头
+  - en: bowl
+    cn: 碗
+  - en: "cat food"
+    cn: 猫粮
+  - en: catch
+    cn: 逮住；抓住
+  - en: cute
+    cn: 可爱的
+  - en: "dog food"
+    cn: 狗粮
+  - en: goat
+    cn: 山羊
+  - en: hole
+    cn: 洞
+  - en: onto
+    cn: 朝；向
+  - en: large
+    cn: 大的
+  - en: parrot
+    cn: 鹦鹉
+  - en: shake
+    cn: 摇动；晃动
+  - en: sleep
+    cn: 睡觉
+  - en: tortoise
+    cn: 乌龟
+  - en: "wake up"
+    cn: 醒来
+  - en: fish
+    cn: 鱼
+  - en: about
+    cn: 关于
+  - en: bathroom
+    cn: 卫生间
+  - en: bedroom
+    cn: 卧室
+  - en: bedtime
+    cn: 就寝时间
+  - en: chat
+    cn: 聊天
+  - en: cook
+    cn: 烹饪
+  - en: dinner
+    cn: 主餐；正餐
+  - en: "go swimming"
+    cn: 去游泳
+  - en: "fairy tale"
+    cn: 童话
+  - en: "have a holiday"
+    cn: 度假
+  - en: "have a look"
+    cn: 看一看
+  - en: homework
+    cn: 作业
+  - en: interesting
+    cn: 有趣的
+  - en: kitchen
+    cn: 厨房
+  - en: light
+    cn: 灯
+  - en: "living room"
+    cn: 客厅
+  - en: make
+    cn: 制造；做
+  - en: "model plane"
+    cn: 飞机模型
+  - en: noise
+    cn: 噪音
+  - en: star
+    cn: 星星
+  - en: themselves
+    cn: 他们自己
+  - en: "turn off"
+    cn: 关掉（灯、煤气等）
+  - en: wash
+    cn: 洗
+  - en: "watch TV"
+    cn: 看电视
+  - en: awake
+    cn: 醒着的
+  - en: bell
+    cn: 铃；铃铛
+  - en: doorbell
+    cn: 门铃
+  - en: doze
+    cn: 打盹儿；小睡
+  - en: "fly away"
+    cn: 飞走
+  - en: "have a bath"
+    cn: 洗澡
+  - en: "have a nap"
+    cn: 小睡
+  - en: loud
+    cn: 大声的；响亮的
+  - en: noisy
+    cn: 吵闹的
+  - en: puzzled
+    cn: 迷惑不解的
+  - en: quiet
+    cn: 轻声的；安静的
+  - en: ring
+    cn: 响起铃声
+  - en: sound
+    cn: 声音
+  - en: square
+    cn: 正方形
+  - en: television（TV）
+    cn: 电视
+  - en: unhappy
+    cn: 不高兴的
+  - en: week
+    cn: 周；星期
+  - en: "a quarter past seven"
+    cn: 七点十五分
+  - en: "a quarter to eight"
+    cn: 七点四十五分
+  - en: "all the way"
+    cn: 一路上；自始自终
+  - en: battery
+    cn: 电池
+  - en: brush
+    cn: 刷
+  - en: "brush my teeth"
+    cn: 刷牙
+  - en: cartoon
+    cn: 动画片
+  - en: finish
+    cn: 完成；做完
+  - en: from
+    cn: 从......来
+  - en: "get up"
+    cn: 起床
+  - en: "half past seven"
+    cn: 七点半
+  - en: "have breakfast"
+    cn: 吃早餐
+  - en: "have a dinner"
+    cn: 吃正餐；吃晚餐
+  - en: "last night"
+    cn: 昨天晚上
+  - en: late
+    cn: 迟到的
+  - en: owl
+    cn: 猫头鹰
+  - en: puzzle
+    cn: 拼图游戏
+  - en: "seven o’clock"
+    cn: 七点钟
+  - en: sofa
+    cn: 沙发
+  - en: start
+    cn: 开始
+  - en: tomorrow
+    cn: 明天
+  - en: "wash my face"
+    cn: 洗脸
+  - en: "a little"
+    cn: 有点
+  - en: activity
+    cn: 活动
+  - en: always
+    cn: 总是
+  - en: "at weekends"
+    cn: 在周末
+  - en: bow
+    cn: 鞠躬
+  - en: "Chinese chess"
+    cn: 象棋
+  - en: clever
+    cn: 聪明的
+  - en: Friday
+    cn: 星期五
+  - en: get
+    cn: 给......拿来
+  - en: "have a good time"
+    cn: 玩的高兴
+  - en: "in the middle of"
+    cn: 在......中间
+  - en: kind
+    cn: 友善的
+  - en: meeting
+    cn: 会议
+  - en: Monday
+    cn: 星期一
+  - en: never
+    cn: 从不
+  - en: often
+    cn: 经常
+  - en: really
+    cn: 确定；的确
+  - en: Saturday
+    cn: 星期六
+  - en: show
+    cn: 表演
+  - en: shy
+    cn: 害羞的
+  - en: smile
+    cn: 微笑
+  - en: sometimes
+    cn: 有时候
+  - en: Sunday
+    cn: 星期日
+  - en: Thursday
+    cn: 星期四
+  - en: Tuesday
+    cn: 星期二
+  - en: usually
+    cn: 通常
+  - en: Wednesday
+    cn: 星期三
+  - en: while
+    cn: 然而
+  - en: drum
+    cn: 鼓
+  - en: "（be）full of"
+    cn: 充满......
+  - en: gold
+    cn: 金子
+  - en: mouse（mice）
+    cn: 老鼠
+  - en: music
+    cn: 音乐
+  - en: piano
+    cn: 钢琴
+  - en: piper
+    cn: 吹笛子的人
+  - en: triangle
+    cn: 三角铁
+  - en: violin
+    cn: 小提琴
+  - en: colourful
+    cn: 色彩缤纷的
+  - en: "dragon boat race"
+    cn: 龙舟赛
+  - en: dumpling
+    cn: 饺子；汤圆
+  - en: during
+    cn: 在......期间
+  - en: festival
+    cn: 节日
+  - en: fireworks
+    cn: 烟花表演
+  - en: important
+    cn: 重要的
+  - en: money
+    cn: 钱
+  - en: "New Year’s Eve"
+    cn: 除夕
+  - en: "red envelope"
+    cn: 红包
+  - en: relative
+    cn: 亲戚
+  - en: "rice dumpling"
+    cn: 粽子
+  - en: "the Double Ninth Festival"
+    cn: 重阳节
+  - en: "the Dragon Boat Festival"
+    cn: 端午节
+  - en: "the Mid-autumn Festival"
+    cn: 中秋节
+  - en: "the Spring Festival"
+    cn: 春节
+  - en: traditional
+    cn: 传统的
+  - en: drive...away
+    cn: 把......赶走
+  - en: duckling
+    cn: 小鸭子
+  - en: fourth
+    cn: 第四
+  - en: heavy
+    cn: 重的
+  - en: lonely
+    cn: 孤独的
+  - en: nest
+    cn: 巢；窝
+  - en: swan
+    cn: 天鹅
+  - en: ugly
+    cn: 丑的
+  - en: worm
+    cn: 虫子
+  - en: begin
+    cn: 开始
+  - en: bring
+    cn: 带来
+  - en: favourite
+    cn: 最喜欢的
+  - en: fifth
+    cn: 第五
+  - en: first
+    cn: 第一
+  - en: fourth
+    cn: 第四
+  - en: invitation
+    cn: 请假
+  - en: party
+    cn: 聚会
+  - en: present
+    cn: 礼物
+  - en: second
+    cn: 第二
+  - en: sixth
+    cn: 第六
+  - en: smart
+    cn: 漂亮的
+  - en: third
+    cn: 第三
+  - en: wear
+    cn: 穿；戴
+  - en: arrive（at）
+    cn: 到达
+  - en: cross
+    cn: 穿过
+  - en: by
+    cn: （表示方式）
+  - en: "get off"
+    cn: 从......下来
+  - en: journey
+    cn: 行程；旅行
+  - en: leave
+    cn: 离开
+  - en: live
+    cn: 居住
+  - en: "on foot"
+    cn: 步行
+  - en: pavement
+    cn: 人行道
+  - en: taxi
+    cn: 出租车
+  - en: "traffic light（s）"
+    cn: 交通信号灯
+  - en: train
+    cn: 火车；列车
+  - en: underground
+    cn: 地铁
+  - en: "underground station"
+    cn: 地铁站
+  - en: "zebra crossing"
+    cn: 斑马线人行横道线
+  - en: "（be）afraid of"
+    cn: 害怕，担忧
+  - en: dream
+    cn: 梦想；梦
+  - en: farmer
+    cn: 农民
+  - en: fly
+    cn: 驾驶（飞机）
+  - en: "（be）good at"
+    cn: 擅长
+  - en: help
+    cn: 帮助
+  - en: "in the future"
+    cn: 在将来
+  - en: lifeguard
+    cn: 救生员
+  - en: pilot
+    cn: 飞行员（飞机）驾驶员
+  - en: save
+    cn: 救
+  - en: sell
+    cn: 卖；出售
+  - en: "shop assistant"
+    cn: 店员；售货员
+  - en: sick
+    cn: 生病的
+  - en: star
+    cn: 歌唱或表演明星
+  - en: travel
+    cn: 旅行
+  - en: traveller
+    cn: 旅行者
+  - en: worker
+    cn: 工人
+  - en: writer
+    cn: 作家
+  - en: "Double Ninth cake"
+    cn: 重阳糕
+  - en: "go on an outing"
+    cn: （集体）外出游玩
+  - en: "go shopping"
+    cn: 去购物
+  - en: grandchild
+    cn: （外）孙子；（外）孙女
+  - en: "have a clod"
+    cn: 感冒
+  - en: hug
+    cn: 拥抱
+  - en: hunter
+    cn: 猎人
+  - en: （the）Internet
+    cn: 互联网；因特网
+  - en: "Litter Red Riding Hood"
+    cn: 小红帽（《格林童话》中人物）
+  - en: once
+    cn: 一次
+  - en: "play chess"
+    cn: 下（国际）象棋
+  - en: rat-tat
+    cn: 吧哒（敲门声）
+  - en: talk
+    cn: 谈话；说话
+  - en: weekend
+    cn: 周末
+  - en: "write an e-mail"
+    cn: 写一封电子邮件
+  - en: all
+    cn: 全体；所有
+  - en: both
+    cn: （两者）都
+  - en: class
+    cn: 班级
+  - en: different
+    cn: 不同的
+  - en: "each other"
+    cn: 互相
+  - en: fifteenth
+    cn: 第十五
+  - en: halt-time
+    cn: 中场休息
+  - en: match
+    cn: 比赛
+  - en: member
+    cn: 成员
+  - en: team
+    cn: （游戏或运动的）队
+  - en: together
+    cn: 在一起；共同
+  - en: same
+    cn: 相同的
+  - en: "a lot of"
+    cn: 大量；许多
+  - en: change
+    cn: 换；变化
+  - en: east
+    cn: 向东；朝东；东；东方
+  - en: enough
+    cn: 足够的
+  - en: face
+    cn: 朝；面向
+  - en: "（be）far from"
+    cn: 离......远
+  - en: "（be）happy with"
+    cn: 对......满意
+  - en: miss
+    cn: 想念
+  - en: move
+    cn: 搬（家）；搬迁
+  - en: north
+    cn: 向北；朝北；北；北方
+  - en: share
+    cn: 共有；合用
+  - en: south
+    cn: 向南；朝南；南；南方
+  - en: study
+    cn: 书房
+  - en: sunshine
+    cn: 阳光
+  - en: take
+    cn: 需要......时间
+  - en: through
+    cn: 穿过；透过
+  - en: twice
+    cn: 两次
+  - en: west
+    cn: 向西；朝西；西；西方
+  - en: "wild goose（geese）"
+    cn: 大雁
+  - en: along
+    cn: 沿着
+  - en: bakery
+    cn: 面包店
+  - en: bank
+    cn: 银行
+  - en: cinema
+    cn: 电影院
+  - en: crocodile
+    cn: 鳄鱼
+  - en: crossing
+    cn: 十字路口
+  - en: hospital
+    cn: 医院
+  - en: hotel
+    cn: 旅馆；酒店
+  - en: lane
+    cn: 小路；小巷
+  - en: left
+    cn: 向左；左边
+  - en: museum
+    cn: 博物馆
+  - en: right
+    cn: 向右；右边
+  - en: shark
+    cn: 鲨鱼
+  - en: turn
+    cn: 转弯
+  - en: button
+    cn: 纽扣
+  - en: emperor
+    cn: 皇帝
+  - en: "have nothing on"
+    cn: 一丝不挂；什么都没穿
+  - en: "keep silent"
+    cn: 保持沉默
+  - en: need
+    cn: 需要
+  - en: nod
+    cn: 点头
+  - en: pocket
+    cn: 衣袋；口袋
+  - en: "put on"
+    cn: 穿上（衣服）
+  - en: take
+    cn: 选择；购买
+  - en: "try on"
+    cn: 试穿
+  - en: zip
+    cn: 拉链
+  - en: best
+    cn: 最好的
+  - en: better
+    cn: （病）好转的
+  - en: cave
+    cn: 山洞；洞穴
+  - en: cold
+    cn: 感冒
+  - en: cough
+    cn: 咳嗽
+  - en: dentist
+    cn: 牙医
+  - en: either
+    cn: （用于否定句）也
+  - en: fever
+    cn: 发烧
+  - en: "have a rest"
+    cn: 休息
+  - en: hide
+    cn: 隐藏
+  - en: hurt
+    cn: 疼痛；受伤
+  - en: medicine
+    cn: 药
+  - en: pull...out
+    cn: 把......拔下来
+  - en: secret
+    cn: 隐秘的；秘密的
+  - en: "soft drink"
+    cn: 软饮料（不含酒精）
+  - en: toothache
+    cn: 牙痛
+  - en: toothless
+    cn: 没有牙齿的
+  - en: well
+    cn: 健康的；身体好的
+  - en: boil
+    cn: 煮沸；烧开
+  - en: drink
+    cn: 喝
+  - en: "fall down"
+    cn: 落下
+  - en: finally
+    cn: 最后
+  - en: first
+    cn: 首先
+  - en: into
+    cn: 到......里面
+  - en: more
+    cn: （数量等）更多；更大
+  - en: next
+    cn: 其次；接下来
+  - en: part
+    cn: 部分
+  - en: pour
+    cn: 倒出
+  - en: quickly
+    cn: 快速地
+  - en: raindrop
+    cn: 雨滴
+  - en: report
+    cn: 报告
+  - en: "rise up"
+    cn: 升起
+  - en: slowly
+    cn: 慢慢地
+  - en: tea
+    cn: 茶叶；茶
+  - en: teapot
+    cn: 茶壶
+  - en: "The Three Gorges"
+    cn: 三峡
+  - en: "the Yangtze River"
+    cn: 长江
+  - en: then
+    cn: 然后
+  - en: toilet
+    cn: 马桶；厕所
+  - en: well
+    cn: 噢；唔
+  - en: blow
+    cn: 吹；刮
+  - en: gently
+    cn: 轻轻地
+  - en: happily
+    cn: 高兴地
+  - en: heavily
+    cn: 猛烈地；剧烈地
+  - en: heavy
+    cn: 猛烈的
+  - en: hope
+    cn: 希望
+  - en: "（be）made of"
+    cn: 由......做成
+  - en: softly
+    cn: 轻轻地；轻柔地
+  - en: strongly
+    cn: 强有力地；猛烈地
+  - en: wind-bell
+    cn: 风铃
+  - en: wood
+    cn: 木头
+  - en: bravely
+    cn: 勇敢地
+  - en: burn
+    cn: 燃烧
+  - en: campfire
+    cn: 营火；篝火
+  - en: careful
+    cn: 小心的；谨慎的
+  - en: country
+    cn: 乡下；乡村
+  - en: "die down"
+    cn: (火)熄灭
+  - en: drop
+    cn: 使降落；空投
+  - en: helicopter
+    cn: 直升飞机
+  - en: match
+    cn: 火柴
+  - en: must
+    cn: 必须；一定
+  - en: luckily
+    cn: 幸运地
+  - en: raw
+    cn: 生的；没有熟的
+  - en: safely
+    cn: 安全
+  - en: sign
+    cn: 标牌；标志
+  - en: smoke
+    cn: 吸烟
+  - en: start
+    cn: 发生；生（火）
+  - en: "the Stone Age"
+    cn: 石器时代
+  - en: throw...away
+    cn: 把......扔掉
+  - en: brush
+    cn: 毛笔；画笔
+  - en: crayon
+    cn: 蜡笔
+  - en: "fall onto..."
+    cn: 掉到......上面
+  - en: glue
+    cn: 胶水
+  - en: hers
+    cn: 她的
+  - en: his
+    cn: 他的
+  - en: magnet
+    cn: 磁铁
+  - en: mess
+    cn: 杂乱；不整洁
+  - en: mine
+    cn: 我的
+  - en: nail
+    cn: 钉子
+  - en: notebook
+    cn: 笔记本
+  - en: ours
+    cn: 我们的
+  - en: paints
+    cn: 绘画颜料
+  - en: put
+    cn: 安置；放
+  - en: "school bag"
+    cn: 书包
+  - en: "stick to"
+    cn: 粘住；粘贴
+  - en: tape
+    cn: 胶带
+  - en: theirs
+    cn: 他们的
+  - en: think
+    cn: 想；认为
+  - en: "tidy up"
+    cn: 收拾；整理
+  - en: workshop
+    cn: 车间；工场；作坊
+  - en: yours
+    cn: 你的；你们的
+  - en: (be)born
+    cn: 出生
+  - en: caterpillar
+    cn: 毛虫
+  - en: chicken
+    cn: 鸡
+  - en: cocoon
+    cn: 茧
+  - en: duckling
+    cn: 小鸭
+  - en: egg
+    cn: 卵；蛋
+  - en: fly
+    cn: 苍蝇
+  - en: fly
+    cn: 飞翔；飞行
+  - en: grow
+    cn: 生长；成长
+  - en: "lay egg"
+    cn: 下蛋；产卵
+  - en: moth
+    cn: 蛾
+  - en: puppy
+    cn: 小狗
+  - en: silk
+    cn: （蚕）丝；丝绸
+  - en: silkworm
+    cn: 蚕
+  - en: was
+    cn: "（am,is的过去式）"
+  - en: were
+    cn: （are）的过去式
+  - en: wing
+    cn: 翅膀
+  - en: another
+    cn: 又一；再一；另一
+  - en: clock
+    cn: 钟
+  - en: drill
+    cn: 钻机；钻头
+  - en: enjoy
+    cn: 享受......的乐趣
+  - en: everything
+    cn: 所有事物；一切
+  - en: heard
+    cn: （hear）的过去式
+  - en: kingdom
+    cn: 王国
+  - en: lorry
+    cn: 卡车
+  - en: loudly
+    cn: 大声的；响亮的
+  - en: motorbike
+    cn: 摩托车
+  - en: noise
+    cn: 噪音
+  - en: outside
+    cn: 外面
+  - en: "pop group"
+    cn: 流行音乐团体
+  - en: quietly
+    cn: 安静地
+  - en: sat
+    cn: （sit的过去式）
+  - en: shout
+    cn: 叫喊；呼喊
+  - en: sleep
+    cn: 睡觉
+  - en: world
+    cn: 世界
+  - en: bean
+    cn: 豆；菜豆；豆荚
+  - en: beef
+    cn: 牛肉
+  - en: cabbage
+    cn: 卷心菜
+  - en: carrot
+    cn: 胡萝卜
+  - en: chicken
+    cn: 鸡肉
+  - en: did
+    cn: （do的过去式）
+  - en: drink
+    cn: 饮料
+  - en: eat
+    cn: 吃
+  - en: fast
+    cn: 快的；迅速的
+  - en: fish
+    cn: 鱼；鱼肉
+  - en: fruit
+    cn: 水果
+  - en: guess
+    cn: 猜测；猜中
+  - en: had
+    cn: （have，has的过去式）
+  - en: happen
+    cn: 发生；出现
+  - en: healthy
+    cn: 健康的
+  - en: keep...away
+    cn: 不让接近某人
+  - en: kill
+    cn: 杀死
+  - en: listen
+    cn: 听从；听信
+  - en: meat
+    cn: 肉；肉类
+  - en: milk
+    cn: 牛奶
+  - en: pork
+    cn: 猪肉
+  - en: potato
+    cn: 土豆；马铃薯
+  - en: rice
+    cn: 米饭
+  - en: safe
+    cn: 安全的
+  - en: tomato
+    cn: 番茄；西红柿
+  - en: unhealthy
+    cn: 不健康的；有害健康的
+  - en: vegetable
+    cn: 蔬菜
+  - en: adult
+    cn: 成年人
+  - en: dwarf
+    cn: 小矮人
+  - en: entrance
+    cn: 大门（口）；入口（处）
+  - en: exit
+    cn: 出口
+  - en: fair
+    cn: 美丽的
+  - en: "fall asleep"
+    cn: 入睡
+  - en: film
+    cn: 电影；影片
+  - en: "find out"
+    cn: 找到；发现
+  - en: funny
+    cn: 有趣的
+  - en: minute
+    cn: 分钟
+  - en: on
+    cn: （电影，电视节目）正在放映
+  - en: princess
+    cn: 公主
+  - en: quick
+    cn: 快的；迅速的
+  - en: "run away"
+    cn: 逃跑
+  - en: seat
+    cn: 座位；席位
+  - en: "see a film"
+    cn: 看电影
+  - en: snowy
+    cn: 下雪多的
+  - en: start
+    cn: 开始
+  - en: ticket
+    cn: 票；入场券
+  - en: "ticket office"
+    cn: 售票处
+  - en: "Toy Story"
+    cn: 《玩具总动员》（电影名）
+  - en: "wake up"
+    cn: 唤醒；弄醒
+  - en: Art
+    cn: （学科）美术
+  - en: break
+    cn: 间歇；休息
+  - en: carefully
+    cn: 仔细地；小心地
+  - en: Chinese
+    cn: （学科）语文
+  - en: class
+    cn: 课；课程
+  - en: colour
+    cn: 给......着色；涂色
+  - en: dot
+    cn: 点；小圆点
+  - en: English
+    cn: （学科）英语
+  - en: IT
+    cn: （学科）信息技术
+  - en: line
+    cn: 线；线条
+  - en: "lunch break"
+    cn: 午休
+  - en: Maths
+    cn: （学科）数学
+  - en: maybe
+    cn: 也许
+  - en: Music
+    cn: （学科）音乐
+  - en: nothing
+    cn: 没有什么；没有一件东西
+  - en: subject
+    cn: 科目
+  - en: PE
+    cn: （学科）体育
+  - en: timetable
+    cn: 时间表；课程表
+  - en: become
+    cn: 变成；成为
+  - en: bookshelf
+    cn: 书架
+  - en: follow
+    cn: 跟随
+  - en: drop
+    cn: （故意）使落下
+  - en: "in the middle of"
+    cn: 在......中间
+  - en: leave
+    cn: 把（某物或人）留在（原处）；留下
+  - en: lost
+    cn: 迷路的
+  - en: mean
+    cn: 意指；意味着
+  - en: "park keeper"
+    cn: 公园管理员
+  - en: sign
+    cn: 标志；指示牌；标牌
+  - en: smoking
+    cn: 吸烟
+  - en: stepmother
+    cn: 继母
+  - en: swimming
+    cn: 游泳
+  - en: telephone
+    cn: 电话；电话机
+  - en: walk
+    cn: 牵着（动物）走；遛
+  - en: ago
+    cn: 以前；以往
+  - en: built
+    cn: （build）的过去式
+  - en: cloud
+    cn: 云
+  - en: comfortable
+    cn: 舒服的；安逸的
+  - en: cut
+    cn: （cut的过去式）
+  - en: degree
+    cn: 度；度数（温度单位）
+  - en: "enjoy oneself"
+    cn: 过得快活；得到乐趣
+  - en: fog
+    cn: 雾
+  - en: foggy
+    cn: 有雾的
+  - en: grew
+    cn: （grow的过去式）
+  - en: make
+    cn: 使；让
+  - en: rain
+    cn: 雨
+  - en: snow
+    cn: 雪；雪花
+  - en: snowy
+    cn: 下雪的
+  - en: storm
+    cn: 暴风雨
+  - en: stormy
+    cn: 有暴风雨的
+  - en: temperature
+    cn: 温度
+  - en: tomorrow
+    cn: （在）明天
+  - en: tonight
+    cn: （在）今晚
+  - en: typhoon
+    cn: 台风
+  - en: weather
+    cn: 天气；气象
+  - en: yesterday
+    cn: （在）昨天
+  - en: bed
+    cn: 床
+  - en: country
+    cn: 国；国家
+  - en: cupboard
+    cn: 橱柜；衣柜
+  - en: cushion
+    cn: 坐垫；靠垫
+  - en: fisherman
+    cn: 渔民；渔夫
+  - en: furniture
+    cn: 家具
+  - en: give
+    cn: 给
+  - en: history
+    cn: 历史
+  - en: lamp
+    cn: 灯
+  - en: later
+    cn: 以后；随后
+  - en: mirror
+    cn: 镜子
+  - en: move
+    cn: 改变位置；移动
+  - en: next
+    cn: 紧随其后的；下一个的
+  - en: shelf
+    cn: 架子
+  - en: sofa
+    cn: 沙发
+  - en: surprise
+    cn: 惊喜
+  - en: surprised
+    cn: 惊讶的
+  - en: town
+    cn: 镇；城镇
+  - en: village
+    cn: 乡村；村庄
+  - en: wall
+    cn: 墙；墙壁
+  - en: window
+    cn: 窗；窗户
+  - en: "art museum"
+    cn: 美术博物馆
+  - en: beautiful
+    cn: 优美地；漂亮地
+  - en: "Beijing Opera"
+    cn: 京剧
+  - en: bought
+    cn: （buy的过去式）
+  - en: bug
+    cn: 小昆虫；虫子
+  - en: "car museum"
+    cn: 汽车博物馆
+  - en: culture
+    cn: 文化；文明
+  - en: dance
+    cn: 跳舞
+  - en: famous
+    cn: 著名的
+  - en: "history museum"
+    cn: 历史博物馆
+  - en: human
+    cn: 人；人类
+  - en: "insect museum"
+    cn: 昆虫博物馆
+  - en: learnt
+    cn: （learn的过去式）
+  - en: love
+    cn: 喜欢；喜爱
+  - en: "Mona Lisa"
+    cn: 《蒙娜丽莎》画名
+  - en: painting
+    cn: 画；油画
+  - en: Paris
+    cn: 巴黎
+  - en: perform
+    cn: 表演
+  - en: prince
+    cn: 王子
+  - en: "railway museum"
+    cn: 铁路博物馆
+  - en: really
+    cn: 非常；极其
+  - en: saw
+    cn: （see的过去式）
+  - en: "science museum"
+    cn: 科学博物馆
+  - en: "The Louvre(Museum)"
+    cn: 卢浮宫（博物馆）
+  - en: thousand
+    cn: 千
+  - en: trip
+    cn: 旅行；旅程
+  - en: ugly
+    cn: 丑陋的；难看的
+  - en: useful
+    cn: 有用的
+  - en: candle
+    cn: 蜡烛
+  - en: Christmas
+    cn: 圣诞节
+  - en: Easter
+    cn: 复活节
+  - en: "fancy-dress party"
+    cn: 化妆舞会
+  - en: find
+    cn: 找到；发现
+  - en: "go trick-or-treating"
+    cn: 玩“不给糖就捣蛋”（万圣节习俗）
+  - en: Halloween
+    cn: 万圣节
+  - en: hide
+    cn: 藏；隐蔽
+  - en: holiday
+    cn: 节日；假日
+  - en: hunt
+    cn: 寻找
+  - en: jack-o’-lantern
+    cn: 南瓜灯
+  - en: monster
+    cn: 怪物；妖怪
+  - en: "play a trick"
+    cn: 搞恶作剧
+  - en: present
+    cn: 礼物
+  - en: pumpkin
+    cn: 南瓜
+  - en: Thanksgiving
+    cn: 感恩节
+  - en: turkey
+    cn: 火鸡
+  - en: "at last"
+    cn: 终于；最终
+  - en: "break down"
+    cn: 推倒；毁掉
+  - en: build
+    cn: 建造
+  - en: castle
+    cn: 城堡
+  - en: ever
+    cn: 永远；曾经
+  - en: forever
+    cn: 永远；永久
+  - en: "from then on"
+    cn: 从那时起
+  - en: giant
+    cn: 巨人
+  - en: "have a good time"
+    cn: 玩的愉快
+  - en: "put up"
+    cn: 张贴
