@@ -244,7 +244,7 @@ layout: post
     /* alert("correctCount: " + correctCount + " | attempts: " + attempts); */
     const rate = attempts === 0 ? "Accuracy: --" : `Accuracy: ${Math.round((correctCount / attempts) * 100)}%`; 
     document.getElementById("accuracy").textContent = rate; 
-    if(seen.size === totalWords) {
+    if(seen.size === totalWords && document.getElementById("answer").value.trim() != "") {
       document.getElementById("coverage").textContent += " 🎉 Congratulations!. All words covered!"; 
       alert("🎉 Congratulations! You have covered all words!");
       setTimeout(reset, 5000);
