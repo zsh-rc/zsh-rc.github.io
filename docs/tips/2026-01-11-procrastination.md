@@ -2,7 +2,7 @@
 layout: post
 title: 克服拖延症
 author: Umbra
-date: 2025-05-25
+date: 2026-01-11
 parent: 💡 Tips
 tags: [tips]
 excerpt: 拖延症是最普通最常见的行为。拖延症不仅仅是耽误了要做的事情本身，更是一种对自身心理道德底线的试探。
