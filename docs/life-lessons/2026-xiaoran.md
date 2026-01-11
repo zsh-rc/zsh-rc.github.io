@@ -30,8 +30,8 @@ xychart
     title "✨ 小然英语学习统计✨ "
     x-axis [Sat, Sun, Mon, Tue, Wed, Thu, Fri, Sat, Sun, Week#4]
     y-axis "words" 1 --> 30
-    bar [20, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    line [20, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    bar [20, 20, 0, 0, 0, 0, 0, 0, 0, 0]
+    line [20, 20, 0, 0, 0, 0, 0, 0, 0, 0]
 ~~~
 
 [Ref. Mermaid XY Chart](https://mermaid.js.org/syntax/xyChart.html){: target="_blank"}{: .fs-1}
