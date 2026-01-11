@@ -1,6 +1,6 @@
 ---
 layout: words
-title: 2026/01/06 Sentences
+title: 2026/01/06 Sentences (✔)
 author: Umbra
 date: 2026-01-06
 parent: 202601 Sentences
