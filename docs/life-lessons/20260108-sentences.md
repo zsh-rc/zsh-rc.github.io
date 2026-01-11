@@ -10,7 +10,7 @@ month: "202601-sentences"
 days: ["2026/01/08"]
 ---
 
-<details closed markdown="block">
+<details open markdown="block">
   <summary>
     Xiexiu: Beyond Wuxia, Into Life 邪修：超越武侠，走进生活
   </summary>

@@ -10,7 +10,7 @@ month: "202601-sentences"
 days: ["2026/01/06"]
 ---
 
-<details closed markdown="block">
+<details open markdown="block">
   <summary>
     AI Introduction
   </summary>
