@@ -34,4 +34,4 @@ xychart
     line [20, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ~~~
 
-[Ref. Mermaid XY Chart](https://mermaid.js.org/syntax/xyChart.html){: .fs-1}
+[Ref. Mermaid XY Chart](https://mermaid.js.org/syntax/xyChart.html){: target="_blank"}{: .fs-1}
