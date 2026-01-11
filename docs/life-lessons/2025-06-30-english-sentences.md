@@ -4,6 +4,7 @@ title: Beautiful English Sentences
 author: Umbra
 date: 2025-06-30
 parent: ✨ Life Lessons
+nav_exclude: true
 tags: [English]
 excerpt: Collection of good English words and sentences
 ---

@@ -126,6 +126,8 @@ days:
     cn: 米饭
   - en: soup
     cn: 汤
+- date: "2026/01/13"
+  words:
   - en: egg
     cn: 鸡蛋
   - en: noodles
@@ -166,6 +168,8 @@ days:
     cn: 晴朗的
   - en: cloudy
     cn: 多云的
+- date: "2026/01/14"
+  words:
   - en: rainy
     cn: 下雨的
   - en: windy
@@ -224,6 +228,8 @@ days:
     cn: 九
   - en: ten
     cn: 十
+- date: "2026/01/15"
+  words:
   - en: fat
     cn: 肥胖的
   - en: thin
@@ -272,6 +278,8 @@ days:
     cn: 操场
   - en: classroom
     cn: 教室
+- date: "2026/01/16"
+  words:
   - en: "an apple"
     cn: 一个苹果
   - en: "an orange"
@@ -316,6 +324,8 @@ days:
     cn: 狗
   - en: cat
     cn: 猫
+- date: "2026/01/17"
+  words:
   - en: leaves
     cn: 树叶（复数）
   - en: branch

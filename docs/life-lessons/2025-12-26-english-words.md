@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Daily English Words
+title: 2025 Words
 author: Umbra
 date: 2025-12-26
 parent: ✨ Life Lessons
