@@ -1,10 +1,9 @@
 ---
 layout: words
-title: 2026/01 All Sentences
+title: 202601 Passages
 author: Umbra
 date: 2026-01-01
-parent: 202601 Sentences
+parent: ✨ Life Lessons
 tags: [English]
 excerpt: ""
-month: "202601-sentences"
 ---
