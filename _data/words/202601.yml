@@ -714,4 +714,19 @@ days:
     cn: 富有韧性的
   - en: wage
     cn: 工资，同salary
+- date: "2026/01/15"
+  words:
+  - en: croissant
+    cn: 羊角面包
+  - en: bubble milk tea
+    cn: 珍珠奶茶
+  - en: americano
+    cn: 美式（咖啡）
+  - en: latte
+    cn: 拿铁（咖啡）
+  - en: cappuccino
+    cn: 卡布奇诺（咖啡）
+  - en: cold brow
+    cn: 冷萃（咖啡）
+  
 
