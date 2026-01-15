@@ -376,6 +376,34 @@ days:
     cn: 猴子
 - date: "2026/01/18"
   words:
+  - en: Chinese
+    cn: 语文
+  - en: English
+    cn: 英语
+  - en: Maths
+    cn: 数学，Mathematics
+  - en: history
+    cn: 历史
+  - en: geography
+    cn: 地理
+  - en: physics
+    cn: 物理
+  - en: politics
+    cn: 政治
+  - en: natural science
+    cn: 自然科学
+  - en: labor technology
+    cn: 劳动技术
+  - en: biology
+    cn: 生物
+  - en: physical education
+    cn: 体育，简称PE
+  - en: psychology
+    cn: 心理
+  - en: chemistry
+    cn: 化学
+  - en: information technology
+    cn: 信息技术，简称IT
   - en: "toy train"
     cn: 玩具火车
   - en: doll
@@ -406,6 +434,10 @@ days:
     cn: （五角）星形
   - en: rectangle
     cn: 长方形（矩形）
+  - en: pentagon
+    cn: 五边形，五角大楼（美国）
+- date: "2026/01/19"
+  words:    
   - en: sky
     cn: 天空
   - en: sea
