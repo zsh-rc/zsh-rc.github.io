@@ -784,4 +784,10 @@ days:
     cn: 超速罚单
   - en: takeaway
     cn: 收获，同lesson learnt；外卖，同takeout或food delivery；
+  - en: battery
+    cn: 电池
+  - en: anode
+    cn: 正极（电池）
+  - en: cathode
+    cn: 负极（电池）
   
