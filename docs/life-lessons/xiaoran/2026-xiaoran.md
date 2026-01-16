@@ -28,10 +28,10 @@ config:
 ---
 xychart
     title "✨ 小然英语学习统计✨ "
-    x-axis [Sat, Sun, Mon, Tue, Wed, Thu, Fri, Sat, Sun, Week#4]
+    x-axis [10, 11, 12, 13, 14, 15, 16, 17, 18, 19,20,21,22,23,24,25,26,27,28,29,30,31,Feb]
     y-axis "words" 1 --> 30
-    bar [20, 20, 20, 20, 0, 24, 0, 0, 0, 0]
-    line [20, 20, 20, 20, 0, 24, 0, 0, 0, 0]
+    bar [20, 20, 20, 20, 0, 24, 0, 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    line [20, 20, 20, 20, 0, 24, 0, 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 ~~~
 
 [Ref. Mermaid XY Chart](https://mermaid.js.org/syntax/xyChart.html){: target="_blank"}{: .fs-1}
