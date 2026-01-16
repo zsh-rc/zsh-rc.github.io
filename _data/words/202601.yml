@@ -648,6 +648,26 @@ days:
     cn: 地标；里程碑，同milestone
   - en: renovation
     cn: 装修，翻新，改造
+  - en: manipulate
+    cn: 操纵
+  - en: uphold
+    cn: 维持，秉持，坚持
+  - en: vicious
+    cn: 恶毒的
+  - en: Somalia
+    cn: 索马里（国家）
+  - en: hemisphere
+    cn: 半球
+  - en: refugee
+    cn: 难民
+  - en: regime
+    cn: 政权，当权政府
+  - en: Latvia
+    cn: 拉脱维亚（国家）
+  - en: deprive
+    cn: 剥夺
+  - en: be deprived of
+    cn: 被剥夺
 - date: "2026/01/13"
   words:
   - en: safety helmet
@@ -676,6 +696,18 @@ days:
     cn: 《兰亭集序》
   - en: orchid
     cn: 兰花
+  - en: stem
+    cn: 茎
+  - en: root
+    cn: 根
+  - en: viable
+    cn: 可行的，同feasible
+  - en: viability
+    cn: 可行性，同feasibility
+  - en: inviable
+    cn: 不可行的，同infeasible
+  - en: inviability
+    cn: 不可行性，同infeasibility
 - date: "2026/01/14"
   words:
   - en: plastics brothers
@@ -790,4 +822,8 @@ days:
     cn: 正极（电池）
   - en: cathode
     cn: 负极（电池）
+  - en: hostile
+    cn: 不友善的
+  - en: hostage
+    cn: 人质
   
