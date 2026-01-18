@@ -23,6 +23,8 @@ layout: post
     <hr/>
 </div>
 
+<div id="total" class="fs-6 fw-300"></div>
+
 {% if page.month %}
 
     {% assign month = site.data.words[page.month] %}
@@ -71,6 +73,8 @@ layout: post
 
         {% endif %}
     {% endif %}
+
+    document.getElementById("total").textContent = "Total words on the page: " + wordsData.length;
 
     let orderedWords = shuffleWordsOrder();
     let currentIndex = 0;
