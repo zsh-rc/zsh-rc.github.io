@@ -644,6 +644,26 @@ days:
     cn: 地标；里程碑，同milestone
   - en: renovation
     cn: 装修，翻新，改造
+  - en: manipulate
+    cn: 操纵
+  - en: uphold
+    cn: 维持，秉持，坚持
+  - en: vicious
+    cn: 恶毒的
+  - en: Somalia
+    cn: 索马里（国家）
+  - en: hemisphere
+    cn: 半球
+  - en: refugee
+    cn: 难民
+  - en: regime
+    cn: 政权，当权政府
+  - en: Latvia
+    cn: 拉脱维亚（国家）
+  - en: deprive
+    cn: 剥夺
+  - en: be deprived of
+    cn: 被剥夺
 - date: "2026/01/13"
   words:
   - en: safety helmet
@@ -672,6 +692,18 @@ days:
     cn: 《兰亭集序》
   - en: orchid
     cn: 兰花
+  - en: stem
+    cn: 茎
+  - en: root
+    cn: 根
+  - en: viable
+    cn: 可行的，同feasible
+  - en: viability
+    cn: 可行性，同feasibility
+  - en: inviable
+    cn: 不可行的，同infeasible
+  - en: inviability
+    cn: 不可行性，同infeasibility
 - date: "2026/01/14"
   words:
   - en: plastics brothers
@@ -780,4 +812,83 @@ days:
     cn: 超速罚单
   - en: takeaway
     cn: 收获，同lesson learnt；外卖，同takeout或food delivery；
-  
+  - en: battery
+    cn: 电池
+  - en: anode
+    cn: 正极（电池）
+  - en: cathode
+    cn: 负极（电池）
+  - en: hostile
+    cn: 不友善的
+  - en: hostage
+    cn: 人质
+- date: "2026/01/17"
+  words:
+  - en: status quo
+    cn: 现状，同as-is
+  - en: attempt
+    cn: 尝试，试图
+  - en: dominance
+    cn: 统治，主导; adj. dominant
+  - en: campaign
+    cn: 活动（如优惠，竞选等）；战役，同battle。
+  - en: promote
+    cn: v. 促销
+  - en: subsidy
+    cn: 补贴，资助，津贴
+  - en: merchant
+    cn: 商人，商家，商户
+  - en: shopper
+    cn: 购物者
+  - en: extent
+    cn: 程度，范围
+  - en: to some entent
+    cn: 某种程度上
+  - en: grocery store
+    cn: 杂货店
+  - en: downside
+    cn: 缺点，同disadvantage，shortcoming
+  - en: merit
+    cn: 优点，同advantage
+  - en: transaction
+    cn: 交易，事务
+  - en: liquidity
+    cn: 流动性（如现金）
+  - en: fraud
+    cn: n.欺诈，欺骗
+  - en: authorize
+    cn: v. 授权，批准，同approve；n. authorization
+  - en: authenticate
+    cn: v. 验证，鉴权；n. authentication
+  - en: psos and cons
+    cn: 优缺点
+  - en: rival
+    cn: 竞争对手
+  - en: terminal
+    cn: 终端
+- date: "2026/01/18"
+  words:
+  - en: court
+    cn: 法院，法庭；场地（网球，羽毛球等）
+  - en: nervous
+    cn: 紧张的
+  - en: patient
+    cn: 有耐心的；病人；
+  - en: obviously
+    cn: adv. 很显然地
+  - en: no matter
+    cn: 无论
+  - en: serve
+    cn: 服务；发球
+  - en: leave off
+    cn: 停止，中断
+  - en: pursue
+    cn: 追求，追寻
+  - en: glow
+    cn: n. 发光，光芒
+  - en: slefie
+    cn: n. 自拍照
+  - en: walk the talk
+    cn: 言出必行，言行一致
+  - en: inhaler
+    cn: 吸入器
