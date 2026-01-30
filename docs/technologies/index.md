@@ -2,7 +2,7 @@
 layout: post
 title: 💻 Technologies
 author: Umbra
-nav_order: 4
+nav_order: 5
 ---
 
 CSS/HTML/JavaScript, C#, Blazor, MAUI, Static Website, etc.

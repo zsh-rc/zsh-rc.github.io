@@ -2,7 +2,7 @@
 layout: post
 title: 🧭 Management
 author: Umbra
-nav_order: 3
+nav_order: 4
 ---
 
 Management theories, project management

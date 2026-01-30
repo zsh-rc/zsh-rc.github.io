@@ -2,5 +2,5 @@
 layout: post
 title: 🌿 Brilliant Writtings
 author: Umbra
-nav_order: 5
+nav_order: 6
 ---
