@@ -1,0 +1,404 @@
+month: "202601-wh-200"
+days:
+- date: "2026/01/30"
+  words:
+  - en: accomplishment
+    cn: 成就；完成 
+  - en: adolescent
+    cn: 青少年 
+  - en: alert
+    cn: 警觉的；警报 
+  - en: amazed
+    cn: 吃惊的；大为惊奇的 
+  - en: amid
+    cn: 在…中间 
+  - en: anchor
+    cn: 锚；依靠；主持 
+  - en: anniversary
+    cn: 周年纪念日 
+  - en: app
+    cn: 应用程序 
+  - en: appliance
+    cn: 家用电器；器具 
+  - en: arouse
+    cn: 引起；唤醒 
+  - en: ash
+    cn: 灰；灰烬 
+  - en: basement
+    cn: 地下室 
+  - en: beg
+    cn: 乞求；请求 
+  - en: besides
+    cn: 此外；除…之外 
+  - en: bin
+    cn: 垃圾桶；箱子 
+  - en: bind
+    cn: 捆绑；结合；约束 
+  - en: blossom
+    cn: 花；开花；繁荣 
+  - en: boom
+    cn: 繁荣；激增；轰响 
+  - en: burst
+    cn: 爆炸；爆裂；猛冲 
+  - en: bush
+    cn: 灌木 
+  - en: capture
+    cn: 俘获；捕捉；夺取 
+  - en: casual
+    cn: 漫不经心的；非正式的 
+  - en: catalog（catalogue）
+    cn: catalog (catalogue)目录 
+  - en: ceremony
+    cn: 典礼；仪式 
+  - en: charm
+    cn: 魅力；咒语 
+  - en: chase
+    cn: 追逐；追赶 
+  - en: chip
+    cn: 芯片；碎片；土豆条 
+  - en: classify
+    cn: 分类；分级 
+  - en: code
+    cn: 代码；密码；准则 
+  - en: command
+    cn: 命令；指挥；掌握 
+  - en: compound
+    cn: 复合物；复合的；加重 
+  - en: conquer
+    cn: 征服；克服 
+  - en: conserve
+    cn: 保护；保存；节约 
+  - en: controversial
+    cn: 有争议的 
+  - en: convey
+    cn: 传达；运输 
+  - en: counter
+    cn: 柜台；反击；相反的 
+  - en: craft
+    cn: 工艺；手艺；航空器 
+  - en: crawl
+    cn: 爬行；缓慢行进 
+  - en: dawn
+    cn: 黎明；开端 
+  - en: dedicate
+    cn: 献身；致力于；题献 
+  - en: deed
+    cn: 行为；契约 
+  - en: delight
+    cn: 欣喜；快乐 
+  - en: diagnose
+    cn: 诊断 
+  - en: distracting
+    cn: 分心的；分散注意力的 
+  - en: distressing
+    cn: 令人痛苦的；令人不安的 
+  - en: dot
+    cn: 点；小圆点 
+  - en: drown
+    cn: 淹死；淹没 
+  - en: duly
+    cn: 适当地；按时地 
+  - en: enclose
+    cn: 围住；随函附上 
+  - en: endurance
+    cn: 忍耐力；持久 
+  - en: equivalent
+    cn: 相等的；等价物 
+  - en: evolve
+    cn: 进化；演变 
+  - en: exhaust
+    cn: 使精疲力竭；废气 
+  - en: exploitation
+    cn: 剥削；开发；利用 
+  - en: fade
+    cn: 褪色；逐渐消失 
+  - en: faint
+    cn: 昏厥；微弱的 
+  - en: fake
+    cn: 假的；伪造品 
+  - en: fare
+    cn: 车费；进食；进展 
+  - en: farewell
+    cn: 告别；辞行 
+  - en: fascinating
+    cn: 迷人的；极有吸引力的 
+  - en: fertilizer 
+    cn: fertilizer肥料 
+  - en: fierce
+    cn: 凶猛的；激烈的 
+  - en: flame
+    cn: 火焰 
+  - en: flesh
+    cn: 肉；肉体 
+  - en: float
+    cn: 漂浮；浮动 
+  - en: foolish
+    cn: 愚蠢的 
+  - en: freshman
+    cn: 大一新生；新手 
+  - en: frustrate
+    cn: 使沮丧；阻挠 
+  - en: fulfill
+    cn: 履行；实现；满足 
+  - en: funeral
+    cn: 葬礼 
+  - en: furthermore
+    cn: 此外；而且 
+  - en: gesture
+    cn: 手势；姿态 
+  - en: giant
+    cn: 巨大的；巨人 
+  - en: glance
+    cn: 扫视；瞥一眼 
+  - en: gossip
+    cn: 流言蜚语；爱说长道短的人 
+  - en: graceful
+    cn: 优美的；得体的 
+  - en: gratitude
+    cn: 感激；感谢 
+  - en: grave
+    cn: 坟墓；严肃的；严重的 
+  - en: hardware
+    cn: 硬件；五金器具 
+  - en: harsh
+    cn: 严酷的；刺耳的 
+  - en: hazardous
+    cn: 危险的；冒险的 
+  - en: highway
+    cn: 公路；干道 
+  - en: hint
+    cn: 暗示；提示 
+  - en: hook
+    cn: 钩子；勾住 
+  - en: hop
+    cn: 单脚跳；蹦跳 
+  - en: horizon
+    cn: 地平线；视野 
+  - en: horn
+    cn: 角；喇叭 
+  - en: imitation
+    cn: 模仿；仿制品 
+  - en: inevitably
+    cn: 不可避免地 
+  - en: inform
+    cn: 通知；告知 
+  - en: ink
+    cn: 墨水 
+  - en: insert
+    cn: 插入；嵌入 
+  - en: install
+    cn: 安装；安置 
+  - en: instinct
+    cn: 本能；天性 
+  - en: interval
+    cn: 间隔；幕间休息 
+  - en: isolated
+    cn: 孤立的；偏远的 
+  - en: jewellery
+    cn: 珠宝；首饰 
+  - en: kidnap
+    cn: 绑架；劫持 
+  - en: knit
+    cn: 编织；结合 
+  - en: ladder
+    cn: 梯子；阶梯 
+  - en: latest
+    cn: 最近的；最新的 
+  - en: laundry
+    cn: 洗衣店；洗好的衣服 
+  - en: lawn
+    cn: 草坪 
+  - en: layer
+    cn: 层；阶层 
+  - en: lean
+    cn: 倾斜；依靠；瘦的 
+  - en: leap
+    cn: 跳跃；激增 
+  - en: locker
+    cn: 储物柜 
+  - en: luggage
+    cn: 行李 
+  - en: manual
+    cn: 手册；体力的；手工的 
+  - en: marine
+    cn: 海洋的；海军陆战队 
+  - en: marvel
+    cn: 惊叹；奇迹 
+  - en: mask
+    cn: 面具；掩饰 
+  - en: masterpiece
+    cn: 杰作 
+  - en: mayor
+    cn: 市长 
+  - en: meanwhile
+    cn: 与此同时 
+  - en: melt
+    cn: 融化；熔化 
+  - en: miserable
+    cn: 痛苦的；惨淡的 
+  - en: moderate
+    cn: 适度的；温和的 
+  - en: modest
+    cn: 谦虚的；适度的 
+  - en: monument
+    cn: 纪念碑；历史遗迹 
+  - en: mutual
+    cn: 相互的；共同的 
+  - en: mysterious
+    cn: 神秘的 
+  - en: nap
+    cn: 午睡；小睡 
+  - en: nasty
+    cn: 肮脏的；下流的；恶毒的 
+  - en: neutral
+    cn: 中立的 
+  - en: nickname
+    cn: 绰号；昵称 
+  - en: nonsense
+    cn: 胡说八道；废话 
+  - en: obstacle
+    cn: 障碍；干扰 
+  - en: oral
+    cn: 口头的；口腔的 
+  - en: outlook
+    cn: 展望；观点；前景 
+  - en: pajamas
+    cn: 睡衣 
+  - en: pants
+    cn: 裤子 
+  - en: parade
+    cn: 游行；检阅 
+  - en: pat
+    cn: 轻拍 
+  - en: patriotic
+    cn: 爱国的 
+  - en: pause
+    cn: 暂停；中止 
+  - en: pave
+    cn: 铺设（道路） 
+  - en: perseverance
+    cn: 毅力；坚持不懈 
+  - en: persist
+    cn: 坚持；执意 
+  - en: perspective
+    cn: 视角；远景；透视 
+  - en: pile
+    cn: 堆；大量 
+  - en: pin
+    cn: 大头针；别住 
+  - en: pizza
+    cn: 比萨饼 
+  - en: portion
+    cn: 部分；一份 
+  - en: proportion
+    cn: 比例；部分 
+  - en: publication
+    cn: 出版；出版物 
+  - en: puppy
+    cn: 小狗 
+  - en: puzzle
+    cn: 难题；谜；使困惑 
+  - en: regulate
+    cn: 调节；管制 
+  - en: reluctant
+    cn: 不情愿的 
+  - en: reverse
+    cn: 颠倒；撤销；相反的 
+  - en: rhythm
+    cn: 节奏；韵律 
+  - en: ritual
+    cn: 仪式；惯例 
+  - en: robber
+    cn: 强盗 
+  - en: rough
+    cn: 粗糙的；艰难的；粗略的 
+  - en: rub
+    cn: 摩擦；揉 
+  - en: sacred
+    cn: 神圣的 
+  - en: sacrifice
+    cn: 牺牲；祭品 
+  - en: sauce
+    cn: 酱汁；调味汁 
+  - en: scale
+    cn: 规模；刻度；比例；鱼鳞 
+  - en: scan
+    cn: 扫描；细看；浏览 
+  - en: seal
+    cn: 印章；封条；海豹；密封 
+  - en: shrug
+    cn: 耸肩 
+  - en: sidewalk
+    cn: 人行道 
+  - en: sigh
+    cn: 叹气 
+  - en: slight
+    cn: 轻微的；微小的 
+  - en: slope
+    cn: 斜坡；倾斜 
+  - en: smash
+    cn: 打碎；粉碎 
+  - en: soap
+    cn: 肥皂 
+  - en: souvenir
+    cn: 纪念品 
+  - en: spill
+    cn: 溢出；洒出 
+  - en: spit
+    cn: 吐痰；唾液 
+  - en: stationery
+    cn: 文具 
+  - en: status
+    cn: 地位；状态 
+  - en: steadily
+    cn: 稳定地；稳固地 
+  - en: stock
+    cn: 股票；库存；备货 
+  - en: strand
+    cn: （线、发等的）股；缕 
+  - en: supervisor
+    cn: 监督人；导师 
+  - en: swallow
+    cn: 吞下；燕子 
+  - en: tap
+    cn: 轻敲；水龙头 
+  - en: teen
+    cn: 青少年 
+  - en: tempt
+    cn: 诱惑；吸引 
+  - en: tent
+    cn: 帐篷 
+  - en: thread
+    cn: 线；思路 
+  - en: throat
+    cn: 喉咙 
+  - en: tide
+    cn: 潮汐；潮流 
+  - en: tongue
+    cn: 舌头；语言 
+  - en: trace
+    cn: 痕迹；追踪 
+  - en: tragic
+    cn: 悲剧的；悲惨的 
+  - en: transition
+    cn: 过渡；转变 
+  - en: tremendous
+    cn: 巨大的；极好的 
+  - en: triangle
+    cn: 三角形 
+  - en: tribe
+    cn: 部落 
+  - en: tunnel
+    cn: 隧道 
+  - en: undergo
+    cn: 经历；承受 
+  - en: underlie
+    cn: 构成…的基础；位于…之下 
+  - en: vocation
+    cn: 职业；天职 
+  - en: voyage
+    cn: 航行；航海 
+  - en: wilderness
+    cn: 荒野 
+  - en: willingly
+    cn: 乐意地；自愿地 

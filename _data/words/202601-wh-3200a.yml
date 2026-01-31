@@ -1,0 +1,458 @@
+month: "202601-wh-3200a"
+days:
+- date: "2026/01/30"
+  words:
+  - en: a (an)
+    cn: art. 一（个、种、份......）；任何一（个）；每一（个）；某一（个）[不定冠词，一般用于读音以辅音音素起首的词前] ~ 
+  - en: abandon
+    cn: vt. 放弃；丢弃；离弃；遗弃；抛弃 ~ 
+  - en: ability
+    cn: n. 能力；本领 ~ beyond one’s ability
+  - en: able
+    cn: adj. 能够......的；能力出众的；聪明能干的 ~ be able to do 
+  - en: abnormal
+    cn: adj. 反常的；异常的 ~ 
+  - en: aboard
+    cn: adv. 在船（或飞机、车等）上；上船；登机；上车 | prep. 在（船、飞机、车）上 ~ 
+  - en: about
+    cn: prep. 关于；在......周围；在......各处；在......附近；（时间上）在......前后（或左右） | adv. 在四周；到处 ~ be about to do 
+  - en: above
+    cn: prep. 在......的上方；多于；大于；高于；优于；超乎......之所及； 不受......之影响；不屑于 | adv. 在（或向）上面 ~ 
+  - en: abroad
+    cn: adv. 到国外；在国外 ~ 
+  - en: absence
+    cn: n. 不在，缺席；缺乏，不存在（of） ~ in the absence of
+  - en: absent
+    cn: adj. 不在场的；缺席的；缺乏的 ~ be absent from 
+  - en: absolutely
+    cn: adv. 绝对地，完全地；不容置疑地 ~ 
+  - en: absorb
+    cn: vt. 吸收；吸引......的注意，使全神贯注  ~ be absorbed in
+  - en: abstract
+    cn: adj. 抽象的 | n. 摘要，梗概 ~ 
+  - en: abuse
+    cn: vt. 虐待；侮辱；滥用 | n. 虐待；辱骂；滥用 ~ 
+  - en: academic
+    cn: adj. 学校的；学术的；普通文化课的 ~ 
+  - en: accent
+    cn: n. 重音；口音，腔调 ~ 
+  - en: accept
+    cn: v. 接受；认可 ~ 
+  - en: access                
+    cn: n. 接近（或进入）的机会；享用权；通道；入口 | vt. 接近；进入 ~ have/gain access to
+  - en: accident              
+    cn: n. 意外事情；事故 ~ 
+  - en: accommodation 
+    cn: n.〔〈英〉~〈美〉~s〕住处；膳宿；方便设施 ~ 
+  - en: accompany       
+    cn: vt. 陪伴，陪同；为......伴奏（或伴唱）；伴随 | vi. 伴奏，伴唱 ~ accompany sb in doing sth
+  - en: according to
+    cn: phrase. 按照；根据 ~ 
+  - en: account
+    cn: n. 记述，陈述；理由；解释；账（目），账户  | vt.  把..视作；把...归因于（to） | vi. 报账；提出理由（for）； | （在数量、比例方面）占（for） ~ take......into account  | account ...... to...... | account for  | 
+  - en: accurate
+    cn: adj. 准确的；精确的；正确无误的 ~ 
+  - en: accuse
+    cn: vt. 指控；指责 ~ accuse ...... of 
+  - en: ache
+    cn: vi.，n. 疼痛 ~ 
+  - en: achieve
+    cn: vt. 完成，实现；达到；得到 ~ 
+  - en: achievement
+    cn: n. 成就；成绩 ~ 
+  - en: acid
+    cn: adj. 酸的 | n. 〔化〕酸 ~ 
+  - en: acknowledge
+    cn: vt. 承认；告知（或确认）（信件等的）收到；对...表示感谢 ~ It is acknowledged that......
+  - en: acquire
+    cn: vt. 取得，获得；学到 ~ 
+  - en: across
+    cn: prep. 穿过......；越过......；在......的对面，在......另一边 | adv. 从一边到另一边 ~ 
+  - en: act
+    cn: vi. 行动；做事；表演；起作用；担当 | vt. 扮演（角色） | n. 行为，行动；法令；法案；（戏）幕 ~ act on  | act as  | 
+  - en: action
+    cn: n. 行动 ~ take action  | put ... into action | Actions speak louder than words.
+  - en: active
+    cn: adj. 积极的；活跃的；勤奋的 ~ 
+  - en: activity
+    cn: n. 活动 ~ 
+  - en: actor
+    cn: n. 男演员 ~ 
+  - en: actress
+    cn: n. 女演员 ~ 
+  - en: actually
+    cn: adv. 实际上；事实上；其实 ~ 
+  - en: AD
+    cn: n. abbr. 公元 ~ 
+  - en: adapt
+    cn: vt/vi.（使）适应，（使）适合；改编，改写 ~ adapt … to …
+  - en: adaptation
+    cn: n.改编 ~ 
+  - en: add
+    cn: vt.加；添加；进一步说（或写） ~ add to … | add up to …
+  - en: addict
+    cn: vt.使沉溺，使入迷；使成瘾 ~ be addicted to doing sth
+  - en: 
+    cn: n. 入迷的人；有瘾的人 ~ 
+  - en: addition
+    cn: n. 加；增加的人（或物） ~ in addition to …
+  - en: address
+    cn: n. 演说，讲话；地址，住址 ~ 
+  - en: 
+    cn: vt.对……发表演说；在（信封等）上写姓名地址；对付；处理 ~ 
+  - en: adjust
+    cn: v. 调整，调节 ~ adjust … to …
+  - en: administration
+    cn: n. 管理；经营；支配 ~ 
+  - en: admire
+    cn: vt. 赞赏；钦佩 ~ 
+  - en: admit
+    cn: vt.准许……进入（或加入）；承认 ~ admit … to / into …
+  - en: adopt
+    cn: vt.采纳；通过，批准；收养 ~ 
+  - en: adorable
+    cn: adj.可爱的；讨人喜爱的 ~ 
+  - en: adult
+    cn: n.成年人 ~ 
+  - en: 
+    cn: adj.成年的 ~ 
+  - en: advance
+    cn: vi.前进，向前移动 ~ in advance
+  - en: 
+    cn: vt.使向前移动；促进 ~ 
+  - en: 
+    cn: n.前进；进展 ~ 
+  - en: advantage
+    cn: n.有利条件（或因素）；好处，利益；优势 | vt.有利于；使……处于有利地位 ~ take advantage of …
+  - en: adventure
+    cn: n.冒险（性）；冒险活动，冒险经历；激动人心的活动（或经历）；奇遇 | v.（使）冒险；担风险 ~ 
+  - en: advertise
+    cn: v.为……做广告，登广告 ~ 
+  - en: advertisement (ad)
+    cn: n.广告 ~ 
+  - en: advice
+    cn: n.劝告；忠告；意见 ~ 
+  - en: advise
+    cn: vt.劝告；建议 ~ 
+  - en: advocate
+    cn: vt.拥护；提倡；主张 | n.拥护者；提倡者；辩护者 ~ 
+  - en: affair
+    cn: n.事情，事件；（~s）事务 ~ 
+  - en: affect
+    cn: vt.影响；（在感情方面）打动，震动；（疾病）侵袭 ~ 
+  - en: afford
+    cn: vt.买得起；负担得起；提供 ~ 
+  - en: afraid
+    cn: adj.怕的，害怕的；<口>恐怕；遗憾的 ~ be afraid of...
+  - en: Africa
+    cn: 非洲 ~ 
+  - en: African
+    cn: adj.非洲的 | n.非洲人（尤指黑人） ~ 
+  - en: after
+    cn: prep., conj.在……以后 ~ 
+  - en: afternoon
+    cn: n.下午；午后 ~ 
+  - en: afterward
+    cn: adv.后来，以后 ~ 
+  - en: again
+    cn: adv.再一次；又；另外 ~ 
+  - en: against
+    cn: prep.（反）对；对着；以…为抵御对象；以……为竞争对手；为……作准备（或防备）；紧靠着；以……为背景；以……为衬托 ~ 
+  - en: age
+    cn: n.年龄；时代；老，老年 | v.（使）变老，显老 ~ 
+  - en: agency
+    cn: n.代理行；代理 ~ 
+  - en: agenda
+    cn: n.议事日程；日常工作事项 ~ 
+  - en: ago
+    cn: adv.以前 ~ 
+  - en: agree
+    cn: v.表示同意；持相同意见；达成协议；相符 ~ agree on … | agree with … | agree to …
+  - en: agreement
+    cn: n.同意 ~ reach an agreement
+  - en: agriculture
+    cn: n.农业；农艺 ~ 
+  - en: ahead
+    cn: adv.在前面；向前 ~ ahead of time /schedule
+  - en: aid
+    cn: n.帮助；援助；辅助物 | v.帮助 ~ first aid
+  - en: aim
+    cn: vt. 把…瞄准，把…对准（at）;使旨在（at） | vi. 瞄准；目的在于，旨在（at） | n. 瞄准；目的，目标 ~ aim at | be aimed at | aim to do  | be aimed to do 
+  - en: air
+    cn: n. 空气；气氛；空中；神态；飞机；航空 ~ in the air
+  - en: airline
+    cn: n. （飞机）航线；（常做~s）航空公司 | adj. （飞机）航线的；航空公司的 ~ 
+  - en: airport
+    cn: n. 机场 ~ 
+  - en: alarm
+    cn: n. 惊恐；警报；（闹钟的）闹铃 | vt. 使惊恐；向…报警 ~ alarm clock
+  - en: alcohol
+    cn: n. 含酒精的饮料；酒；酒精，乙醇 ~ 
+  - en: alive
+    cn: adj. 活着的；在世的；有活力的 ~ 
+  - en: all
+    cn: adj. 全部的；一切的；所有的 | pron.全体；（整体中的）每个；一切 | n. 所有的一切 ~ 
+  - en: allow
+    cn: vt. 允许；准许；承认 ~ allow doing | allow sb to do 
+  - en: almost
+    cn: adv. 几乎；差不多 ~ 
+  - en: alone
+    cn: adj. 仅（用于名词或代词后）；单独的；唯一的 | adv. 单独地；独自地 ~ 
+  - en: along
+    cn: prep. 沿着 | adv. 向前；一道；一起 ~ along with
+  - en: alongside
+    cn: adv. 在旁边 | prep. 在…旁边；沿着…的边 ~ 
+  - en: aloud
+    cn: adv. 大声地；出声地 ~ 
+  - en: already
+    cn: adv. 已经 ~ 
+  - en: also
+    cn: adv. 而且（也），（此外）还 ~ 
+  - en: alternative
+    cn: adj. 供选择的 | n. 两者（或在两者以上之间）择一，抉择；供选择的东西；供替代的抉择 ~ have no alternative but to do 
+  - en: although
+    cn: conj. 虽然，尽管 ~ 
+  - en: altogether
+    cn: adv. 总共；全部地；完全 ~ 
+  - en: always
+    cn: adv. 总是 ~ 
+  - en: a.m.
+    cn: 上午 ~ 
+  - en: amateur
+    cn: n. 业余爱好者 | adj. 业余爱好的 ~ 
+  - en: amazing
+    cn: adj. 令人惊奇的；令人惊喜的 ~ 
+  - en: ambition
+    cn: n. 强烈欲望；志向 ~ 
+  - en: ambitious
+    cn: adj. 雄心勃勃的；有野心的；有雄心的 ~ 
+  - en: ambulance
+    cn: n. 救护车 ~ 
+  - en: America
+    cn: n. 美国；美洲 ~ 
+  - en: American
+    cn: n. （尤指）美国人；美洲人 | adj. （尤指）美国的；美洲的 ~ 
+  - en: among
+    cn: prep. 在…中间，在…之中 ~ 
+  - en: amount
+    cn: n. 数量；总数 | vi. 合计，共计；等同；接近（to） ~ 
+  - en: amuse
+    cn: vt. 逗乐，逗笑；给…提供娱乐（消遣） ~ amuse oneself | be amused by
+  - en: analyse (analyze)
+    cn: vt. 分析 ~ 
+  - en: ancestor
+    cn: n. 祖先；先驱；原型 ~ 
+  - en: ancient
+    cn: adj. 古代的 | n. 古代人 ~ 
+  - en: and
+    cn: conj. 和 ~ 
+  - en: anger
+    cn: n. 怒；愤怒 | vt. 使发怒，激怒 ~ 
+  - en: angle
+    cn: n. 角度 ~ 
+  - en: angry
+    cn: adj. 发怒的，生气的 ~ 
+  - en: animal
+    cn: n. 动物 ~ 
+  - en: ankle
+    cn: n. 脚踝 ~ 
+  - en: announce
+    cn: vt. 宣布；宣告 ~ 
+  - en: annoy
+    cn: vt. 使恼怒；使烦恼；打扰 ~ 
+  - en: annual
+    cn: adj. 每年的；年度的 | n. 年刊 ~ 
+  - en: another
+    cn: adj. 另一的；再一个（或一批）的 | pron. 又一个，再一个 ~ 
+  - en: answer
+    cn: v., n. 回答；答复；对......作出反应；响应 ~ 
+  - en: ant
+    cn: n. 蚂蚁 ~ 
+  - en: anticipate
+    cn: vt. 预料；预期；预见；预先准备 ~ anticipate sth/doing/that... | It is anticipated that ...
+  - en: antique
+    cn: n. 文物；古物；古董；古玩 | adj. 古老的；古董的 ~ 
+  - en: anxiety
+    cn: n. 焦虑，忧虑；渴望；挂念 ~ 
+  - en: anxious
+    cn: adj. 焦虑的；急切的；渴望的 ~ be anxious about .../for ... | be anxious to do... | /for.../that...
+  - en: any
+    cn: adj., pron. 任一的；一些 ~ 
+  - en: anybody
+    cn: pron. 任何人 ~ 
+  - en: anyhow
+    cn: adv. 不管怎么说；无论如何 ~ 
+  - en: anyone
+    cn: pron. 任何人 ~ 
+  - en: anything
+    cn: pron. 任何事情；任何东西 ~ 
+  - en: anyway
+    cn: adv. 无论如何；不管怎么说 ~ 
+  - en: anywhere
+    cn: adv. 在（或往）任何地方 ~ 
+  - en: apart
+    cn: adv. 成零碎；相间隔；（留置）于一旁 ~ come/fall apart | take ... apart | apart from ... | tell ... apart
+  - en: apartment
+    cn: n. 一套公寓房间；（美）公寓大楼 ~ 
+  - en: apologise (apologize)
+    cn: vi. 道歉，认错 ~ apologize (to sb) (for ...)
+  - en: apparently
+    cn: adv. 看来；显然 ~ 
+  - en: appeal
+    cn: vi. 呼吁；上诉，申诉；有吸引力 | n. 呼吁；上诉，申诉；吸引力 ~ appeal to sb to do.../for ... | appeal to sb against ... | appeal to sb
+  - en: appear
+    cn: vi. 出现；变得明显；看来好像 ~ appear to do... | It appears that ......
+  - en: appetite
+    cn: n. 食欲；欲望（for）；爱好；趣味（for） ~ 
+  - en: applaud
+    cn: vt. 向......鼓掌；向......喝彩；称赞 | vi. 鼓掌；喝彩 ~ applaud sb (for ...)
+  - en: apple
+    cn: n. 苹果 ~ 
+  - en: applicant
+    cn: n. 申请人 ~ 
+  - en: application
+    cn: n. 应用；申请（表）；（计）应用程序 ~ 
+  - en: apply
+    cn: vt. 应用；涂，敷；把......施（用）于；使（自己）致力于 | vi. 申请；适用 ~ apply (to sb) (for ...) | apply to do ... | apply ... to ... | apply to ... 适用 | apply oneself to ... 致力于
+  - en: appointment
+    cn: n. 约会；预约；约定；任命；委任；职务；职位 ~ appointment as/to ... | by appointment
+  - en: appreciate
+    cn: vt. 为...表示感激；重视；赏识，欣赏 ~ appreciate (doing) sth
+  - en: approach
+    cn: v. 接近；临近 | n. 接近；入门；途径；（处理问题的）方式，方法 ~ approach sb about ... | an approach to ...
+  - en: appropriate
+    cn: adj. 合适的，适当的 ~ 
+  - en: approve
+    cn: vt. 批准；赞成 | vi. 赞成 ~ approve ... 批准，通过 | approve of ... 赞成，同意
+  - en: April
+    cn: n. 四月 ~ 
+  - en: arch
+    cn: n. 拱形结构；弧线（运动）；足背，足弓 | v. 弓着；呈拱形；使成拱形 ~ 
+  - en: architect
+    cn: n. 建筑师；设计师 ~ 
+  - en: area
+    cn: n. 地区；领域；面积 ~ 
+  - en: argue
+    cn: v. 争辩，争论；（坚决）主张，认为 ~ argue (with sb.) (about/over ...) | argue for/against (doing) ...
+  - en: arise
+    cn: vi. 起立,起身;上升;产生;出现 ~ 
+  - en: arm
+    cn: n. 臂;前肢 | n. (一件)武器;〔~s〕〔总称]武  | 器,军火 | vt. 装备 ~ 
+  - en: army
+    cn: n. 军队;陆军;大群 ~ 
+  - en: around
+    cn: prep. 在……四周;环绕  | adv. 在周围;大约 ~ 
+  - en: arrangement
+    cn: n. 安排; 解决办法;准备工作; | 约定,协议 ~ make an arrangement for … | have an arrangement with  | come to an arrangement
+  - en: arrest
+    cn: vt., n. 拘捕,逮捕 ~ under arrest
+  - en: arrive
+    cn: vi. 到达;到来;达成 ~ arrive at an agreement
+  - en: arrow
+    cn: n. 箭;箭头符号 ~ 
+  - en: art
+    cn: n. 美术;艺术;(一门)人文科学;  | [~s]文科 | adj. 美术(品)的;艺术(品)的 ~ 
+  - en: article
+    cn: n. 文章;物品 ~ 
+  - en: artificial
+    cn: adj. 人工的,人造的 ~ 
+  - en: artist
+    cn: n. 艺术家;画家 ~ 
+  - en: as
+    cn: conj. [表示时间]当……的时候;  | [表示比较]像……一样 | prep. 作为 ~ 
+  - en: ashamed
+    cn: adj. 惭愧的，羞耻的;因怕羞而不  | 愿的 ~ be ashamed of/that | 
+  - en: Asia
+    cn: n. 亚洲 ~ 
+  - en: Asian
+    cn: n. 亚洲人 | adj. 亚洲的 ~ 
+  - en: aside
+    cn: adv. 在旁边;到(或向)一边 ~ 
+  - en: ask
+    cn: v. 问;请求,要求 ~ ask about 询问，打听 | ask for 要，要求
+  - en: asleep
+    cn: adj. 睡着的 ~ fall asleep
+  - en: aspect
+    cn: n. 方面 ~ 
+  - en: assess
+    cn: vt. 对……进行估价;评价,评论     ~ 
+  - en: assign
+    cn: vt. 分配;布置(作业);指派 ~ 
+  - en: assistant
+    cn: n. 助手,助理 ~ 
+  - en: association
+    cn: n. 联合,联盟;协会,社团 ~ 
+  - en: assume
+    cn: vt. 假定,想当然地认为;承担;担  | 任;呈现;假装 ~ 
+  - en: assumption
+    cn: n. 假定;担任;承担;假装 ~ 
+  - en: astonish
+    cn: vt. 使惊讶 ~ 
+  - en: astronaut
+    cn: n. 宇航员;航天员 ~ 
+  - en: astronomer
+    cn: n. 天文学家 ~ 
+  - en: at
+    cn: prep. 在……里(上、旁、时刻……) ~ 
+  - en: athlete
+    cn: n. 运动员;(英)田径运动员 ~ 
+  - en: Atlantic
+    cn: adj. 大西洋的 ~ 
+  - en: atmosphere
+    cn: n. 大气;气氛 ~ 
+  - en: attach
+    cn: vt. 连接;使依附  | vi. 附属 ~ attach … to …
+  - en: attack
+    cn: vt., n. 攻击,进攻;侵害 ~ 
+  - en: attain
+    cn: vt. 得到；获得；达到 ~ 
+  - en: attempt
+    cn: vt., n. 企图;试图;尝试 ~ make an attempt to do sth
+  - en: attend
+    cn: vt. 出席,参加;护理;照料 ~ 
+  - en: attention
+    cn: n. 注意;注意力;照料 ~ draw one’s attention
+  - en: attitude
+    cn: n. 态度,看法 ~ attitude towards ….
+  - en: attract
+    cn: vt. 吸引；引起  ~ attract one’s attention
+  - en: audience
+    cn: n. 听众；观众 ~ 
+  - en: August
+    cn: n. 八月 ~ 
+  - en: aunt
+    cn: n. 姨；姑；婶母；舅母 ~ 
+  - en: Australia
+    cn: n. 澳大利亚；澳洲 ~ 
+  - en: Australian
+    cn: adj. 澳大利亚的 | n.  澳大利亚人 ~ 
+  - en: author
+    cn: n. 著作者 | vt. 著作、撰写 ~ 
+  - en: authority
+    cn: n. 权力、权威；职权；[authorities] 当局，官方 ~ 
+  - en: automatic
+    cn: adj. 自动的 ~ 
+  - en: autonomous
+    cn: adj. 自治的；有自治权的；自主的；有自主权的 ~ 
+  - en: autumn
+    cn: n. 秋；秋季 ~ 
+  - en: available
+    cn: adj. 可获得的；可利用的；可取得联系的 ~ be available to
+  - en: average
+    cn: adj. 中等的，平常的；平均的 | n. 平均数；平均；一般水平；中等水平 | vt. 算出……的平均数；平均做（或得到、生产、分担等） | vi. 平均数为 ~ on average, above/below average
+  - en: avoid
+    cn: vt. 避免 ~ 
+  - en: awake
+    cn: adj. 醒着的；意识到的；认识到的（to） | vi. 醒；觉醒 | vt. 唤醒；使觉醒 ~ 
+  - en: award
+    cn: vt. 授予（奖品等） | n.  奖；奖品；奖状 ~ 
+  - en: aware
+    cn: adj. 意识到；知道的（of，that） ~ 
+  - en: away
+    cn: adv. 向远处；离开；向另一方向；向一边 ~ 
+  - en: awesome
+    cn: adj. 令人惊叹的；使人惊惧的；很困难的；难得吓人的；<口>很好的（或极好玩的等） ~ 
+  - en: awful
+    cn: adj. 可怕的；不舒服的；<口>非常的；极坏的 ~ 
+  - en: awkward
+    cn: adj. 笨拙的；使用不便的；难处理的 ~ 
