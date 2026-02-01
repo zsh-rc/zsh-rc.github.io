@@ -1,8 +1,8 @@
 ---
-layout: todo
-title: 作业完成情况
+layout: post
+title: 英语
 author: Umbra
-date: 2026-02-01
+date: 2026-01-30
 parent: ⠿ 寒假作业
 tags: [project]
 ---
