@@ -1,0 +1,126 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{% if site.data.projects["Wh26OfBangbang"] %}
+  {% assign bangbang = site.data.projects["Wh26OfBangbang"] %}
+
+  {% assign subjects = "" %}
+  {% for item in bangbang %}
+    {% assign subject = item.subject %}
+    {% unless subjects contains subject %}
+      {% assign subjects = subjects | append: subject | append: "," %}
+    {% endunless %}
+  {% endfor %}
+
+  {% assign subjects = subjects | split: "," %}
+  {% for subject in subjects %}
+    {% if subject != "" %}
+      <details open class="fs-2 fw-300">
+        <summary class="text-delta">{{ subject }}</summary>        
+          {% assign tasks = bangbang | where: "subject", subject %}
+
+          {% assign dates = "" %}
+          {% for task in tasks %}
+            {% assign date = task.date %}
+            {% unless dates contains date %}
+              {% assign dates = dates | append: date | append: "," %}
+            {% endunless %}
+          {% endfor %}
+
+          {% assign dates = dates | split: "," %}
+          {% for date in dates %}
+            <details open style="text-indent: 10px;" class="fs-2 fw-300">
+              <summary class="text-delta">{{ date }}</summary>
+              <ul class="task-list">
+              {% assign tasks_by_date = tasks | where: "date", date %}
+              {% for task in tasks_by_date %}
+                <li class="task-list-item">
+                  <input type="checkbox" class="task-list-item-checkbox">{{ task.task }}
+                </li>
+              {% endfor %}
+              </ul>
+            </details>
+          {% endfor %}
+
+      </details>
+    {% endif %}
+  {% endfor %}
+
+{% endif %}
+
+<!-- <div class="todo-app-container">
+  <div class="todo-app">
+    <details open>
+      <summary class="text-delta">2026年2月1日</summary>
+      <details open style="text-indent: 10px;" class="fs-2 fw-300">
+        <summary class="text-delta">英语</summary>
+        <ul class="task-list">
+          <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox">单词背默*100个
+          </li>
+          <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox">中文翻译*15句
+          </li>
+          <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox">词组*1页
+          </li>
+          <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox">阅读*1篇
+          </li>
+        </ul>
+      </details>
+      <details open style="text-indent: 10px;" class="fs-2 fw-300">
+        <summary class="text-delta">语文</summary>
+        <ul class="task-list">
+          <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox">文言文*1篇
+          </li>
+          <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox">实词*2页
+          </li>
+          <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox">背诵*1页
+          </li>
+          <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox">阅读*2篇
+          </li>
+        </ul>
+      </details>
+      <details open style="text-indent: 10px;" class="fs-2 fw-300">
+        <summary class="text-delta">数学</summary>
+        <ul class="task-list">
+          <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox">作业*1套
+          </li>
+        </ul>
+      </details>
+      <details open style="text-indent: 10px;" class="fs-2 fw-300">
+        <summary class="text-delta">物理</summary>
+        <ul class="task-list">
+          <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox">课外*1套
+          </li>
+        </ul>
+      </details>
+      <details open style="text-indent: 10px;" class="fs-2 fw-300">
+        <summary class="text-delta">化学</summary>
+        <ul class="task-list">
+          <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox">作业*1套
+          </li>
+        </ul>
+      </details>
+      <details open style="text-indent: 10px;" class="fs-2 fw-300">
+        <summary class="text-delta">地理</summary>
+        <ul class="task-list">
+          <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox">试卷*1套
+          </li>
+        </ul>
+      </details>
+    </details>
+
+  </div> -->

@@ -168,3 +168,14 @@ nav_external_links:
 
 back_to_top: true
 back_to_top_text: "🔝Top"
+
+csv_reader:
+    converters:
+      - numeric
+      - datetime
+    headers: true
+    encoding: utf-8
+tsv_reader:
+    converters:
+      - all
+    headers: false
