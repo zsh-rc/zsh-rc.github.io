@@ -15,7 +15,7 @@ layout: default
     {% endunless %}
   {% endfor %}
 
-  {% assign dates = dates | split: "," %}
+  {% assign dates = dates | split: "," | sort %}
   {% for date in dates %}
     {% if date != "" %}
       <details closed class="fs-2 fw-300">
@@ -43,7 +43,8 @@ layout: default
                     class="task-list-item-checkbox"
                     disabled
                     {% if task.status == "完成" %}checked{% endif %}
-                  > {{ task.task }}
+                  > {{ task.task }} 
+                  {% if task.feedback %} - <em>{{ task.feedback }}</em>{% endif %}
                 </li>
               {% endfor %}
               </ul>
