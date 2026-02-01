@@ -7,38 +7,43 @@ layout: default
 {% if site.data.projects["Wh26OfBangbang"] %}
   {% assign bangbang = site.data.projects["Wh26OfBangbang"] %}
 
-  {% assign subjects = "" %}
+  {% assign dates = "" %}
   {% for item in bangbang %}
-    {% assign subject = item.subject %}
-    {% unless subjects contains subject %}
-      {% assign subjects = subjects | append: subject | append: "," %}
+    {% assign date = item.date %}
+    {% unless dates contains date %}
+      {% assign dates = dates | append: date | append: "," %}
     {% endunless %}
   {% endfor %}
 
-  {% assign subjects = subjects | split: "," %}
-  {% for subject in subjects %}
-    {% if subject != "" %}
-      <details open class="fs-2 fw-300">
-        <summary class="text-delta">{{ subject }}</summary>        
-          {% assign tasks = bangbang | where: "subject", subject %}
+  {% assign dates = dates | split: "," %}
+  {% for date in dates %}
+    {% if date != "" %}
+      <details closed class="fs-2 fw-300">
+        <summary class="text-delta fs-4 fw-300">📅 {{ date }}</summary>        
+          {% assign tasks = bangbang | where: "date", date %}
 
-          {% assign dates = "" %}
+          {% assign subjects = "" %}
           {% for task in tasks %}
-            {% assign date = task.date %}
-            {% unless dates contains date %}
-              {% assign dates = dates | append: date | append: "," %}
+            {% assign subject = task.subject %}
+            {% unless subjects contains subject %}
+              {% assign subjects = subjects | append: subject | append: "," %}
             {% endunless %}
           {% endfor %}
 
-          {% assign dates = dates | split: "," %}
-          {% for date in dates %}
+          {% assign subjects = subjects | split: "," %}
+          {% for subject in subjects %}
             <details open style="text-indent: 10px;" class="fs-2 fw-300">
-              <summary class="text-delta">{{ date }}</summary>
+              <summary class="text-delta">{{ subject }}</summary>
               <ul class="task-list">
-              {% assign tasks_by_date = tasks | where: "date", date %}
-              {% for task in tasks_by_date %}
+              {% assign tasks_by_subject = tasks | where: "subject", subject %}
+              {% for task in tasks_by_subject %}
                 <li class="task-list-item">
-                  <input type="checkbox" class="task-list-item-checkbox">{{ task.task }}
+                  <input 
+                    type="checkbox" 
+                    class="task-list-item-checkbox"
+                    disabled
+                    {% if task.status == "完成" %}checked{% endif %}
+                  > {{ task.task }}
                 </li>
               {% endfor %}
               </ul>
