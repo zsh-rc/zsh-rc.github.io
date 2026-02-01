@@ -1,8 +1,8 @@
 ---
 layout: post
-title: T1a - 单词背诵
+title: T2 - 中文翻译
 author: Umbra
-date: 2026-01-30
+date: 2026-02-01
 parent: 英语
 tags: [project]
 ---
