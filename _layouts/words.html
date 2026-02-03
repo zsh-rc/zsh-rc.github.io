@@ -16,10 +16,12 @@ layout: post
     <span class="fs-2"> <a href="javascript:void(0)" class="btn" onclick="checkAnswer()">✔ Check (Enter)</a> </span>&nbsp;&nbsp;
     <!-- <span class="fs-2"> <a href="javascript:void(0)" id="nextButton" class="btn" onclick="nextWord()">➡ Next (Ctrl+])</a> </span> -->
      <span class="fs-2"> <a href="javascript:void(0)" class="btn" onclick="reviewAnswer()">Review Only (Ctrl + ])</a> </span>&nbsp;&nbsp;
-     <span class="fs-2"> <a href="javascript:void(0)" class="btn" onclick="reset()">Reset</a> </span>
+     <span class="fs-2"> <a href="javascript:void(0)" class="btn" onclick="reset()">Reset</a> </span>&nbsp;&nbsp;&nbsp;&nbsp;
+     <span class="fs-2"> <a href="javascript:void(0)" class="btn" onclick="report()">★ My daily report</a> </span>
     <div id="result"></div> 
     <div id="stats"> <div id="coverage"></div> <div id="accuracy"></div> </div>
     <div id="errors"></div>
+    <div id="daily-report"></div>
     <hr/>
 </div>
 
@@ -110,6 +112,7 @@ layout: post
   let seen = new Set(); /* tracks which words have been shown */
   let attempts = 0; /* total questions answered */
   let correctCount = 0; /* correct answers */
+  let today = new Date().toISOString().split('T')[0].replace(/-/g, ''); /*in yyyymmdd format*/
 
   /* Levenshtein distance for fuzzy matching */
   function levenshtein(a, b) {
@@ -204,12 +207,18 @@ layout: post
       correctCount++;
       document.getElementById("result").textContent = "Correct!";
       setTimeout(nextWord, 500);
+      /* save to localstorage */
+      let corrects =  (localStorage.getItem(today + "-words-correct") || "") + current.en + ";";
+      localStorage.setItem(today + "-words-correct", corrects)      
     } else {
       document.getElementById("result").innerHTML =
         "<span>Not quite. Correct answer: </span>" 
         + "<a href='javascript:void(0)' onclick='playVoice(\"" + current.en + "\");'>" + current.en + " 🔊 " + current.cn + "</a>&nbsp;→&nbsp;"
         + "<a href='https://dict.youdao.com/result?word=" + current.en +"&lang=en' target='_blank'>🔗</a>";
       document.getElementById("errors").innerHTML += `<div>❌ ${mode === "en_to_cn" ? current.en : current.cn} → ${correct} (Your answer: ${user})</div>`;
+      /* save to localstorage */
+      let errors =  (localStorage.getItem(today + "-words-error")|| "") + current.en + ";";
+      localStorage.setItem(today + "-words-error", errors)      
     }
 
     updateStats();
@@ -287,6 +296,28 @@ layout: post
         reviewAnswer();
       }
     });
+
+function report() {
+    /* Get data from localStorage with proper fallbacks */
+    let corrects = localStorage.getItem(today + "-words-correct") || "";
+    let errors = localStorage.getItem(today + "-words-error") || ""; 
+    
+    /* Count items safely (handle empty cases) */
+    let correct_count = corrects ? corrects.split(';').filter(Boolean).length : 0;
+    let error_count = errors ? errors.split(';').filter(Boolean).length : 0;
+    
+    /* Build the report text with HTML line breaks */
+    let texts = `Total: ${correct_count + error_count}\n`;
+    texts += `Error: ${error_count}\n`;
+    texts += `Correct: ${correct_count}\n`;
+    texts += `----❌ Errored words----------\n`;
+    texts += errors;
+    
+    /* Add to the report div */
+    document.getElementById("daily-report").innerHTML = `<hr/>❗Copy the content and send to <a href="mailto:shaozelian@live.com">shaozelian@live.com</a> everyday.`;
+    document.getElementById("daily-report").innerHTML += `<textarea style="width: 100%;" rows="10">${texts}</textarea>`;
+}
+
 
 
 </script>
