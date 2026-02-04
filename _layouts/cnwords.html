@@ -1,0 +1,190 @@
+---
+layout: post
+---
+
+{{ content }}
+
+<style>
+  ul.option-list li {
+    list-style-type: none !important;
+  }
+
+  ul.option-list li::before {
+     content: none !important;
+  }  
+
+  .option-list-item-option-correct{
+    background-color: green;
+    color: white;
+  }
+
+  .option-list-item-option-error{
+    background-color: red;
+    color: white;
+  }  
+
+</style>
+
+{% if site.data.projects["cwh-cn-wyw"] and page.min and page.max %}
+
+  {% assign min = page.min | plus: 0 %}
+  {% assign max = page.max | plus: 0 %}
+  {% assign total = max | minus: min | plus: 1 %}
+  {% assign data = site.data.projects["cwh-cn-wyw"] %}
+
+    {% if data.size > 0 %}
+      
+      <div id="action-toolbar" class="fs-6 fw-300" style="margin-top: 10px; margin-bottom: 20px;">
+          <span>试题共{{ total }}道（{{ min }} - {{ max }}）</span>&nbsp;&nbsp;
+          <span class="fs-2"> <a href="javascript:void(0)" class="btn" onclick="submitForCheck()">✔ 完成并提交</a> </span>&nbsp;&nbsp;
+          <span class="fs-2"> <a href="javascript:void(0)" class="btn" onclick="reset(false)">重置测试</a> </span>
+      </div>
+      <div id="test-result-container" class="d-none">
+        <hr/>
+        <div>❗复制以下测试结果并发送至<a href="mailto:shaozelian@live.com">shaozelian@live.com</a>。</div>
+        <textarea id="test-result" rows="10" style="width: 100%;" readonly></textarea>
+      </div>      
+
+      {% for item in data %}
+        {% assign current_id = item.id | plus: 0 %}
+        {% if current_id >= min and current_id <= max %}
+          {% capture styled_keyword %}<strong><u>{{ item.keyword }}</u></strong>{% endcapture %}
+          <div class="question" id="question-{{ item.id }}">{{ item.id }}. {{ item.sentence | replace: item.keyword, styled_keyword }}</div>
+          {% assign options = item.options | split: "；" %}
+          <div class="fs-3 mb-3">
+              {% for option in options %}
+                    {% if option == item.answer %}
+                      {% assign is_correct = "true" %}
+                    {% else %}
+                      {% assign is_correct = "false" %}
+                    {% endif %}
+                    <span class="option-list-item-option">
+                      <input 
+                        type="radio" 
+                        name="options-{{ item.id }}"
+                        value="{{ option }}-{{ is_correct }}"
+                        class="option-list-item-radio"
+                        onclick="checkAnswer(this)"
+                      > {{ option }}
+                    </span>
+              {% endfor %}
+            <div class="check-result d-none">
+              <div id="check-result-{{ item.id }}"></div>
+              <div class="correct-answer">Correct is: {{ item.answer }}</div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+
+    {% else %}
+        <span>No data not found. </span><br/>
+    {% endif %}
+
+{% endif %}
+
+<script>
+
+  let today = new Date().toISOString().split('T')[0].replace(/-/g, ''); /*in yyyymmdd format*/
+
+  function checkAnswer(input){
+    const divCheckResult = document.getElementById("check-result-" + input.name.replace("options-", ""));
+    if(divCheckResult){
+      if(input.value.includes("true") && input.checked){
+        divCheckResult.innerHTML = "You are right!";
+      }else{
+        divCheckResult.innerHTML = "Wrong answer!";
+      }
+    }
+  }
+
+  function submitForCheck(){
+      /* re-submission based on current result is not allowed */
+      if(document.getElementById("test-result").value != ""){
+        alert("重复提交，需要先点击重置测试。");
+        return;
+      }
+
+      const questions = document.querySelectorAll('div.question');
+      const total = questions.length; /*total*/
+      let corrects = [];
+      let errors = [];
+
+      /* Check if all answers are given */
+      const selectedRadios = document.querySelectorAll('input[type="radio"]:checked');
+      if(selectedRadios.length != total){
+        alert(`还有${total - selectedRadios.length}道题目没有完成，不能提交！`);
+        return;
+      }
+
+      questions.forEach(question =>{
+          let id = question.id.replace("question-", "");
+          const divCheckResult = document.getElementById("check-result-" + id);
+          const divQuestion = document.getElementById("question-" + id);
+          if(divCheckResult.innerHTML == "You are right!"){
+            corrects.push({id: id, question: divQuestion.innerText});
+          }else{
+            errors.push({id: id, question: divQuestion.innerText});
+          }
+      });
+
+      /* output the statistics and errors */
+      const result = document.getElementById("test-result");
+      let texts = `总共: ${total}\n`;
+      texts += `错误: ${errors.length}\n`;
+      texts += `正确: ${corrects.length}\n`;
+      texts += `******❌ 错误题目******\n`;
+      errors.forEach(error=>{
+        texts += error.question + "\n";
+      });
+      texts += "--------------------------------------------\n";
+      /* get localStorage and append this time's result */
+      let cnwordsReport =  texts + (localStorage.getItem(today + "-cnwords-report") || "");
+      localStorage.setItem(today + "-cnwords-report", cnwordsReport);
+      /* show on page */
+      result.value = cnwordsReport + "\n";
+
+      document.getElementById("test-result-container").classList.remove("d-none");
+
+      /* select all options */
+      const radios = document.querySelectorAll('input[type="radio"].option-list-item-radio');
+      /* hightlight correct / wrong answers */
+      radios.forEach(radio => {
+        const span = radio.parentElement;
+        if(radio.value.includes("false") && radio.checked ){          
+          span.classList.replace('option-list-item-option', 'option-list-item-option-error');
+        }
+        if(radio.value.includes("true") && radio.checked ){
+          span.classList.replace('option-list-item-option', 'option-list-item-option-correct');
+        }
+      });
+
+      /* show all check-results */
+      const divCheckResults = document.querySelectorAll('div.check-result');
+      divCheckResults.forEach(checkResult => {
+        checkResult.classList.remove("d-none");
+      });
+  }
+
+  function reset(beforeSubmit){
+    document.getElementById("test-result-container").classList.add("d-none");
+    const resultTextArea = document.getElementById("test-result");
+    resultTextArea.value = "";
+
+    /* select all options */
+    const radios = document.querySelectorAll('input[type="radio"].option-list-item-radio');
+    /* clear all styles and check status */
+    radios.forEach(radio => {
+      if(!beforeSubmit) radio.checked = false;
+      const span = radio.parentElement;
+      span.classList.replace('option-list-item-option-correct', 'option-list-item-option');
+      span.classList.replace('option-list-item-option-error', 'option-list-item-option');
+    });    
+  }
+
+    /* show all check-results */
+    const divCheckResults = document.querySelectorAll('div.check-result');
+    divCheckResults.forEach(checkResult => {
+      checkResult.classList.add("d-none");
+    });
+
+</script>
