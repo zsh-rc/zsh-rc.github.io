@@ -39,7 +39,8 @@ layout: default
           {% assign subjects = subjects | split: "," %}
           {% for subject in subjects %}
             {% if subject == "英语" or subject == "语文" %}
-              <td style="vertical-align: top;" class="fs-2 fw-200">{{ subject }}
+              <td style="vertical-align: top;" class="fs-2 fw-200">
+                <b>{{ subject }}</b>
                 <ul class="task-list">
                 {% assign tasks_by_subject = tasks | where: "subject", subject %}
                 {% for task in tasks_by_subject %}
@@ -67,29 +68,29 @@ layout: default
 
             <td style="vertical-align: top;" class="fs-2 fw-200">
               {% for subject in subjects %}
-              {% if subject != "英语" and subject != "语文" %}
-                  {{ subject }}
-                    <ul class="task-list">
-                    {% assign tasks_by_subject = tasks | where: "subject", subject %}
-                    {% for task in tasks_by_subject %}
-                      <li class="task-list-item">
-                        <input 
-                          type="checkbox" 
-                          class="task-list-item-checkbox"
-                          disabled
-                          {% if task.status == "完成" %}checked{% endif %}
-                        > 
-                        {% if task.feedback %}
-                          <span class="jekyll-glossary">
-                            {{ task.task }}
-                            <span class="jekyll-glossary-tooltip"><span class="jekyll-glossary-tooltip-hidden">(</span>{{ task.feedback }}<span class="jekyll-glossary-tooltip-hidden">)</span></span>
-                          </span>
-                        {% else %}
-                          {{ task.task }} 
-                        {% endif %}
-                      </li>
-                    {% endfor %}
-                    </ul>
+                {% if subject != "英语" and subject != "语文" %}
+                  <b>{{ subject }}</b>
+                  <ul class="task-list">
+                  {% assign tasks_by_subject = tasks | where: "subject", subject %}
+                  {% for task in tasks_by_subject %}
+                    <li class="task-list-item">
+                      <input 
+                        type="checkbox" 
+                        class="task-list-item-checkbox"
+                        disabled
+                        {% if task.status == "完成" %}checked{% endif %}
+                      > 
+                      {% if task.feedback %}
+                        <span class="jekyll-glossary">
+                          {{ task.task }}
+                          <span class="jekyll-glossary-tooltip"><span class="jekyll-glossary-tooltip-hidden">(</span>{{ task.feedback }}<span class="jekyll-glossary-tooltip-hidden">)</span></span>
+                        </span>
+                      {% else %}
+                        {{ task.task }} 
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                  </ul>
                 {% endif %}
               {% endfor %}
             </td>
