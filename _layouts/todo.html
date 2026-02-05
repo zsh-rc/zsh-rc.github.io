@@ -16,6 +16,106 @@ layout: default
   {% endfor %}
 
   {% assign dates = dates | split: "," | sort %}
+  <table class="fs-2 fw-200">
+    <thead>
+      <th>日期</th>
+      <th colspan="6">任务</th>
+    </thead>
+    <tbody>
+      {% for date in dates %}
+        {% if date != "" %}
+          <tr>
+            <td style="vertical-align: top;" class="fs-2 fw-200">📅 {{ date | date: "%m/%d" }}</td>
+
+          {% assign tasks = bangbang | where: "date", date %}
+          {% assign subjects = "" %}
+          {% for task in tasks %}
+            {% assign subject = task.subject %}
+            {% unless subjects contains subject %}
+              {% assign subjects = subjects | append: subject | append: "," %}
+            {% endunless %}
+          {% endfor %}
+
+          {% assign subjects = subjects | split: "," %}
+          {% for subject in subjects %}
+            {% if subject == "英语" or subject == "语文" %}
+              <td style="vertical-align: top;" class="fs-2 fw-200">{{ subject }}
+                <ul class="task-list">
+                {% assign tasks_by_subject = tasks | where: "subject", subject %}
+                {% for task in tasks_by_subject %}
+                  <li class="task-list-item">
+                    <input 
+                      type="checkbox" 
+                      class="task-list-item-checkbox"
+                      disabled
+                      {% if task.status == "完成" %}checked{% endif %}
+                    > 
+                    {% if task.feedback %}
+                      <span class="jekyll-glossary">
+                        {{ task.task }}
+                        <span class="jekyll-glossary-tooltip"><span class="jekyll-glossary-tooltip-hidden">(</span>{{ task.feedback }}<span class="jekyll-glossary-tooltip-hidden">)</span></span>
+                      </span>
+                    {% else %}
+                      {{ task.task }} 
+                    {% endif %}
+                  </li>
+                {% endfor %}
+                </ul>
+              </td>
+            {% endif %}
+          {% endfor %}
+
+            <td style="vertical-align: top;" class="fs-2 fw-200">
+              {% for subject in subjects %}
+              {% if subject != "英语" and subject != "语文" %}
+                  {{ subject }}
+                    <ul class="task-list">
+                    {% assign tasks_by_subject = tasks | where: "subject", subject %}
+                    {% for task in tasks_by_subject %}
+                      <li class="task-list-item">
+                        <input 
+                          type="checkbox" 
+                          class="task-list-item-checkbox"
+                          disabled
+                          {% if task.status == "完成" %}checked{% endif %}
+                        > 
+                        {% if task.feedback %}
+                          <span class="jekyll-glossary">
+                            {{ task.task }}
+                            <span class="jekyll-glossary-tooltip"><span class="jekyll-glossary-tooltip-hidden">(</span>{{ task.feedback }}<span class="jekyll-glossary-tooltip-hidden">)</span></span>
+                          </span>
+                        {% else %}
+                          {{ task.task }} 
+                        {% endif %}
+                      </li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+              {% endfor %}
+            </td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>  
+
+{% endif %}
+
+
+<div class="d-none">
+
+{% if site.data.projects["Wh26OfBangbang"] %}
+  {% assign bangbang = site.data.projects["Wh26OfBangbang"] %}
+
+  {% assign dates = "" %}
+  {% for item in bangbang %}
+    {% assign date = item.date %}
+    {% unless dates contains date %}
+      {% assign dates = dates | append: date | append: "," %}
+    {% endunless %}
+  {% endfor %}
+
+  {% assign dates = dates | split: "," | sort %}
   {% for date in dates %}
     {% if date != "" %}
       <details closed class="fs-2 fw-300">
@@ -57,76 +157,4 @@ layout: default
 
 {% endif %}
 
-<!-- <div class="todo-app-container">
-  <div class="todo-app">
-    <details open>
-      <summary class="text-delta">2026年2月1日</summary>
-      <details open style="text-indent: 10px;" class="fs-2 fw-300">
-        <summary class="text-delta">英语</summary>
-        <ul class="task-list">
-          <li class="task-list-item">
-            <input type="checkbox" class="task-list-item-checkbox">单词背默*100个
-          </li>
-          <li class="task-list-item">
-            <input type="checkbox" class="task-list-item-checkbox">中文翻译*15句
-          </li>
-          <li class="task-list-item">
-            <input type="checkbox" class="task-list-item-checkbox">词组*1页
-          </li>
-          <li class="task-list-item">
-            <input type="checkbox" class="task-list-item-checkbox">阅读*1篇
-          </li>
-        </ul>
-      </details>
-      <details open style="text-indent: 10px;" class="fs-2 fw-300">
-        <summary class="text-delta">语文</summary>
-        <ul class="task-list">
-          <li class="task-list-item">
-            <input type="checkbox" class="task-list-item-checkbox">文言文*1篇
-          </li>
-          <li class="task-list-item">
-            <input type="checkbox" class="task-list-item-checkbox">实词*2页
-          </li>
-          <li class="task-list-item">
-            <input type="checkbox" class="task-list-item-checkbox">背诵*1页
-          </li>
-          <li class="task-list-item">
-            <input type="checkbox" class="task-list-item-checkbox">阅读*2篇
-          </li>
-        </ul>
-      </details>
-      <details open style="text-indent: 10px;" class="fs-2 fw-300">
-        <summary class="text-delta">数学</summary>
-        <ul class="task-list">
-          <li class="task-list-item">
-            <input type="checkbox" class="task-list-item-checkbox">作业*1套
-          </li>
-        </ul>
-      </details>
-      <details open style="text-indent: 10px;" class="fs-2 fw-300">
-        <summary class="text-delta">物理</summary>
-        <ul class="task-list">
-          <li class="task-list-item">
-            <input type="checkbox" class="task-list-item-checkbox">课外*1套
-          </li>
-        </ul>
-      </details>
-      <details open style="text-indent: 10px;" class="fs-2 fw-300">
-        <summary class="text-delta">化学</summary>
-        <ul class="task-list">
-          <li class="task-list-item">
-            <input type="checkbox" class="task-list-item-checkbox">作业*1套
-          </li>
-        </ul>
-      </details>
-      <details open style="text-indent: 10px;" class="fs-2 fw-300">
-        <summary class="text-delta">地理</summary>
-        <ul class="task-list">
-          <li class="task-list-item">
-            <input type="checkbox" class="task-list-item-checkbox">试卷*1套
-          </li>
-        </ul>
-      </details>
-    </details>
-
-  </div> -->
+</div>
