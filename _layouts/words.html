@@ -208,8 +208,8 @@ layout: post
       document.getElementById("result").textContent = "Correct!";
       setTimeout(nextWord, 500);
       /* save to localstorage */
-      let corrects =  (localStorage.getItem(today + "-words-correct") || "") + current.en + ";";
-      localStorage.setItem(today + "-words-correct", corrects)      
+      /* let corrects =  (localStorage.getItem(today + "-words-correct") || "") + current.en + ";"; */
+      /* localStorage.setItem(today + "-words-correct", corrects) */
     } else {
       document.getElementById("result").innerHTML =
         "<span>Not quite. Correct answer: </span>" 
@@ -217,7 +217,7 @@ layout: post
         + "<a href='https://dict.youdao.com/result?word=" + current.en +"&lang=en' target='_blank'>🔗</a>";
       document.getElementById("errors").innerHTML += `<div>❌ ${mode === "en_to_cn" ? current.en : current.cn} → ${correct} (Your answer: ${user})</div>`;
       /* save to localstorage */
-      let errors =  (localStorage.getItem(today + "-words-error")|| "") + current.en + ";";
+      let errors =  (localStorage.getItem(today + "-words-error")|| "") + current.en + ";\n";
       localStorage.setItem(today + "-words-error", errors)      
     }
 
