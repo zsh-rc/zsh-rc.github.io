@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+{% if page.source %}
+ {% assign dataset = site.data.words[page.source] %}
+
+    {% if dataset %}
+        {% assign sorted = dataset.days | sort: "date" | reverse %}
+
+        {% assign days_is_empty = true %}
+        {% if page.days and page.days.size > 0 %}
+          {% assign days_is_empty = false %}
+        {% endif %}
+
+        {% assign sql = "" %}
+        {% for day in sorted %}
+          {% if days_is_empty or page.days contains day.date %}
+            {% assign remark = page.source | append: " - " | append: day.date %}
+            {% for word in day.words %}
+                {% capture line %}
+                INSERT INTO EnglishTranslations (Sentence, Meaning, Remark) VALUES ('{{ word.en | replace: "'", "''" }}', N'{{ word.cn | replace: "'", "''" }}', '{{ remark }}');
+                {% endcapture %}
+
+                {% assign sql = sql | append: line | append: "\r\n" %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+        <textarea rows="20" style="width: 100%;">{{ sql }}</textarea>
+    {% else %}
+        <p><strong>Warning:</strong> Dataset '{{ page.source }}' not found.</p>
+    {% endif %}
+
+{% endif %}
+
+{{ content }}
