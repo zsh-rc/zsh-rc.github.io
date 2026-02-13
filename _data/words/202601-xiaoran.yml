@@ -1050,7 +1050,7 @@ days:
     cn: 西瓜
   - en: yum
     cn: （表示味道非常好）
-- date: "2026/02/01"
+- date: "2026/02/15"
   words:
   - en: all
     cn: 所有；全体
@@ -1096,6 +1096,8 @@ days:
     cn: 薄的；细的
   - en: whose
     cn: 谁的
+- date: "2026/02/16"
+  words:    
   - en: again
     cn: 又；再
   - en: also
@@ -1142,6 +1144,8 @@ days:
     cn: 眼泪
   - en: wait
     cn: 等待
+- date: "2026/02/17"
+  words:        
   - en: "go down"
     cn: 落下
   - en: ask
@@ -1192,6 +1196,8 @@ days:
     cn: 明天
   - en: warm-up
     cn: 准备活动
+- date: "2026/02/18"
+  words:   
   - en: angry
     cn: 生气的
   - en: basket
@@ -1260,6 +1266,8 @@ days:
     cn: 灯
   - en: "living room"
     cn: 客厅
+- date: "2026/02/19"
+  words:       
   - en: make
     cn: 制造；做
   - en: "model plane"
@@ -1314,6 +1322,8 @@ days:
     cn: 七点十五分
   - en: "a quarter to eight"
     cn: 七点四十五分
+- date: "2026/02/20"
+  words:         
   - en: "all the way"
     cn: 一路上；自始自终
   - en: battery
@@ -1374,6 +1384,8 @@ days:
     cn: 给......拿来
   - en: "have a good time"
     cn: 玩的高兴
+- date: "2026/02/21"
+  words:       
   - en: "in the middle of"
     cn: 在......中间
   - en: kind
@@ -1430,6 +1442,8 @@ days:
     cn: 小提琴
   - en: colourful
     cn: 色彩缤纷的
+- date: "2026/02/22"
+  words:        
   - en: "dragon boat race"
     cn: 龙舟赛
   - en: dumpling
