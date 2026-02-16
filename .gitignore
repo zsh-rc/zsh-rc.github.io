@@ -15,3 +15,10 @@ _site/
 
 # Ignore system-specific files
 Gemfile.lock
+
+# Ignore OS-specific files
+.DS_Store
+
+# Ignore editor-specific files
+.idea/
+.idea/zsh-rc.github.io.iml
