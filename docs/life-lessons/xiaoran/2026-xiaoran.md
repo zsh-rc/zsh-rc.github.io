@@ -15,7 +15,7 @@ config:
         showDataLabel: true
     themeVariables:
         xyChart:
-            titleColor: "#e84a99"
+            titleColor: "#8174f3"
             xAxisTitleColor: "#FF69B4"
             xAxisLabelColor: "#FF69B4"
             xAxisLineColor: "#FF69B4"
